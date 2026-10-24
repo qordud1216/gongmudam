@@ -1,5 +1,9 @@
 # Gongmudam desktop prototype direction
 
+## Integration — 2026-10-24
+
+B now opens the actual v69 service in same-origin windows. Mock business templates are removed. The public desktop runs on Workers; APIs use a dedicated VPC service and tunnel to an isolated Windows demo runtime. Confirmed affiliation accompanies questions. Travel calculations still require confirmation of the institution and rule pack. Recent work comes from saved service records. Calculator, notepad and window behavior retain the approved design. All visitors share demo business data, as stated in the banner. The remaining notes preserve the original exploration history.
+
 Operate mode, code-first. Three alternatives were compared; the user approved B. This remains an isolated prototype pending integration with the feature-development session.
 
 The user has approved the program name 공무담 and otter companion name 무무. Header, browser title, start menu, action labels and first-visit greeting share these names. Existing identifiers, asset paths and profile storage remain compatible.

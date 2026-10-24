@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: button.querySelector('.app-symbol')?.cloneNode(true) || null,
     });
   });
+  const serviceRoutes = window.GongmudamServiceBridge?.routes || {};
+  const serviceLabels = { chat: '서무 안내', travel: '출장정산', collection: '자료 취합', folders: '업무자료 정리', toolbox: '업무도구함', inbox: '변경 알림함', calendar: '달력', models: '로컬 AI 설정' };
+  Object.entries(serviceRoutes).forEach(([id]) => { if (!apps.has(id)) apps.set(id, { id, label: serviceLabels[id] || id, kind: 'service', icon: null }); });
+  const recentWorkApps = new Set(['travel', 'collection', 'folders', 'toolbox', 'inbox']);
+  let recentWorkRequest = null;
+  let recentWorkSequence = 0;
 
   const windows = new Map();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -148,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const output = document.querySelector('#prototype-state'); if (!output) return;
     const minimized = [...windows.values()].filter((state) => state.window.hidden).length;
     const variant = document.body.dataset.variant || 'A';
-    output.textContent = `시안 ${variant} · 열린 창 ${windows.size}개 · 최소화 ${minimized}개 · 예시 데이터`;
+    output.textContent = `공개 시연 · 열린 창 ${windows.size}개 · 최소화 ${minimized}개`;
   }
   function activate(state, focus = false) {
     if (state.minTimer) { clearTimeout(state.minTimer); state.minTimer = null; }
@@ -157,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.window.classList.add('is-active'); state.window.style.zIndex = String(++zIndex);
     if (focus) state.window.focus({ preventScroll: true });
     renderTaskbar();
+    if (state.service && recentWorkApps.has(state.id)) refreshRecentWork();
   }
   function clampWindow(state) {
     const win = state.window; if (win.hidden || win.classList.contains('is-maximized')) return;
@@ -196,16 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (state.minTimer) clearTimeout(state.minTimer);
     state.agencyPicker?.dispose();
     state.notepad?.dispose();
+    state.service?.dispose();
     if (openAgencyPicker === state.agencyPicker) openAgencyPicker = null;
     windows.delete(state.id); win.classList.remove('is-active');
+    if (recentWorkApps.has(state.id)) refreshRecentWork();
     win.classList.add('closing');
     state.closeTimer = window.setTimeout(() => win.remove(), motionDelay(150));
     const next = [...windows.values()].reverse().find((item) => !item.window.hidden);
     if (next) activate(next); else renderTaskbar();
   }
-  function makeWindow(id) {
+  function makeWindow(id, initialHref, itemId) {
     const app = apps.get(id); const template = document.querySelector(`#app-${CSS.escape(id)}`);
-    if (!app || !template || !template.content) return null;
+    const isServiceApp = Object.hasOwn(serviceRoutes, id);
+    if (!app || (!isServiceApp && (!template || !template.content))) return null;
     const win = document.createElement('article'); win.className = 'app-window opening'; win.dataset.app = id;
     win.setAttribute('role', 'region'); win.setAttribute('tabindex', '-1');
     const titlebar = document.createElement('header'); titlebar.className = 'window-titlebar';
@@ -217,7 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const max = document.createElement('button'); setControl(max, '최대화', 'maximize');
     const shut = document.createElement('button'); setControl(shut, '닫기', 'close');
     controls.append(min, max, shut); titlebar.append(controls); win.append(titlebar);
-    const body = document.createElement('div'); body.className = 'window-body'; body.append(template.content.cloneNode(true)); win.append(body);
+    const body = document.createElement('div'); body.className = 'window-body';
+    if (template?.content) body.append(template.content.cloneNode(true));
+    win.append(body);
     if (id === 'settings') {
       const organization = body.querySelector('#profile-org'); const department = body.querySelector('#profile-department');
       const frameworkChoices = body.querySelectorAll('input[name="profile-framework"]'); const region = body.querySelector('#profile-region');
@@ -243,6 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (affiliation.agency) agencyPicker.restore(affiliation.agency, affiliation.region);
     }
     const notepad = id === 'notepad' ? window.GongmudamNotepad?.init(win, area) || null : null;
+    if (isServiceApp) body.classList.add('service-window-body');
     const bounds = area.getBoundingClientRect();
     const width = id === 'calculator' ? Math.max(0, Math.min(360, bounds.width - 24)) : id === 'notepad' ? Math.max(0, Math.min(520, bounds.width - 24)) : Math.max(Math.min(860, bounds.width - 40), Math.min(320, bounds.width));
     const height = id === 'calculator' ? Math.max(0, Math.min(510, bounds.height - 24)) : id === 'notepad' ? Math.max(0, Math.min(460, bounds.height - 24)) : Math.max(Math.min(id === 'settings' ? 760 : 610, bounds.height - (id === 'settings' ? 32 : 40)), Math.min(200, bounds.height));
@@ -250,7 +263,17 @@ document.addEventListener('DOMContentLoaded', () => {
     win.style.left = `${Math.max(0, (bounds.width - width) / 2 + offset)}px`;
     win.style.top = `${Math.max(0, (bounds.height - height) / 2 + offset)}px`;
     win.style.width = `${width}px`; win.style.height = `${height}px`;
-    const state = { id, window: win, titlebar, minButton: min, maxButton: max, closeButton: shut, geometry: null, minTimer: null, closeTimer: null, agencyPicker, notepad };
+    const state = { id, window: win, titlebar, minButton: min, maxButton: max, closeButton: shut, geometry: null, minTimer: null, closeTimer: null, agencyPicker, notepad, service: null, serviceHref: null, serviceItemId: null };
+    if (isServiceApp && window.GongmudamServiceBridge) {
+      state.serviceHref = initialHref || serviceRoutes[id];
+      state.serviceItemId = itemId || null;
+      state.service = window.GongmudamServiceBridge.mount(body, id, {
+        href: state.serviceHref, title: app.label, profile: getServiceProfile(),
+        onOpen: (nextId, href) => openApp(nextId, href),
+        onChanged: refreshRecentWork,
+        onFocus: () => { if (recentWorkApps.has(id)) refreshRecentWork(); },
+      });
+    }
     min.addEventListener('click', () => minimize(state)); max.addEventListener('click', () => toggleMaximize(state)); shut.addEventListener('click', () => close(state));
     win.addEventListener('pointerdown', () => activate(state), { passive: true });
     titlebar.addEventListener('dblclick', (event) => { if (!event.target.closest('button')) toggleMaximize(state); });
@@ -273,31 +296,64 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => win.classList.remove('opening'), motionDelay(260));
     return state;
   }
-  function openApp(id) {
-    if (!apps.has(id)) return;
+  function openApp(id, optionalHref, itemId) {
+    if (!apps.has(id) && !Object.hasOwn(serviceRoutes, id)) return null;
     let state = windows.get(id);
-    if (!state) state = makeWindow(id);
+    if (!state) state = makeWindow(id, optionalHref, itemId);
+    else if (optionalHref && state.service && state.serviceHref !== optionalHref) { state.serviceHref = optionalHref; state.serviceItemId = itemId || null; state.service.navigate(optionalHref); }
     if (state) activate(state, true);
     document.querySelector('#start-menu')?.setAttribute('hidden', '');
+    return state;
   }
   function toast(message) {
     const node = document.querySelector('#prototype-toast'); if (!node) return;
     node.textContent = message; node.hidden = false;
     clearTimeout(toast.timer); toast.timer = window.setTimeout(() => { node.hidden = true; }, 2400);
   }
+  function resolveRecentHref(value) {
+    if (typeof value !== 'string' || !value.trim()) return null;
+    try {
+      const path = value.startsWith('/') ? value : `/${value}`;
+      const url = new URL(path, location.origin);
+      if (url.origin !== location.origin) return null;
+      const allowedRoutes = new Map([['/travel.html', 'travel'], ['/adhoc.html', 'collection'], ['/folders.html', 'folders']]);
+      const id = allowedRoutes.get(url.pathname);
+      return id ? { id, href: `${url.pathname}${url.search}${url.hash}` } : null;
+    } catch { return null; }
+  }
+  async function refreshRecentWork() {
+    const host = document.querySelector('#recent-work-items'); const status = document.querySelector('#recent-work-status');
+    if (!host || !status) return;
+    if (recentWorkRequest) recentWorkRequest.abort();
+    recentWorkRequest = new AbortController(); const controller = recentWorkRequest; const token = ++recentWorkSequence;
+    host.replaceChildren(); status.textContent = '최근 저장한 업무를 확인하고 있습니다…';
+    try {
+      const response = await fetch('/api/workspace/recent', { method: 'GET', headers: { Accept: 'application/json' }, credentials: 'same-origin', signal: controller.signal });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json(); if (token !== recentWorkSequence) return;
+      const referenceLibraryIds = new Set(['esaram-manuals-v68', '2d452f42d15242f7b3506c111148aff6']);
+      const items = Array.isArray(data?.items) ? data.items.filter((item) => !referenceLibraryIds.has(item?.library_id) && !referenceLibraryIds.has(item?.id)) : [];
+      const renderable = items.map((item) => ({ item, itemId: typeof item?.id === 'string' || Number.isFinite(item?.id) ? String(item.id) : '', destination: resolveRecentHref(item?.href) })).filter(({ itemId, destination }) => destination && itemId.length > 0 && itemId.length <= 200);
+      if (!renderable.length) {
+        status.textContent = items.length ? '열 수 있는 최근 업무가 없습니다.' : '저장된 업무가 없습니다.';
+        return;
+      }
+      renderable.forEach(({ item, itemId, destination }) => {
+        const button = document.createElement('button'); button.type = 'button'; button.dataset.open = destination.id;
+        button.dataset.serviceHref = destination.href; button.dataset.itemId = itemId; button.className = 'recent-work-item';
+        const type = document.createElement('span'); type.className = 'work-type'; type.textContent = ({ travel: '출장정산', collection: '자료 취합', education: '교육 취합', folder: '업무자료' })[item.kind] || '저장한 업무';
+        const title = document.createElement('strong'); title.textContent = typeof item.title === 'string' ? item.title : '제목 없는 업무';
+        const detail = document.createElement('small'); detail.textContent = [item.status, item.next_action].filter((part) => typeof part === 'string' && part.trim()).join(' · ');
+        button.append(type, title, detail); host.append(button);
+      });
+      status.textContent = `${renderable.length}개의 최근 업무`;
+    } catch (error) {
+      if (error.name === 'AbortError' || token !== recentWorkSequence) return;
+      host.replaceChildren(); status.textContent = '최근 업무를 불러오지 못했습니다. 서비스를 확인해 주세요.';
+    } finally { if (token === recentWorkSequence) recentWorkRequest = null; }
+  }
   function submitChatQuestion(question) {
-    openApp('chat');
-    const chatWindow = windows.get('chat')?.window; if (!chatWindow) return;
-    const log = chatWindow.querySelector('.mock-chat-log');
-    if (log) {
-      log.querySelectorAll('.demo-question, .is-answer').forEach((sample) => sample.remove());
-      const user = document.createElement('p'); user.className = 'mock-chat-message is-user'; user.textContent = question;
-      const answer = document.createElement('p'); answer.className = 'mock-chat-message is-demo'; answer.textContent = '시안 예시 · 실제 AI에 연결되지 않아 답변을 만들지 않습니다.';
-      log.append(user, answer); log.scrollTop = log.scrollHeight;
-    } else {
-      const preview = chatWindow.querySelector('.demo-question'); if (preview) preview.textContent = question;
-      const note = chatWindow.querySelector('.demo-response'); if (note) note.textContent = '시안 예시 · 실제 AI에 연결되지 않아 답변을 만들지 않습니다.';
-    }
+    const state = openApp('chat'); return state?.service?.ask(question) === true;
   }
   function updateClock() {
     const now = new Date();
@@ -313,6 +369,22 @@ document.addEventListener('DOMContentLoaded', () => {
     output.textContent = affiliation.confirmed ? [affiliation.organization, affiliation.department].filter(Boolean).join(' · ') : '소속 설정';
     output.title = affiliation.confirmed ? [frameworks[affiliation.personnel_framework], affiliation.region, affiliation.organization, affiliation.department].filter(Boolean).join(' · ') : '내 소속 설정';
   }
+  function getServiceProfile() {
+    if (!affiliation.confirmed) return null;
+    return {
+      confirmed: true,
+      schema_version: affiliation.schema_version,
+      personnel_framework: affiliation.personnel_framework,
+      region: affiliation.region,
+      organization: affiliation.organization,
+      department: affiliation.department,
+      agency: affiliation.agency || null,
+    };
+  }
+  function broadcastServiceContext() {
+    const profile = getServiceProfile();
+    windows.forEach((state) => state.service?.updateProfile(profile));
+  }
   function renderRuleHint(scope = document) {
     const hint = scope.querySelector('#profile-rule-hint'); if (!hint) return;
     const hasLiveForm = Boolean(scope.querySelector('#profile-form'));
@@ -321,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const organization = hasLiveForm ? (scope.querySelector('#profile-org')?.value.trim() || '') : affiliation.organization;
     const criteria = [frameworks[framework], region, organization].filter(Boolean);
     const frameworkPrompt = !framework ? '신분 구분을 직접 확인해 주세요. ' : '';
-    hint.textContent = `${criteria.length ? `선택 기준: ${criteria.join(' · ')}. ` : '근무 기준을 선택해 주세요. '}${frameworkPrompt}실제 규정팩 연결은 기존 앱 통합 후 적용됩니다.`;
+    hint.textContent = `${criteria.length ? `선택 기준: ${criteria.join(' · ')}. ` : '근무 기준을 선택해 주세요. '}${frameworkPrompt}소속 정보는 질문에 함께 전달됩니다. 여비 계산은 출장 화면에서 적용할 규정팩을 직접 선택해야 합니다.`;
   }
   function renderCompanion() {
     const title = document.querySelector('#companion-title'); const message = document.querySelector('#companion-message'); const action = document.querySelector('#companion-action');
@@ -345,7 +417,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scope.querySelector('#profile-org')?.setCustomValidity('');
     openAgencyPicker?.clear({ clearInput: true, clearRegion: true });
     renderAffiliation(); renderCompanion(); renderRuleHint(scope);
-    toast(removed ? '저장한 시안 소속을 지웠습니다.' : '현재 화면에서 소속을 지웠습니다. 브라우저 저장을 변경할 수 없습니다.');
+    broadcastServiceContext();
+    toast(removed ? '저장한 소속 정보를 지웠습니다.' : '현재 화면에서 소속을 지웠습니다. 브라우저 저장을 변경할 수 없습니다.');
   }
   function loadAffiliation() {
     try {
@@ -365,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const open = event.target.closest('[data-open]');
     if (open) {
       if (suppressDraggedIconClick && open.classList.contains('desktop-app')) { event.preventDefault(); event.stopPropagation(); suppressDraggedIconClick = false; return; }
-      event.preventDefault(); openApp(open.dataset.open); return;
+      event.preventDefault(); openApp(open.dataset.open, open.dataset.serviceHref, open.dataset.itemId); return;
     }
     const task = event.target.closest('.running-app[data-task]');
     if (task) {
@@ -408,13 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(() => { windows.forEach(clampWindow); if (document.body.dataset.variant === 'B') applyBIconPositions(); });
       return;
     }
-    const save = event.target.closest('.demo-save'); if (save) { toast('시안에서만 저장 표시했습니다. 실제 업무에는 반영되지 않습니다.'); return; }
-    const step = event.target.closest('[data-switch-step]');
-    if (step) {
-      const group = step.parentElement; group?.querySelectorAll('[data-switch-step]').forEach((item) => { item.classList.toggle('is-selected', item === step); item.setAttribute('aria-pressed', String(item === step)); });
-      const title = step.closest('.window-body')?.querySelector('.demo-step-title'); if (title) title.textContent = step.dataset.stepTitle || step.textContent.trim(); return;
-    }
-    const choice = event.target.closest('.tool-choice'); if (choice) { toast(`${choice.dataset.label || choice.textContent.trim()} 도구 미리보기입니다.`); }
   });
   document.addEventListener('submit', (event) => {
     const profile = event.target.closest('#profile-form');
@@ -435,29 +501,22 @@ document.addEventListener('DOMContentLoaded', () => {
       let persisted = false;
       try { window.localStorage.setItem(profileStorageKey, JSON.stringify(affiliation)); persisted = true; }
       catch { /* Keep the submitted profile in memory for this page session. */ }
-      renderAffiliation(); renderCompanion(); renderRuleHint();
-      toast(persisted ? '시안 소속을 적용했습니다. 실제 규정은 아직 연결되지 않았습니다.' : '소속은 이 화면에만 임시 적용했습니다. 브라우저 저장을 사용할 수 없습니다.'); return;
+      renderAffiliation(); renderCompanion(); renderRuleHint(); broadcastServiceContext();
+      toast(persisted ? '소속 정보를 저장하고 열린 서비스에 전달했습니다.' : '소속 정보를 저장하지 못했습니다. 브라우저 저장을 사용할 수 없습니다.'); return;
     }
     const search = event.target.closest('#taskbar-search');
     if (search) {
       event.preventDefault();
       const field = search.querySelector('#taskbar-query'); const question = field?.value.trim(); if (!question) return;
-      submitChatQuestion(question);
-      search.reset(); return;
+      if (submitChatQuestion(question)) search.reset(); return;
     }
     const command = event.target.closest('#desktop-question');
     if (command) {
       event.preventDefault(); const input = command.querySelector('input, textarea'); const question = input?.value.trim(); if (!question) return;
-      submitChatQuestion(question);
-      command.reset();
+      if (submitChatQuestion(question)) command.reset();
       return;
     }
-    const form = event.target.closest('.mock-chat-form'); if (!form) return;
-    event.preventDefault(); const field = form.querySelector('input, textarea'); const question = field?.value.trim(); if (!question) return;
-    const log = form.closest('.window-body')?.querySelector('.mock-chat-log'); if (!log) return;
-    const user = document.createElement('p'); user.className = 'mock-chat-message is-user'; user.textContent = question;
-    const answer = document.createElement('p'); answer.className = 'mock-chat-message is-demo'; answer.textContent = '시안 예시 · 실제 AI와 연결되지 않은 화면 미리보기입니다.';
-    log.append(user, answer); form.reset(); log.scrollTop = log.scrollHeight;
+    return;
   });
 
   function setVariant(value) {
@@ -493,4 +552,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   renderTaskbar();
+  refreshRecentWork();
 });

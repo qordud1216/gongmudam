@@ -1,0 +1,12 @@
+{
+  "name": "gongmudam",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:desktop": "py -3.12 tools/build_web_assets.py",
+    "test:edge": "node --test tests/worker.test.mjs",
+    "deploy": "npm run build:desktop && wrangler deploy",
+    "tunnel": "wrangler tunnel run fcf40f16-2c0e-4541-b529-77d357f1be1a"
+  },
+  "devDependencies": {"wrangler": "4.152.0"}
+}

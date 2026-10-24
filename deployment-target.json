@@ -2,8 +2,9 @@
   "provider": "cloudflare-workers",
   "name": "gongmudam",
   "requested_url": "https://gongmudam.visanu81.workers.dev",
-  "deployment_status": "not_deployed",
-  "service_backend_status": "local_fastapi_v69",
-  "desktop_status": "independent_preview_with_local_agency_api",
-  "integration_status": "pending"
+  "deployment_status": "deployed",
+  "service_backend_status": "isolated_public_fastapi_v69_vpc_tunnel",
+  "desktop_status": "connected",
+  "integration_status": "connected",
+  "requires_origin_pc": true
 }

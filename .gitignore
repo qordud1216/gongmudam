@@ -17,6 +17,9 @@ desktop/data/*
 !desktop/data/agencies-v1.sqlite
 !desktop/data/agencies-v1.json
 .local-verification/
+.local-runtime/
+.wrangler/
+.dev.vars*
 work/
 tmp/
 *.log

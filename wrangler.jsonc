@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gongmudam",
+  "account_id": "bf848c0112a24bf78192b5b721290ded",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "assets": {
+    "directory": ".wrangler/web-assets",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "vpc_services": [{
+    "binding": "BACKEND",
+    "service_id": "01a16ddf-2b4a-7b60-8a74-1b4f9f72fc92"
+  }],
+  "observability": {"enabled": false}
+}
