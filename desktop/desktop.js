@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (state.service && recentWorkApps.has(state.id)) refreshRecentWork();
   }
   function clampWindow(state) {
+    state.resizer?.cancel();
     const win = state.window; if (win.hidden || win.classList.contains('is-maximized')) return;
     const bounds = area.getBoundingClientRect();
     if (bounds.width <= 0 || bounds.height <= 0) return;
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bounds.width > 700) { win.style.width = `${width}px`; win.style.height = `${height}px`; }
   }
   function toggleMaximize(state) {
+    state.resizer?.cancel();
     const win = state.window;
     if (!win.classList.contains('is-maximized')) {
       state.geometry = { left: win.style.left, top: win.style.top, width: win.style.width, height: win.style.height };
@@ -193,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activate(state); 
   }
   function minimize(state) {
+    state.resizer?.cancel();
     const win = state.window; if (win.hidden || win.classList.contains('minimizing')) return;
     win.classList.add('minimizing'); win.classList.remove('is-active');
     state.minTimer = window.setTimeout(() => { win.hidden = true; win.classList.remove('minimizing'); state.minTimer = null; renderTaskbar(); }, motionDelay(180));
@@ -202,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const win = state.window;
     if (state.minTimer) clearTimeout(state.minTimer);
     state.agencyPicker?.dispose();
+    state.resizer?.dispose();
     state.notepad?.dispose();
     state.service?.dispose();
     if (openAgencyPicker === state.agencyPicker) openAgencyPicker = null;
@@ -254,7 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
       openAgencyPicker = agencyPicker;
       if (affiliation.agency) agencyPicker.restore(affiliation.agency, affiliation.region);
     }
-    const notepad = id === 'notepad' ? window.GongmudamNotepad?.init(win, area) || null : null;
     if (isServiceApp) body.classList.add('service-window-body');
     const bounds = area.getBoundingClientRect();
     const width = id === 'calculator' ? Math.max(0, Math.min(360, bounds.width - 24)) : id === 'notepad' ? Math.max(0, Math.min(520, bounds.width - 24)) : Math.max(Math.min(860, bounds.width - 40), Math.min(320, bounds.width));
@@ -263,7 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
     win.style.left = `${Math.max(0, (bounds.width - width) / 2 + offset)}px`;
     win.style.top = `${Math.max(0, (bounds.height - height) / 2 + offset)}px`;
     win.style.width = `${width}px`; win.style.height = `${height}px`;
-    const state = { id, window: win, titlebar, minButton: min, maxButton: max, closeButton: shut, geometry: null, minTimer: null, closeTimer: null, agencyPicker, notepad, service: null, serviceHref: null, serviceItemId: null };
+    const resizer = window.GongmudamWindowResize?.init(win, area) || null;
+    const notepad = id === 'notepad' ? window.GongmudamNotepad?.init(win, area) || null : null;
+    const state = { id, window: win, titlebar, minButton: min, maxButton: max, closeButton: shut, geometry: null, minTimer: null, closeTimer: null, agencyPicker, notepad, resizer, service: null, serviceHref: null, serviceItemId: null };
     if (isServiceApp && window.GongmudamServiceBridge) {
       state.serviceHref = initialHref || serviceRoutes[id];
       state.serviceItemId = itemId || null;

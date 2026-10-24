@@ -8,4 +8,5 @@ body.gongmudam-embedded #main-content,
 body.gongmudam-embedded main { margin-left:0!important; width:100%!important; max-width:none!important; min-width:0; }
 body.gongmudam-embedded .app-shell,
 body.gongmudam-embedded .studio-shell { display:block!important; }
+body.gongmudam-embedded #view-chat .chat-composer textarea { width:100%; max-width:100%; box-sizing:border-box; min-width:0; flex:none; }
 #gongmudam-context { margin:0; padding:10px 20px; font:12px/1.6 sans-serif; color:#405a68; background:#eaf3ef; border-bottom:1px solid #d5e4dd; }

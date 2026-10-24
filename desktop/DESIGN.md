@@ -2,6 +2,8 @@
 
 ## Integration — 2026-10-24
 
+All desktop app windows now share eight edge/corner resize grips with workspace bounds, keyboard arrows and Shift steps. Maximize, minimize, close and viewport changes cancel active resizing; restore retains the last dimensions. The old notepad grip is suppressed while shared resizing is active. Mobile keeps its full-workspace layout. The chosen deployment remains the fixed Workers URL with a local PC backend; server migration was cancelled before resource creation.
+
 B now opens the actual v69 service in same-origin windows. Mock business templates are removed. The public desktop runs on Workers; APIs use a dedicated VPC service and tunnel to an isolated Windows demo runtime. Confirmed affiliation accompanies questions. Travel calculations still require confirmation of the institution and rule pack. Recent work comes from saved service records. Calculator, notepad and window behavior retain the approved design. All visitors share demo business data, as stated in the banner. The remaining notes preserve the original exploration history.
 
 Operate mode, code-first. Three alternatives were compared; the user approved B. This remains an isolated prototype pending integration with the feature-development session.

@@ -12,7 +12,7 @@
     "brand": "gongmudam",
     "mascot": "무무",
     "files": {
-      "DESIGN.md": "ffa3575f47cef6fe625347bc30fc8f65060f9c4a5ba06a7cc77054d097669f52",
+      "DESIGN.md": "ab9257da663978ede83a351b20195574ce2e17fd3477c80ca1f848d6ca974996",
       "LEX_FLOW_REUSE.txt": "6a4062b18b15b25fac9909855ad1ebe4e5af43385325337377db5358c9d4079a",
       "README.txt": "7d0a62fab19f6c6bdca3e75103e181dc0db07b792a6f42caa937f6c3d444298f",
       "VERIFICATION.txt": "4337b05b0ce253098a1583983d566f715e778f77fe163ea572e69d1b89cfb7ed",
@@ -27,16 +27,18 @@
       "data/agencies-v1.json": "f72796765b5f40a3cac53d4bd526e350a1887b9c60f0c9c8b3b88139a7c00fca",
       "data/agencies-v1.sqlite": "dd646a9cfe6d69ee9176a6bba78ef0c3dca9a6aba3dd3053105ef0db17f04c0e",
       "desktop.css": "8af0139aef7e0d052fcdb6bda8a6b74a328bd5a70f884d482f6d043879ce5a33",
-      "desktop.js": "4fbe542f056dd41205f03907fe199d72a88eb8c22ba4e155e54b8d945ce0d9f9",
-      "embedded.css": "0ae588eb64e9406d2466db230c20c1e9c08ab6fb3748a94fec70b5bad5847379",
+      "desktop.js": "cb02667925ff70fe17a2a00e4089468bcc21bd28ffb821b02b6ea64161e042ad",
+      "embedded.css": "ab2e1b49ed5d07afdcd7f634a42c5da71e32c92018254e9b397f2e2bf4332cbd",
       "embedded.js": "ae7e4d0632d1bf963d7ee06864cdda2a493a2afe7eefc73f71b51fcc99e3d82a",
-      "index.html": "beee39b66466c70ed48e8231d5b9ba6813566d75ffecb7bf58e16c7cb911bc72",
-      "notepad.js": "c98b591b0c1f4fe1550df309ef2cf3e9dc64513d9eed76094a1b393562d9dd5f",
+      "index.html": "80d114b275fdbcf7750468df14ee324d8aa2bbe766b8158dc5a8dd71ff7aa4fc",
+      "notepad.js": "56e48e502bf99e299328dc2570bc82edd0ccdd0848792d65911264e069ebf776",
       "server.py": "9db9c5bf59134237ac1bb54c40fb85be7b8cf740909003e16740bde88b3b7dc7",
       "service-bridge.css": "d38f8dccebc532a0d6567f7f4ba10df8d18e8657fdb18f089c53d86c57ee0c06",
       "service-bridge.js": "fe0b6251f5b1100c2054947ca2f7ba978c9b15a014846f59c847ec8b02aa3f18",
       "tests/test_agency_directory.py": "5a8f0a6403748d5baa318227130c06716e724415220096d9b33efcdf575b3f9b",
-      "tools/export_agencies.py": "429cd19178948b025630a81c79623bd6a61b23368be3dd8b497c914cf54e1069"
+      "tools/export_agencies.py": "429cd19178948b025630a81c79623bd6a61b23368be3dd8b497c914cf54e1069",
+      "window-resize.css": "220f8a298c4082aee93137112acf3acd574b9915ba7d66b631841517a70bc296",
+      "window-resize.js": "be8a1c266d9afd7c3528ac8d033704364481e542ade22c16183d9da20d2d6c8e"
     },
     "integration_status": "connected to existing v69 service APIs through same-origin desktop windows",
     "approved_preview_files": {
@@ -61,7 +63,8 @@
       "data/agencies-v1.json": "f72796765b5f40a3cac53d4bd526e350a1887b9c60f0c9c8b3b88139a7c00fca",
       "tools/export_agencies.py": "429cd19178948b025630a81c79623bd6a61b23368be3dd8b497c914cf54e1069",
       "tests/test_agency_directory.py": "5a8f0a6403748d5baa318227130c06716e724415220096d9b33efcdf575b3f9b"
-    }
+    },
+    "window_resize": "eight edge/corner grips; keyboard; constrained workspace; fixed-PC backend retained"
   },
   "excluded": [
     "live business databases",
@@ -78,6 +81,6 @@
     "status": "deployed",
     "mode": "Workers static desktop + private VPC service to isolated Windows demo runtime",
     "requires_origin_pc": true,
-    "worker_version": "3788a7a8-239c-47da-9574-136f9195ba6b"
+    "worker_version": "8c644b46-3325-4e01-918b-1bc10f58aede"
   }
 }

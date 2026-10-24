@@ -21,6 +21,8 @@
     const status = win.querySelector('#notepad-save-status');
     const handle = win.querySelector('.notepad-resize');
     if (!editor || !status || !handle) return null;
+    const usesSharedResizer = win.classList.contains('has-window-resizer');
+    if (usesSharedResizer) handle.hidden = true;
     let disposed = false;
     let activeResizeCleanup = null;
 
@@ -40,7 +42,7 @@
     setStatus(stored.available ? '브라우저에 저장되는 메모입니다.' : '브라우저 저장을 사용할 수 없습니다.', !stored.available);
 
     function isResizable() {
-      return !disposed && !win.hidden && !win.classList.contains('is-maximized') && area.getBoundingClientRect().width > 700;
+      return !usesSharedResizer && !disposed && !win.hidden && !win.classList.contains('is-maximized') && area.getBoundingClientRect().width > 700;
     }
     function resizeTo(width, height) {
       const bounds = area.getBoundingClientRect(); const rect = win.getBoundingClientRect();
@@ -80,8 +82,10 @@
       const height = rect.height + (event.key === 'ArrowDown' ? step : event.key === 'ArrowUp' ? -step : 0);
       resizeTo(width, height);
     }
-    handle.addEventListener('pointerdown', onPointerDown);
-    handle.addEventListener('keydown', onKeyDown);
+    if (!usesSharedResizer) {
+      handle.addEventListener('pointerdown', onPointerDown);
+      handle.addEventListener('keydown', onKeyDown);
+    }
 
     function dispose() {
       if (disposed) return;
