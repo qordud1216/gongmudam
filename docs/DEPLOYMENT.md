@@ -14,6 +14,8 @@
 
 ## 실행과 유지
 
+- 현재 운영 PC: 바탕화면의 **공무담 실행**을 더블클릭합니다. 필요한 서버·터널만 실행하고 공개 주소 연결을 확인한 뒤 브라우저를 엽니다. [실행 안내와 검증](DESKTOP-LAUNCHER-20261024.md).
+- 바로가기 생성·복구: 프로젝트의 `install-desktop-shortcut.bat`. 프로젝트를 이동한 뒤에도 다시 실행합니다.
 - 처음 설치: `install-service.bat`. 운영 도구는 Node.js 설치 후 `npm ci`.
 - 업무 서버: `run-gongmudam.bat`. 통합 로컬 주소는 `http://127.0.0.1:8892/`.
 - 공개 연결: 별도 터미널에서 `run-tunnel.bat`. 해당 Cloudflare 계정 권한이 필요합니다.

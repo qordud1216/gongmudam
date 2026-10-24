@@ -16,7 +16,7 @@ def main():
     spec = importlib.util.spec_from_file_location('service_code_map', ROOT / 'service/tools/graphify_code_map.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    module.SCOPES = {'desktop': '.js', 'integration': '.py', 'cloudflare': '.js', 'tests': '.py'}
+    module.SCOPES = {'desktop': '.js', 'integration': '.py', 'cloudflare': '.js', 'tests': '.py', 'tools': '.py'}
     runtime = os.environ.get('SEOMU_GRAPHIFY_PYTHON')
     asset = os.environ.get('SEOMU_GRAPHIFY_ASSET')
     if not runtime or not asset:
