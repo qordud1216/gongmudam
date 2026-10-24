@@ -1,0 +1,77 @@
+{
+  "_설명": "LLM 연결 설정. llm.active 에 아래 profiles 중 하나의 이름을 적으면 그 모델로 연결된다. 화면 '설정' 탭에서도 바꿀 수 있다. api_key 는 직접 적거나, api_key_env 에 환경변수 이름을 적는다.",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "llm": {
+    "active": "offline",
+    "profiles": {
+      "offline": {
+        "provider": "offline",
+        "설명": "LLM 없이 규칙 기반으로 안내 (키·네트워크 불필요)"
+      },
+      "local_vllm": {
+        "provider": "openai_compatible",
+        "base_url": "http://127.0.0.1:8000/v1",
+        "model": "Qwen3.5-9B",
+        "api_key": "",
+        "temperature": 0.2,
+        "max_tokens": 900,
+        "timeout": 120,
+        "extra_body": {
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      },
+      "local_ollama": {
+        "provider": "openai_compatible",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "model": "gemma3:4b",
+        "api_key": "",
+        "temperature": 0.2,
+        "max_tokens": 900,
+        "timeout": 180
+      },
+      "openai": {
+        "provider": "openai_compatible",
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "api_key": "",
+        "api_key_env": "OPENAI_API_KEY",
+        "temperature": 0.2,
+        "max_tokens": 900,
+        "timeout": 60
+      },
+      "local_gemma": {
+        "provider": "openai_compatible",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "model": "gemma3:4b",
+        "api_key": "",
+        "temperature": 0,
+        "max_tokens": 500,
+        "timeout": 180,
+        "extra_body": {
+          "response_format": {
+            "type": "json_object"
+          }
+        }
+      },
+      "local_llama": {
+        "provider": "openai_compatible",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "model": "llama3.2:3b",
+        "api_key": "",
+        "temperature": 0,
+        "max_tokens": 500,
+        "timeout": 180,
+        "extra_body": {
+          "response_format": {
+            "type": "json_object"
+          }
+        }
+      }
+    }
+  }
+}

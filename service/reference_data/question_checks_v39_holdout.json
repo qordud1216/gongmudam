@@ -1,0 +1,327 @@
+[
+  {
+    "id": "independent-travel-two",
+    "category": "추가 검토",
+    "question": "국가공무원 관내출장 지급 기준이랑 출장 후 영수증 제출 기한 둘 다 알려주세요",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제18조(",
+      "제8조의2("
+    ],
+    "require_articles": [
+      "제18조(",
+      "제8조의2("
+    ],
+    "answer_facts": [
+      "4시간 이상",
+      "2주일 이내",
+      "증거서류"
+    ]
+  },
+  {
+    "id": "independent-leave-two",
+    "category": "추가 검토",
+    "question": "지방직 연가 기본일수표와 병가 진단서 첨부 기준을 비교해줘",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조(",
+      "제7조의5("
+    ],
+    "require_articles": [
+      "제7조(",
+      "제7조의5("
+    ],
+    "answer_facts": [
+      "1년 이상 3년 미만",
+      "6일을 초과"
+    ]
+  },
+  {
+    "id": "independent-goods-missing",
+    "category": "추가 검토",
+    "question": "물품 검사조서 작성 기준과 폐기 절차를 함께 알려줘",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-travel-missing",
+    "category": "추가 검토",
+    "question": "출장 영수증 정산 기한과 택시 운임 인정 범위를 같이 알려줘",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-cross-missing",
+    "category": "추가 검토",
+    "question": "출장 정산 기한이랑 물품 견적 몇 장 받아야 하는지 알려줘",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-amount-syn",
+    "category": "추가 검토",
+    "question": "국가공무원 출장 일비 하루 지급액은 몇 만 원인가요?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-foreign-local",
+    "category": "추가 검토",
+    "question": "미국에서 근무지 내 출장 3시간이면 우리나라와 똑같이 1만원인가요?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-teacher-family",
+    "category": "추가 검토",
+    "question": "지방공무원이 자녀 담임교사와 상담할 때 가족돌봄휴가를 쓸 수 있나요?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의7("
+    ],
+    "require_articles": [
+      "제7조의7("
+    ],
+    "facts": [
+      "교사와의 상담"
+    ],
+    "answer_facts": [
+      "교사와의 상담"
+    ]
+  },
+  {
+    "id": "independent-scope-national",
+    "category": "추가 검토",
+    "question": "국공립기관이 아니라 사기업 직원의 병가 일수는?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-scope-specific",
+    "category": "추가 검토",
+    "question": "교육청 소속 교원 병가의 진단서 기준 알려줘",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-annual-extra",
+    "category": "추가 검토",
+    "question": "지방공무원 재직 10년인데 작년에 병가 안 썼으면 올해 연가가 22일인지 알려줘",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "facts": [
+      "1일"
+    ],
+    "answer_facts": [
+      "1일"
+    ]
+  },
+  {
+    "id": "independent-annual-pay",
+    "category": "추가 검토",
+    "question": "지방공무원 연가 8시간 미만 남은 것을 이월해야 한다는 근거는?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-health-family",
+    "category": "추가 검토",
+    "question": "지방공무원이 아이 건강검진에 동행할 때 공가인가요?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의7("
+    ],
+    "require_articles": [
+      "제7조의7("
+    ],
+    "facts": [
+      "병원 진료",
+      "동행"
+    ],
+    "answer_facts": [
+      "병원 진료",
+      "동행"
+    ]
+  },
+  {
+    "id": "independent-public-election",
+    "category": "추가 검토",
+    "question": "지방직 투표하러 가는 공가는 필요한 시간만 쓰나요?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의6("
+    ],
+    "require_articles": [
+      "제7조의6("
+    ]
+  },
+  {
+    "id": "independent-sick-doc-hour",
+    "category": "추가 검토",
+    "question": "지방공무원 병가로 조퇴가 48시간 쌓이면 진단서 필요 여부를 무슨 조문으로 판단해요?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의5("
+    ],
+    "require_articles": [
+      "제7조의5("
+    ]
+  },
+  {
+    "id": "independent-wife-miscarriage",
+    "category": "추가 검토",
+    "question": "지방공무원 아내가 유산했을 때 남편이 쓸 수 있는 휴가는?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의7("
+    ],
+    "require_articles": [
+      "제7조의7("
+    ],
+    "facts": [
+      "남성공무원은 배우자가",
+      "3일"
+    ],
+    "answer_facts": [
+      "남성공무원은 배우자가",
+      "3일"
+    ]
+  },
+  {
+    "id": "independent-wife-check",
+    "category": "추가 검토",
+    "question": "지방공무원 배우자 산전검진 동행은 본인 임신검진휴가와 같은 건가요?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제7조의7("
+    ],
+    "require_articles": [
+      "제7조의7("
+    ],
+    "facts": [
+      "임신기간 중 검진",
+      "배우자의 임신기간"
+    ],
+    "answer_facts": [
+      "임신기간 중 검진",
+      "배우자의 임신기간"
+    ]
+  },
+  {
+    "id": "independent-pay-delay",
+    "category": "추가 검토",
+    "question": "지자체 물품 대금 지급이 늦어지면 지체일수에 따른 이자를 줘야 한다는 근거는?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제18조("
+    ],
+    "require_articles": [
+      "제18조("
+    ],
+    "facts": [
+      "지체일수에 따른 이자"
+    ],
+    "answer_facts": [
+      "지체일수에 따른 이자"
+    ]
+  },
+  {
+    "id": "independent-payment-number",
+    "category": "추가 검토",
+    "question": "지자체 납품 대금은 청구 후 5일 안에 줘야 한다는데 맞아?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-inspection-number",
+    "category": "추가 검토",
+    "question": "지자체 물품 3000만원 계약이면 검사조서를 안 써도 돼?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "independent-contractor-test",
+    "category": "추가 검토",
+    "question": "물품 성능시험으로 망가진 시제품 비용은 업체가 부담하는지 조문 보여줘",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제17조("
+    ],
+    "require_articles": [
+      "제17조("
+    ],
+    "facts": [
+      "계약상대자가 부담"
+    ],
+    "answer_facts": [
+      "계약상대자가 부담"
+    ]
+  },
+  {
+    "id": "independent-points-disclose",
+    "category": "추가 검토",
+    "question": "지자체 카드 포인트의 세입조치 내역 공개 주기는?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제121조("
+    ],
+    "require_articles": [
+      "제121조("
+    ],
+    "facts": [
+      "매 반기 후 1개월"
+    ],
+    "answer_facts": [
+      "매 반기 후 1개월"
+    ]
+  },
+  {
+    "id": "independent-retire-disclose",
+    "category": "추가 검토",
+    "question": "지자체 퇴직예정자 기념품 집행내역 공개 항목은?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제121조("
+    ],
+    "require_articles": [
+      "제121조("
+    ]
+  },
+  {
+    "id": "independent-extra-percent",
+    "category": "추가 검토",
+    "question": "국내 출장에서 부득이하게 초과한 숙박비는 상한액의 몇 퍼센트까지 추가로 지급할 수 있어?",
+    "outcome": "answer",
+    "allow_rules": [],
+    "allow_articles": [
+      "제16조("
+    ],
+    "require_articles": [
+      "제16조("
+    ],
+    "facts": [
+      "10분의 3"
+    ],
+    "answer_facts": [
+      "10분의 3"
+    ]
+  }
+]

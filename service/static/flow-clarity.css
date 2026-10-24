@@ -1,0 +1,57 @@
+/* Shared concise workflow presentation for collection and folder pages. */
+.flow-clarity-page main,.flow-clarity-page .panel,.flow-clarity-page #workspace-detail{min-width:0}
+.flow-clarity-page :where(input:not([type=checkbox]):not([type=radio]),select,textarea,button){min-height:40px;box-sizing:border-box}
+.flow-clarity-page textarea{min-height:80px}
+.flow-clarity-page :where(p,span,a,summary,h1,h2,h3,label,code){overflow-wrap:anywhere}
+.flow-overview{background:#f5f9f6;border:1px solid #dce8df;border-radius:12px;padding:14px 18px;margin:14px 0}
+.flow-topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.flow-rail,.workflow-rail{display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;padding:6px 0 12px;max-width:100%}
+.flow-step,.workflow-step{flex:0 0 auto;display:flex;align-items:center;gap:9px;min-width:0;max-width:230px;text-align:left;border:1px solid #d7e2dc;border-radius:9px;background:#f5f8f6;padding:9px 12px;cursor:pointer;color:#2c493e}
+.flow-step .flow-number{font-size:11px;color:#61786b;flex:0 0 auto}
+.flow-step .flow-label,.workflow-step span{font-size:12px;font-weight:650;white-space:nowrap}
+.flow-step .flow-state,.workflow-step small{font-size:10px;color:#6c7c74;white-space:nowrap}
+.flow-step.selected,.workflow-step.selected{border:2px solid #167b65;background:#eaf8f1}
+.flow-step.selected .flow-number,.flow-step.selected .flow-label{color:#185c46}
+.flow-step.done .flow-state,.workflow-step.done small{color:#137358}
+.flow-step.needs_review .flow-state,.workflow-step.needs_review small{color:#a94b22}
+.flow-current{border-top:1px solid #dfe9e4;padding-top:14px}
+.flow-current h2{font-size:20px;margin:0 0 8px}
+.flow-instruction,.flow-reason,.flow-reference,.flow-note{font-size:12px;line-height:1.65;color:#52685c;overflow-wrap:anywhere}
+.flow-reference{display:inline-flex;align-items:center;min-height:36px;padding:5px 10px;border:1px solid #d7e2dc;border-radius:7px;background:#fff}
+.flow-note{background:#f1f7f3;border-radius:8px;padding:10px 12px;margin:10px 0}
+.flow-edit-tools{margin:10px 0}
+.flow-edit-tools>summary,.flow-fold>summary{cursor:pointer;font-size:13px;font-weight:650;color:#315b48;padding:10px 12px}
+.flow-stage-body{min-width:0}
+.flow-stage-footer{display:block;margin-top:18px;padding:20px;background:#fff;border:1px solid #dce8df;border-radius:10px}
+.flow-fold{border:1px solid #dce8df;border-radius:10px;background:#fbfdfb;margin:12px 0;min-width:0}
+.flow-fold:not([open]){padding:0}
+.flow-fold[open]{padding:4px 14px 14px}
+.flow-fold[open]>summary{border-bottom:1px solid #e2ebe5;margin-bottom:12px}
+#folder-overview .metrics,#adhoc-overview .metrics{margin:8px 0 0}
+#folder-connect-panel,#folder-libraries-panel,#folder-scan-panel,#folder-knowledge-panel,#folder-history-panel,#folder-case-bar,#folder-classify-panel{scroll-margin-top:20px}
+.flow-clarity-page .work-columns{grid-template-columns:240px minmax(0,1fr);gap:18px}
+.flow-clarity-page .work-columns>*{min-width:0}
+.flow-clarity-page .project-card,.flow-clarity-page .project-card>*{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.flow-clarity-page .workflow-selected h3{font-size:22px}
+.flow-clarity-page .workflow-annotations{grid-template-columns:1fr}
+.flow-clarity-page .workflow-selected .toolbar{flex-wrap:wrap;gap:6px}
+@media(max-width:1000px){.flow-clarity-page .work-columns{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.flow-clarity-page main{min-width:0}.flow-clarity-page .case-bar,.flow-clarity-page .flow-stage-footer{align-items:flex-start}.flow-clarity-page .case-bar{flex-wrap:wrap}.flow-clarity-page .flow-current h2{font-size:18px}.flow-clarity-page .workflow-step{padding:8px 10px;gap:7px}.flow-clarity-page .workflow-step span{font-size:11px}.flow-clarity-page .workflow-step small{font-size:10px}}
+@media(max-width:390px){.flow-clarity-page .panel{padding:16px}.flow-clarity-page .flow-fold[open]{padding:3px 10px 10px}.flow-clarity-page .metrics{gap:8px}.flow-clarity-page .metric{padding:12px}}
+[hidden]{display:none!important}
+.flow-clarity-page .flow-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+.flow-clarity-page .flow-step{flex-direction:column;align-items:center;max-width:none;width:100%;gap:4px;padding:12px 8px}
+.flow-clarity-page .flow-number{display:grid;place-items:center;width:24px;height:24px;border-radius:7px;background:#e5eee7}
+.flow-clarity-page .flow-step.selected .flow-number{background:#147566;color:#fff}
+.flow-clarity-page .workflow-step{flex:1 0 125px;flex-direction:column;align-items:flex-start;gap:3px;max-width:none}
+.flow-clarity-page .workflow-step small{margin-top:2px}
+.flow-clarity-page .flow-instruction{font-size:15px;color:var(--ink)}
+.flow-clarity-page .flow-note{font-size:11px;margin-bottom:0}
+.flow-clarity-page .flow-edit-tools{margin:0}
+.flow-clarity-page .flow-edit-tools .toolbar{margin-top:8px}
+.flow-clarity-page #folder-case-bar{padding:12px 0;margin-bottom:8px}
+.flow-clarity-page #folder-case-bar h2{font-size:20px;margin:4px 0}
+.flow-clarity-page #folder-case-bar>div:last-child>p{display:none}
+.flow-clarity-page #folder-result-download{margin-top:20px}
+.flow-clarity-page #folder-result-download a{display:inline-block}
+@media(max-width:760px){.flow-clarity-page .flow-rail{grid-template-columns:repeat(4,130px)}.flow-clarity-page .flow-stage-footer{padding:18px}.flow-clarity-page .flow-topline .secondary{max-width:100%;white-space:normal}}

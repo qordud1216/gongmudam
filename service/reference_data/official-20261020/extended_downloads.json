@@ -1,0 +1,84 @@
+[
+  {
+    "key": "travel_annex1",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169558635",
+    "source_url": "https://www.law.go.kr/LSW/lsBylInfoP.do?bylSeq=18481387",
+    "file": "travel_annex1.pdf",
+    "raw_sha256": "ead2259f9983dd2655f5beba490dea7d435985b5dfd367ab2cd206531909846f",
+    "retrieved_at": "2026-10-20T13:29:04.445816+00:00"
+  },
+  {
+    "key": "travel_annex2",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169558641",
+    "source_url": "https://www.law.go.kr/LSW/lsBylInfoP.do?bylSeq=18481389",
+    "file": "travel_annex2.pdf",
+    "raw_sha256": "320ddc310256e7dc3f49c6cb0624ace2fd9c3a613f884a0525ac40039f9eed5c",
+    "retrieved_at": "2026-10-20T13:29:04.555452+00:00"
+  },
+  {
+    "key": "travel_annex4",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169558653",
+    "source_url": "https://www.law.go.kr/LSW/lsBylInfoP.do?bylSeq=18481393",
+    "file": "travel_annex4.pdf",
+    "raw_sha256": "e705be87af6283b7658dacd0bf6fb709240da3bf5d29273ea2b4619b75093d29",
+    "retrieved_at": "2026-10-20T13:29:04.665911+00:00"
+  },
+  {
+    "key": "leave_annex1",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169632879",
+    "source_url": "https://www.law.go.kr/LSW/lsBylInfoP.do?bylSeq=18483039",
+    "file": "leave_annex1.pdf",
+    "raw_sha256": "539f3e8bc4b97cc39cd9e36e1f57959c26b2b1b9633c36cb897a942c62df8a99",
+    "retrieved_at": "2026-10-20T13:29:04.785901+00:00"
+  },
+  {
+    "key": "national_leave_annex2",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169556367",
+    "source_url": "https://www.law.go.kr/LSW/lsBylInfoP.do?bylSeq=18481229",
+    "file": "national_leave_annex2.pdf",
+    "raw_sha256": "42bab275961a066964d7b668bc24fb3d09a84275d50183ccf6ba442f680c597f",
+    "retrieved_at": "2026-10-20T13:32:35.903106+00:00"
+  },
+  {
+    "key": "goods_decree_30",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0030&joBrNo=00&lsiSeq=286149&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_decree_30.html",
+    "raw_sha256": "15d29cbb6129a2440b362d6f971773cfb5bdaaea2614f21231f3211cf9759580",
+    "retrieved_at": "2026-10-20T13:27:00.100184+00:00"
+  },
+  {
+    "key": "goods_decree_64",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0064&joBrNo=00&lsiSeq=286149&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_decree_64.html",
+    "raw_sha256": "1febd5e83c72e00ac5037135a909ac083e0c88438274025de520beff11d4ada8",
+    "retrieved_at": "2026-10-20T13:27:00.276912+00:00"
+  },
+  {
+    "key": "goods_decree_65",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0065&joBrNo=00&lsiSeq=286149&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_decree_65.html",
+    "raw_sha256": "43c14666f46aac9f227a73af78aa2135611c8ba7e00530eeea2e22429d4606c2",
+    "retrieved_at": "2026-10-20T13:27:00.451656+00:00"
+  },
+  {
+    "key": "goods_decree_67",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0067&joBrNo=00&lsiSeq=286149&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_decree_67.html",
+    "raw_sha256": "00e4c817a9c68da29a349d37b2d56f4e842ba4bd40945e3f3e60bc7bec8e882d",
+    "retrieved_at": "2026-10-20T13:27:00.637749+00:00"
+  },
+  {
+    "key": "goods_decree_68",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0068&joBrNo=00&lsiSeq=286149&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_decree_68.html",
+    "raw_sha256": "bfcd46e98a2b91c6ece6f50ef4d1c6bcdf94cf423aa2900649744690f78820b0",
+    "retrieved_at": "2026-10-20T13:27:00.819365+00:00"
+  },
+  {
+    "key": "national_leave_20",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0020&joBrNo=00&lsiSeq=290349&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "national_leave_20.html",
+    "raw_sha256": "3c21528ca118b80d3563280c01e4e7d8adba8712adb250ac31a990d6471624df",
+    "retrieved_at": "2026-10-20T13:32:36.255308+00:00"
+  }
+]

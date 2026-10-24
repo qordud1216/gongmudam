@@ -1,0 +1,121 @@
+/* Chat-first layout: keep secondary controls available without competing with answers. */
+#view-chat .chat-wrap {
+  height: calc(100dvh - 72px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+#view-chat .chat-head { flex: 0 0 auto; }
+#view-chat #chatClear { margin-left:auto; }
+#view-chat .chat-head > div:nth-child(2) { min-width: 0; }
+#view-chat .chat-head .purpose-chat-title,
+#view-chat .chat-head .chat-sub { overflow-wrap: anywhere; }
+
+#view-chat .chat-options,
+#view-chat .chat-examples-options { flex: 0 0 auto; min-width: 0; }
+#view-chat .chat-options { margin: 0; border-bottom: 1px solid var(--line, #dfe6e5); background: #fff; }
+#view-chat .chat-options > summary,
+#view-chat .chat-examples-options > summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  min-width: 0;
+  padding: 8px 18px;
+  cursor: pointer;
+  color: var(--accent-strong, #0e5c50);
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+#view-chat .chat-options > summary:focus-visible,
+#view-chat .chat-examples-options > summary:focus-visible { outline: 3px solid #44a48e; outline-offset: -3px; }
+#view-chat #chat-options-summary { min-width: 0; color: var(--text2, #62747b); font-size: 11px; font-weight: 500; }
+#view-chat .chat-options > summary::before,
+#view-chat .chat-examples-options > summary::before { content:'▸'; }
+#view-chat .chat-options[open] > summary::before,
+#view-chat .chat-examples-options[open] > summary::before { content:'▾'; }
+#view-chat .chat-options-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+  padding: 12px 18px;
+  border-top: 1px solid var(--border, #dfe6e5);
+  background: #fbfcfb;
+}
+#view-chat .chat-options-body > * { min-width: 0; max-width: 100%; }
+#view-chat .chat-options-body section { min-width: 0; }
+#view-chat .chat-settings-library { grid-column: auto; }
+#view-chat .chat-settings-library .row { justify-content: flex-start; }
+#view-chat .chat-settings-library label { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; min-width: 0; }
+#view-chat #knowledge-library { max-width: min(26rem, 100%); }
+#view-chat .chat-settings-work { display: grid; align-content: start; gap: 10px; }
+#view-chat .chat-settings-work .chat-layers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; min-width: 0; margin: 0; }
+#view-chat .chat-settings-work .chat-layers label { display: inline-flex; align-items: center; gap: 4px; min-width: 0; }
+#view-chat .chat-reference-date-label { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-width: 0; }
+#view-chat #chat-reference-date { max-width: 100%; }
+#view-chat #chat-workflow-options { min-width: 0; }
+#view-chat #chat-workflow-options h2 { margin: 4px 0; font-size: 14px; }
+#view-chat #chat-workflow-options p { margin: 2px 0 8px; }
+#view-chat #chat-workflow-options .workflow-chat-context { display:grid; grid-template-columns:minmax(0,1fr); }
+#view-chat #chat-workflow-options .workflow-chat-context label { display:grid; gap:6px; }
+#view-chat #chat-workflow-options .workflow-chat-context select { width:100%; max-width:100%; }
+#view-chat .chat-options-body .workspace-scope { grid-column: 1 / -1; margin: 0; padding: 8px 12px; border-radius: 6px; }
+#view-chat #chat-options-alert[hidden] { display: none; }
+#view-chat #chat-options-alert:not([hidden]) { flex: 0 0 auto; margin: 6px 14px; padding:8px 12px; border-left:3px solid #c19248; background:#fff5e7; color:#79501f; font-size:12px; overflow-wrap: anywhere; }
+
+#view-chat #knowledge-catalog { min-width: 0; max-width: 100%; }
+#view-chat .chat-log { flex: 1 1 auto; min-height: 260px; min-width: 0; }
+#view-chat .chat-examples-options { border-top: 1px solid var(--border, #dfe6e5); background: #fff; }
+#view-chat .chat-examples-options > summary { padding: 6px 18px; font-size: 11px; }
+#view-chat .chat-examples { border-top: 0; padding: 4px 18px 8px; }
+#view-chat .chat-input { flex: 0 0 auto; min-width: 0; }
+#view-chat .chat-input textarea { min-width: 0; }
+#view-chat input,
+#view-chat select,
+#view-chat textarea,
+#view-chat label { min-width: 0; max-width: 100%; }
+
+body:has(#view-chat.on) .sb-today { display: none; }
+
+@media (min-width: 761px) {
+  #view-chat .chat-wrap:has(#chat-options[open]) {
+    height: auto;
+    min-height: calc(100dvh - 72px);
+    overflow: visible;
+  }
+  #view-chat .chat-wrap:has(#chat-options[open]) .chat-log {
+    flex: 0 0 auto;
+    height: min(55dvh, 480px);
+    min-height: 260px;
+  }
+  #view-chat .chat-wrap:not(:has(#chat-options[open])) { height:calc(100dvh - 72px); min-height:0; overflow:hidden; }
+  #view-chat .chat-wrap:not(:has(#chat-options[open])) .chat-log { flex:1 1 auto; height:auto; min-height:260px; }
+}
+
+@media (max-width: 760px) {
+  #view-chat .chat-wrap { height: auto; min-height: 0; overflow: visible; }
+  #view-chat .chat-options-body { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 11px 14px; }
+  #view-chat .chat-settings-library { grid-column: auto; }
+  #view-chat .chat-options-body .workspace-scope { grid-column: auto; }
+  #view-chat .chat-settings-library .row { gap: 8px; }
+  #view-chat .chat-settings-library label { width: 100%; }
+  #view-chat #knowledge-library { width: 100%; max-width: 100%; }
+  #view-chat .chat-options > summary,
+  #view-chat .chat-examples-options > summary { padding-left: 14px; padding-right: 14px; }
+  #view-chat .chat-log { flex: none; height: min(65dvh, 520px); min-height: 260px; }
+  #view-chat .chat-input { align-items: flex-end; }
+  #view-chat .chat-input textarea { width: 1px; flex: 1 1 0; }
+  #view-chat .chat-examples { padding-left: 14px; padding-right: 14px; }
+  #view-chat .workflow-chat-context { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; min-width: 0; }
+  #view-chat .workflow-chat-context > *,
+  #view-chat .workflow-chat-context label,
+  #view-chat .workflow-chat-context select { min-width: 0; max-width: 100%; width: 100%; }
+}
+
+/* 낮은 창에서는 전체 화면 스크롤로 입력창까지 접근한다. */
+@media (min-width:761px) and (max-height:720px) {
+  #view-chat .chat-wrap:not(:has(#chat-options[open])) { height:auto; min-height:calc(100dvh - 72px); overflow:visible; }
+  #view-chat .chat-wrap:not(:has(#chat-options[open])) .chat-log { flex:0 0 auto; height:clamp(260px,45dvh,360px); min-height:260px; }
+}

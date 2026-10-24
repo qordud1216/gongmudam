@@ -1,0 +1,104 @@
+{
+  "source_project": "C:\\AI작업\\프로그램 제작\\경기소방 업무도구함",
+  "source": "경기소방 업무도구함 · 사용자 기존 소스",
+  "categories": [
+    "admin",
+    "pdf",
+    "photo",
+    "util"
+  ],
+  "telemetry": false,
+  "external_script_dependencies": false,
+  "dependencies": [
+    {
+      "asset": "static/toolbox/vendor/pdf-lib.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js",
+      "sri": "sha384-weMABwrltA6jWR8DDe9Jp5blk+tZQh7ugpCsF3JwSA53WZM9/14PjS5LAJNHNjAI",
+      "sha256": "0f9a5cad07941f0826586c94e089d89b918c46e5c17cf2d5a3c6f666e3bc694f"
+    },
+    {
+      "asset": "static/toolbox/vendor/pdf.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js",
+      "sri": "sha384-/1qUCSGwTur9vjf/z9lmu/eCUYbpOTgSjmpbMQZ1/CtX2v/WcAIKqRv+U1DUCG6e",
+      "sha256": "5b5799e6f8c680663207ac5b42ee14eed2a406fa7af48f50c154f0c0b1566946"
+    },
+    {
+      "asset": "static/toolbox/vendor/pdf.worker.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js",
+      "sri": "sha384-SnzOobpRMLXZ52iJvZm/C0fYw0OQemTXzTjIsdsfMcrCtCEe9qgzxTd3RSklO5x2",
+      "sha256": "feabdf309770ed24bba31a5467836cdc8cf639c705af27d52b585b041bb8527b"
+    },
+    {
+      "asset": "static/toolbox/vendor/jszip.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",
+      "sri": "sha384-+mbV2IY1Zk/X1p/nWllGySJSUN8uMs+gUAN10Or95UBH0fpj6GfKgPmgC5EXieXG",
+      "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e"
+    },
+    {
+      "asset": "static/toolbox/vendor/qrcode.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js",
+      "sri": "sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1",
+      "sha256": "164fc2c1c9eaf0a03aa8dfdb855e82e41a5c6922fbad8bb3238116207e26bef7"
+    },
+    {
+      "asset": "static/toolbox/vendor/JsBarcode.all.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js",
+      "sri": "sha384-Kk5SjBOKprEnGfyBWfD2zROFd1Cu8kwOXxG2GIhYPcoDL2rBJS9P8Ud1ZMy4412a",
+      "sha256": "52e032534c3f98976ad95cb8c20baf80ed0cc83d42590602a8cf1db16e2e22ed"
+    },
+    {
+      "asset": "static/toolbox/vendor/lame.min.js",
+      "source_url": "https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js",
+      "sri": "sha384-xuasJXVcyv3hZq0eYpelEkBC8l4yufatZXDsKuyCU2rqfhDCb+ftuE/mSfZAteiK",
+      "sha256": "15d285e2587b3bdbfd18a68de6ce07cc074f7480a82c3815da2dc1c348ec6df4"
+    },
+    {
+      "asset": "static/toolbox/vendor/heic2any.min.js",
+      "source_url": "https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js",
+      "sri": "sha384-OTofQ0MEeiSgh62havBcemCIK0gqj809wX6UA0uPISNMRnR6NZyCdGzX3SbLrgwL",
+      "sha256": "0963cfa50e9e1e7e6af929a40a81e3e898a673f1270eafa6917dd137e4968164"
+    },
+    {
+      "asset": "static/toolbox/vendor/full.umd.js",
+      "source_url": "https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js",
+      "sri": "sha384-KrOocIA+lZcNUz2MDavnT/FuX+CbTREJihUi0bp8QUSwhE2AkGTNpv2b7yMbBkx5",
+      "sha256": "2bd05117781c12ddd965dee846de3b3f986b5ecb4c7f6a78f2d2ec1db7c65ae7"
+    }
+  ],
+  "files": {
+    "static/toolbox/app.js": "d4dc28f716a836490f8cf35220536456070849ec63461cda668b63fdc54a371e",
+    "static/toolbox/board.js": "27d2d0c5caa50681ab13f91b1d8c27e7236054f296b4eb573665705d25d1a6bf",
+    "static/toolbox/docgen.js": "b5d569b6cb01372155e456845d278c52d3403e5cbad27382e755d7f364a73dfd",
+    "static/toolbox/ocrpp.js": "a068b1954004807ca2e115182ae3b588694eadf1128c62e729c88ed311d6e45d",
+    "static/toolbox/source.css": "7098915dea0204921a897780befeb01240b63fc5e4b506dd6a3bb85f088eea47",
+    "static/toolbox/start.js": "c535bed804014b2476c295c1a07fb029d4a25858f4a3a16a841a9caf7d3216bb",
+    "static/toolbox/tools-admin.js": "278fe945209499a17dbe05ba0db051b196055ff6a2215c37802645a2764cce69",
+    "static/toolbox/tools-pdf.js": "1f7d342944a7c45385720123d37b6b8284b0938056d6b45bbad7e07f00b376f3",
+    "static/toolbox/tools-photo.js": "537bc2d2df3478f29b6eb780bf961d15d9613d60c7f22bb02cf79b2a2a1bd235",
+    "static/toolbox/tools-util.js": "caa35775ec18428eff5ef61617bcdd08c55a4bc5ad66d2884f756cb8faf9231c",
+    "static/toolbox/hwpx/header.xml": "5695dfef65e1045496eb71e775fc7f4a101f0558bbe077243d499db0471b7528",
+    "static/toolbox/hwpx/PrvImage.png": "199421054da7920d8bf8974afad536a799efdb85bc64b33aaaaed35223b90efd",
+    "static/toolbox/ocr/tesseract-core-lstm.wasm.js": "8f04aa0cc81e7bde33f80e92fa01a7a665f0b4884d098acf5de9c7104a11dfaa",
+    "static/toolbox/ocr/tesseract-core-simd-lstm.wasm.js": "ce20eda9533cbed1e6c2b4276fbae1e0adc61b6754b5513084be601787b457cf",
+    "static/toolbox/ocr/tesseract.min.js": "a8e29918d098b2b06e1012bdaeffb4aec0445c5d5654709023e0bd1f442a80e8",
+    "static/toolbox/ocr/worker.min.js": "aca1229639fc9907d86f96e825955a2b7c5716d17f3bc3acd71f9c7ab66181fc",
+    "static/toolbox/vendor/full.umd.js": "2bd05117781c12ddd965dee846de3b3f986b5ecb4c7f6a78f2d2ec1db7c65ae7",
+    "static/toolbox/vendor/heic2any.min.js": "0963cfa50e9e1e7e6af929a40a81e3e898a673f1270eafa6917dd137e4968164",
+    "static/toolbox/vendor/JsBarcode.all.min.js": "52e032534c3f98976ad95cb8c20baf80ed0cc83d42590602a8cf1db16e2e22ed",
+    "static/toolbox/vendor/jszip.min.js": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+    "static/toolbox/vendor/lame.min.js": "15d285e2587b3bdbfd18a68de6ce07cc074f7480a82c3815da2dc1c348ec6df4",
+    "static/toolbox/vendor/pdf-lib.min.js": "0f9a5cad07941f0826586c94e089d89b918c46e5c17cf2d5a3c6f666e3bc694f",
+    "static/toolbox/vendor/pdf.min.js": "5b5799e6f8c680663207ac5b42ee14eed2a406fa7af48f50c154f0c0b1566946",
+    "static/toolbox/vendor/pdf.worker.min.js": "feabdf309770ed24bba31a5467836cdc8cf639c705af27d52b585b041bb8527b",
+    "static/toolbox/vendor/qrcode.min.js": "164fc2c1c9eaf0a03aa8dfdb855e82e41a5c6922fbad8bb3238116207e26bef7",
+    "static/toolbox/ocr/lang/eng.traineddata.gz": "45b4cb346724ac1774f1c36f42f182b887bcdb28ebe63e6fff90ac41f3fcff91",
+    "static/toolbox/ocr/lang/kor.traineddata.gz": "78c21276ab14c9bb734d83be1055d9fe5469a4e7e977c51ad385be5737e61126",
+    "static/toolbox/ocr/ort/ort-wasm-simd-threaded.mjs": "745eb7c0ce6f18a6aa521971b2877babc7ffb27eecb58ab3bc6e5ef4692672e8",
+    "static/toolbox/ocr/ort/ort-wasm-simd-threaded.wasm": "207d02be4591c156b0a98f024f3d58005b5b04c92274d759fb390338c63559ea",
+    "static/toolbox/ocr/ort/ort.wasm.min.js": "e66568724f8848e57cc2a56e4bea3a5b86ce3ff81b2da11eac8ed7ab02b27bd4",
+    "static/toolbox/ocr/pp/det.onnx": "a431985659dc921974177a95adcfbb90fd9e51989a5e04d70d0b75f597b6e61d",
+    "static/toolbox/ocr/pp/dict_kor.txt": "035584a8f49eaaeb4643170376a107d7de866b925b3b51126b4f764327751a92",
+    "static/toolbox/ocr/pp/rec_kor.onnx": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08"
+  },
+  "integration_revision": "v57 direct work attachments"
+}

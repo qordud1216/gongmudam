@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-24T12:02:39.557578+00:00",
+  "service": {
+    "version": "v69",
+    "archive_sha256": "94f3cba75e97d4cfa9465d0f7a4c59374f6c941dc84002d645d8fe384b00b7b8",
+    "runtime_files": 483,
+    "sealed_source_preserved": true,
+    "public_sources": 25,
+    "manuals": 6
+  },
+  "desktop": {
+    "brand": "gongmudam",
+    "mascot": "무무",
+    "files": {
+      "index.html": "9ac2c9626592d4cff196906c62cad0ccafaa307f14e4bd94eaf2ce0af9da01f1",
+      "desktop.css": "73a313e713e74ade55f2bb11b80ca2050fcd42fbe79c8e89aabdb8db48c00d33",
+      "desktop.js": "ffc1f28954499bb2639bad0c0181af765c2639420c1d80ab4b0b679a63f4f680",
+      "agency-picker.js": "e589ff00b8d52684e1dc231dc29ce181f3836f998815557db6b27e342499969f",
+      "calculator.js": "d1eeb2ca53c1eb187aad0a8b4e98c807cefcdf2ccec1bf85282eaceabaa6fe6f",
+      "notepad.js": "c98b591b0c1f4fe1550df309ef2cf3e9dc64513d9eed76094a1b393562d9dd5f",
+      "server.py": "9db9c5bf59134237ac1bb54c40fb85be7b8cf740909003e16740bde88b3b7dc7",
+      "agency_directory.py": "b7f729ae6d20efc58efa8a9c87cc3d6eba85881e0db0eb4880d64ef8d1f233a7",
+      "README.txt": "7d0a62fab19f6c6bdca3e75103e181dc0db07b792a6f42caa937f6c3d444298f",
+      "DESIGN.md": "84f5c23fce311b1d25d276e3a92503a2d813055e7a213f4d01d6336e711c586c",
+      "LEX_FLOW_REUSE.txt": "6a4062b18b15b25fac9909855ad1ebe4e5af43385325337377db5358c9d4079a",
+      "VERIFICATION.txt": "4337b05b0ce253098a1583983d566f715e778f77fe163ea572e69d1b89cfb7ed",
+      "assets/PretendardVariable.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+      "assets/OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "assets/seomu-mark.svg": "57a947854a4a08f2bcf0ec7e2f5e74202e5a1117fe86c748dac9868e7750aeb3",
+      "assets/seomu-otter-v1.png": "f0e215c8ee4d48d5480dec73873c2962788d30837204fe6556cecb1d57615758",
+      "assets/mascot-prompt.txt": "cabce704618c7f3776d159cc1c73ccee3b13a64de37a592c7532b0456ceda1a4",
+      "data/agencies-v1.sqlite": "dd646a9cfe6d69ee9176a6bba78ef0c3dca9a6aba3dd3053105ef0db17f04c0e",
+      "data/agencies-v1.json": "f72796765b5f40a3cac53d4bd526e350a1887b9c60f0c9c8b3b88139a7c00fca",
+      "tools/export_agencies.py": "429cd19178948b025630a81c79623bd6a61b23368be3dd8b497c914cf54e1069",
+      "tests/test_agency_directory.py": "5a8f0a6403748d5baa318227130c06716e724415220096d9b33efcdf575b3f9b"
+    },
+    "integration_status": "independent preview; not yet wired to the full service APIs"
+  },
+  "excluded": [
+    "live business databases",
+    "personal config",
+    "browser profiles and notes",
+    "screenshots",
+    "runtime logs",
+    "virtual environments",
+    "LLM weights",
+    "temporary work directories"
+  ],
+  "deployment": {
+    "requested_url": "https://gongmudam.visanu81.workers.dev",
+    "status": "not_deployed"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "id": "domestic-2026-10",
+  "version": "2026-10-19.2",
+  "engine_version": "domestic-training-1.0",
+  "coverage_start": "2026-10-02",
+  "verified_through": "2026-10-19",
+  "sources": {
+    "national": {
+      "id": "national",
+      "title": "공무원 여비 규정",
+      "version": "대통령령 제36728호",
+      "effective_date": "2026-10-02",
+      "verified_on": "2026-10-19",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=290313",
+      "file": "national.html",
+      "sha256": "53ca5e0ddb3fa144330c61520070391f54c1b90e9d3b28a9d410464a40b79840"
+    },
+    "gyeonggi": {
+      "id": "gyeonggi",
+      "title": "경기도 공무원 여비 조례",
+      "version": "경기도조례 제8887호",
+      "effective_date": "2026-06-29",
+      "verified_on": "2026-10-19",
+      "url": "https://law.go.kr/LSW/ordinInfoP.do?ordinSeq=2136163",
+      "file": "gg_body.html",
+      "sha256": "e243be0a2d655df869f35567bc68bbf2e64b8b0a40a2ee45c98aa5b62c40af9c"
+    },
+    "guide": {
+      "id": "guide",
+      "title": "공무원보수 등의 업무지침 제9장",
+      "version": "인사혁신처예규 제226호",
+      "effective_date": "2026-10-01",
+      "verified_on": "2026-10-19",
+      "url": "https://www.mpm.go.kr/mpm/info/resultPay/payBoard/?boardId=bbs_0000000000000035&cntId=695&mode=view",
+      "file": "mpm226.pdf",
+      "sha256": "8167329dfbe20e909f1c70d5abc64d0d8bf3b1b8f87625bf595c51e07fbf978b"
+    },
+    "national_training": {
+      "id": "national_training",
+      "title": "공무원 인재개발 업무처리지침",
+      "version": "인사혁신처예규 제228호",
+      "effective_date": "2026-10-15",
+      "verified_on": "2026-10-19",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000286938",
+      "file": "national_training.html",
+      "sha256": "3cf77a5bcbb169bd89f59c84720fddae40082d1f3b911d31469e05f82fc56eaf"
+    },
+    "national_training_table": {
+      "id": "national_training_table",
+      "title": "공무원 인재개발 업무처리지침 별표 1",
+      "version": "인사혁신처예규 제228호",
+      "effective_date": "2026-10-15",
+      "verified_on": "2026-10-19",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=170649721",
+      "file": "national_training_table.pdf",
+      "sha256": "acd3c3eed88a52f420cefcae6137432def3a5d18d075a6c58d298ad618054fe5"
+    },
+    "local_training": {
+      "id": "local_training",
+      "title": "지방공무원 교육훈련 운영지침",
+      "version": "행정안전부예규 제380호",
+      "effective_date": "2026-08-27",
+      "verified_on": "2026-10-19",
+      "url": "https://law.go.kr/admRulInfoP.do?admRulSeq=2100000284386",
+      "file": "local_training.html",
+      "sha256": "858fbddff2fbfbf14638dd0b59e4b9966589a395e08fe272ef3df7be37c85fe9"
+    },
+    "local_training_table": {
+      "id": "local_training_table",
+      "title": "지방공무원 교육훈련 운영지침 별표 3",
+      "version": "행정안전부예규 제380호",
+      "effective_date": "2026-08-27",
+      "verified_on": "2026-10-19",
+      "url": "https://www.law.go.kr/LSW/flDownload.do?flSeq=168755067",
+      "file": "local_training_table.pdf",
+      "sha256": "eef4bac40687ab208a62cfe7626bd7a5c4db251688f17f621744643211f91949"
+    }
+  },
+  "clauses": {
+    "N3": {
+      "id": "N3",
+      "source_id": "national",
+      "article": "제3조 및 별표 1",
+      "summary": "여비 지급구분은 별표 1에 따른다. 이 계산기는 제2호 해당자만 지원한다."
+    },
+    "N5": {
+      "id": "N5",
+      "source_id": "national",
+      "article": "제5조",
+      "summary": "공무 여행에 실제로 필요한 일수로 계산한다. 사적 체류일을 자동으로 포함하지 않는다."
+    },
+    "N7": {
+      "id": "N7",
+      "source_id": "national",
+      "article": "제7조",
+      "summary": "출장 중 규정·계급 등의 변경으로 구분계산이 필요하면 사유 발생일을 기준으로 나눈다."
+    },
+    "N8": {
+      "id": "N8",
+      "source_id": "national",
+      "article": "제8조의2제2항·제5항",
+      "summary": "운임·숙박비는 세부 증거서류로 정산하며 교육훈련 여비는 별도 세부기준을 적용한다."
+    },
+    "N10": {
+      "id": "N10",
+      "source_id": "national",
+      "article": "제10조제1항",
+      "summary": "국내 철도운임은 별표 2에 따라 지급한다."
+    },
+    "N12": {
+      "id": "N12",
+      "source_id": "national",
+      "article": "제12조",
+      "summary": "항공운임은 공적 항공마일리지 등의 사용·감액 조건을 확인해야 한다."
+    },
+    "N13": {
+      "id": "N13",
+      "source_id": "national",
+      "article": "제13조 및 별표 2 비고 제4호",
+      "summary": "버스운임은 기준 요율의 실비이며 자가용은 대중교통 상당액 또는 별도 조건의 실비 기준을 확인한다."
+    },
+    "N15": {
+      "id": "N15",
+      "source_id": "national",
+      "article": "제15조",
+      "summary": "공용 차량·선박·항공기 이용 여행의 운임은 지급하지 않는다."
+    },
+    "N16_1": {
+      "id": "N16_1",
+      "source_id": "national",
+      "article": "제16조제1항",
+      "summary": "국내 일비·숙박비·식비는 별표 2를 적용한다. 부득이한 숙박비 초과 지출은 별도 요건으로 추가 지급 가능하다."
+    },
+    "N16_3": {
+      "id": "N16_3",
+      "source_id": "national",
+      "article": "제16조제3항",
+      "summary": "일비는 여행일수에 따라 지급하고 공무용 차량 이용 등에는 일비의 2분의 1을 지급한다."
+    },
+    "N16_4": {
+      "id": "N16_4",
+      "source_id": "national",
+      "article": "제16조제4항",
+      "summary": "숙박비는 실제 숙박하는 밤의 수를 기준으로 지급한다."
+    },
+    "N16_5": {
+      "id": "N16_5",
+      "source_id": "national",
+      "article": "제16조제5항",
+      "summary": "식비는 여행일수에 따라 지급한다. 수로·항공 여행은 별도 필요조건이 있다."
+    },
+    "N17": {
+      "id": "N17",
+      "source_id": "national",
+      "article": "제17조",
+      "summary": "동일 지역 장기체재는 도착 다음 날부터의 체재기간에 따라 일비 감액을 확인한다."
+    },
+    "N18": {
+      "id": "N18",
+      "source_id": "national",
+      "article": "제18조제1항·제2항",
+      "summary": "근무지 내 출장: 4시간 이상 20,000원, 미만 10,000원. 전용차량 배정자는 미지급, 공무용차량 등 이용은 10,000원 감액. 근무지내 분류 조건을 별도 확인한다."
+    },
+    "N28": {
+      "id": "N28",
+      "source_id": "national",
+      "article": "제28조",
+      "summary": "예산·외부 지원·지출 불필요 등 조정 사유와 상급자 동행에 따른 예외를 확인한다."
+    },
+    "N29_2": {
+      "id": "N29_2",
+      "source_id": "national",
+      "article": "제29조의2",
+      "summary": "지방자치단체에 근무하는 공무원은 해당 지방자치단체의 여비 조례를 적용한다."
+    },
+    "T2": {
+      "id": "T2",
+      "source_id": "national",
+      "article": "별표 2 제2호 및 비고 제5호·제6호",
+      "summary": "제2호: 철도 일반실 실비, 일비·식비 각 25,000원/일. 숙박 실비 상한은 서울 100,000원/박, 광역시 80,000원/박, 기타 70,000원/박. 통합특별시는 종전 지역 기준이며 할인 가능 시 할인요금 적용."
+    },
+    "G3": {
+      "id": "G3",
+      "source_id": "gyeonggi",
+      "article": "제1조·제3조",
+      "summary": "경기도 소속 공무원에 적용하며 계급별 국가 여비규정 별표 1을 적용한다. 경기도 내 시·군청 직원에게 자동 적용하지 않는다."
+    },
+    "G4": {
+      "id": "G4",
+      "source_id": "gyeonggi",
+      "article": "제4조 본문·제1호·제5호·제8호",
+      "summary": "조례의 예외를 제외하고 국가 여비규정의 예에 따른다. 카드 결제 조항 일부 제외와 소방공무원에 관한 준용 예외를 확인한다."
+    },
+    "G_NEAR": {
+      "id": "G_NEAR",
+      "source_id": "gyeonggi",
+      "article": "제4조제4호의2",
+      "summary": "근무지내 왕복 2km 이내 출장은 인사혁신처장이 정한 방식으로 실비 지급한다."
+    },
+    "M_LODGING": {
+      "id": "M_LODGING",
+      "source_id": "guide",
+      "article": "제9장 Ⅳ.3.가.1) (본문 614쪽)",
+      "summary": "여러 날 출장의 숙박비는 개별 밤마다 지출을 잘라 합산하지 않고 출장기간 전체 숙박비 총액한도 안에서 실비 정산한다.",
+      "pdf_page": 615
+    },
+    "M_VEHICLE": {
+      "id": "M_VEHICLE",
+      "source_id": "guide",
+      "article": "제9장 Ⅳ.5.나. (본문 617쪽)",
+      "summary": "공무용 차량·그에 준하는 차량·임차차량을 사용한 여행일은 일비 2분의 1을 지급한다.",
+      "pdf_page": 618
+    },
+    "M_NEAR": {
+      "id": "M_NEAR",
+      "source_id": "guide",
+      "article": "제9장 Ⅲ.2.나.~마. (본문 602쪽)",
+      "summary": "근무지내 1일 상한 20,000원. 왕복 2km 이내는 시간별 상한 안의 운임·조건부 식비 실비로 지급한다.",
+      "pdf_page": 603
+    },
+    "M_TRAINING": {
+      "id": "M_TRAINING",
+      "source_id": "guide",
+      "article": "제9장 Ⅱ.4.라. (본문 580쪽)",
+      "summary": "교육훈련 여비는 공무원 인재개발 업무처리지침 등 별도 교육훈련 기준을 확인한다.",
+      "pdf_page": 581
+    },
+    "NT_TABLE": {
+      "id": "NT_TABLE",
+      "source_id": "national_training_table",
+      "article": "별표 1 교육훈련여비 지급기준 및 비고",
+      "summary": "합숙: 입교·수료일 일비 전액, 기타 교육일 0원, 숙식은 교육기관 청구액 등. 비합숙: 입교·수료일 전액, 기타 교육일 일비 5할. 근무지외 비합숙 식비는 기관 중식 청구액을 차감한다. 기타일은 실제 교육이 있는 날이며 비용이 발생하지 않는 항목은 지급하지 않는다.",
+      "pdf_page": 1
+    },
+    "NT_BODY": {
+      "id": "NT_BODY",
+      "source_id": "national_training",
+      "article": "Ⅶ. 교육훈련비 지급 2·4·5",
+      "summary": "교육기관 입교·국내 직무위탁교육의 적용대상, 근무지내외·합숙 구분과 실비정산 방식을 확인한다. 합숙/기숙사 이용이 가능한 경우 비합숙 여비를 지급하지 않는다. 기관 통보 훈련일정·숙식비 청구액·구내식당 가격을 확인한다."
+    },
+    "LT_TABLE": {
+      "id": "LT_TABLE",
+      "source_id": "local_training_table",
+      "article": "별표 3 교육훈련여비 지급기준 및 비고",
+      "summary": "합숙: 입교·수료일 일비 전액, 기타 교육일 0원, 숙식은 교육기관 청구액 등. 비합숙: 입교·수료일 전액, 기타 교육일 일비 5할. 근무지외 비합숙 식비는 기관 중식 청구액을 차감한다. 기타일은 실제 교육이 있는 날이며 비용이 발생하지 않는 항목은 지급하지 않는다.",
+      "pdf_page": 1
+    },
+    "LT_BODY": {
+      "id": "LT_BODY",
+      "source_id": "local_training",
+      "article": "Ⅶ. 교육훈련비 및 교육훈련 여비 지급 2·4·5",
+      "summary": "교육기관 입교·국내 직무위탁교육의 적용대상, 근무지내외·합숙 구분과 실비정산 방식을 확인한다. 합숙/기숙사 이용이 가능한 경우 비합숙 여비를 지급하지 않는다. 기관 통보 훈련일정·숙식비 청구액·구내식당 가격을 확인한다. 지방 지침을 특정직 소방공무원에게 자동 적용하지 않는다."
+    }
+  },
+  "rates": {
+    "daily": 25000,
+    "meal_daily": 25000,
+    "lodging_caps": {
+      "seoul": 100000,
+      "metropolitan": 80000,
+      "other": 70000
+    },
+    "within_under4": 10000,
+    "within_4plus": 20000,
+    "within_vehicle_deduction": 10000,
+    "vehicle_daily_denominator": 2
+  },
+  "profiles": {
+    "national-general": {
+      "id": "NATIONAL_DOMESTIC",
+      "title": "국가기관 · 국내출장·교육훈련",
+      "scope_basis": [
+        "N3"
+      ],
+      "source_ids": [
+        "national",
+        "guide",
+        "national_training",
+        "national_training_table"
+      ],
+      "training_prefix": "NT",
+      "training_from": "2026-10-15"
+    },
+    "gg-province": {
+      "id": "GYEONGGI_DOMESTIC",
+      "title": "경기도 소속 지방공무원 · 국내출장·교육훈련",
+      "scope_basis": [
+        "N29_2",
+        "G3",
+        "G4"
+      ],
+      "source_ids": [
+        "national",
+        "guide",
+        "gyeonggi",
+        "local_training",
+        "local_training_table"
+      ],
+      "training_prefix": "LT",
+      "training_from": "2026-10-02"
+    },
+    "gg-fire": {
+      "id": "GYEONGGI_FIRE_DOMESTIC",
+      "title": "경기도 소방공무원 · 일반 국내출장",
+      "scope_basis": [
+        "N29_2",
+        "G3",
+        "G4"
+      ],
+      "source_ids": [
+        "national",
+        "guide",
+        "gyeonggi"
+      ]
+    }
+  }
+}

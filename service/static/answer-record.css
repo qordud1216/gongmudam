@@ -1,0 +1,4 @@
+.answer-record-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:10px;border-top:1px solid #e2e8e4;min-width:0}
+.answer-record-actions>span{min-width:0;overflow-wrap:anywhere;color:#68766d;font-size:12px}
+.answer-record-actions .answer-record-button{min-height:40px;flex:0 0 auto}
+.answer-record-actions .answer-record-status{flex-basis:100%}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>서무비서 · 업무 시작</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="travel.css"><link rel="stylesheet" href="workspace.css"><link rel="stylesheet" href="design.css?v=15"><link rel="stylesheet" href="start.css?v=52"><link rel="stylesheet" href="model-status.css?v=48"><link rel="stylesheet" href="page-purpose.css?v=49">
+<link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="studio.css?v=61">
+<link rel="stylesheet" href="guidance-ui.css?v=69">
+</head>
+<body class="start-page studio-ui">
+<a class="skip-link" href="#start-question">업무 입력으로 바로가기</a>
+<aside class="sidebar">
+  <a class="brand" href="start.html"><span class="logo">서</span><span>서무비서<small>공통 업무를 더 가볍게</small></span></a>
+  <div class="workspace"><span class="eyebrow">내 업무 공간</span><strong>기관 맞춤 서무 도우미</strong><span>2026 공공 AI 대전환 챌린지</span></div>
+  <nav class="common-navigation" aria-label="주 메뉴"><a class="nav active" href="start.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>업무 시작</span></a><a class="nav" href="index.html#chat"><span class="nav-icon" aria-hidden="true">◇</span><span>서무 안내</span></a><details class="navigation-settings"><summary>필요할 때 쓰는 업무 도구</summary><a class="nav" href="calendar.html"><span class="nav-icon" aria-hidden="true"></span><span>업무 달력</span></a><a class="nav" href="folders.html"><span class="nav-icon" aria-hidden="true">▱</span><span>업무자료 정리</span></a><a class="nav" href="adhoc.html#inbox"><span class="nav-icon" aria-hidden="true">▤</span><span>자료 취합</span></a><a class="nav" href="travel.html"><span class="nav-icon" aria-hidden="true">↗</span><span>출장정산</span></a><a class="nav" href="toolbox.html"><span class="nav-icon" aria-hidden="true">▦</span><span>업무도구함</span></a></details><details class="navigation-settings"><summary>관리 · 설정</summary><small class="sb-section-hd">자료 관리</small><a class="nav" href="index.html#home"><span class="nav-icon" aria-hidden="true">⌂</span><span>업무 현황</span></a><a class="nav" href="index.html#cards"><span class="nav-icon" aria-hidden="true">▤</span><span>업무 절차 카드</span></a><a class="nav" href="index.html#docs"><span class="nav-icon" aria-hidden="true">▦</span><span>규정·지침·서식</span></a><a class="nav" href="index.html#forms"><span class="nav-icon" aria-hidden="true">▣</span><span>서식 칸 정의</span></a><a class="nav" href="adhoc.html#templates"><span class="nav-icon" aria-hidden="true">▦</span><span>기관 취합 서식</span></a><small class="sb-section-hd">관리 · 설정</small><a class="nav" href="travel.html#organizations"><span class="nav-icon" aria-hidden="true"></span><span>기관 설정</span></a><a class="nav" href="index.html#settings"><span class="nav-icon" aria-hidden="true"></span><span>모델 설정</span></a><a class="nav" href="local-ai.html"><span class="nav-icon" aria-hidden="true">◉</span><span>로컬 AI 검증</span></a></details></nav>
+  <div class="side-note"><span class="side-status"><i aria-hidden="true"></i> 로컬 업무 도우미</span><p>근거를 확인하고,<br>담당자의 검토로 마무리합니다.</p></div>
+</aside>
+<main>
+  <div class="workspace-topbar"><span>내 업무 공간 <span aria-hidden="true">/</span> <b>업무 시작</b></span><a href="travel-guide.html">사용 안내 <span aria-hidden="true">↗</span></a></div>
+  <header class="start-header studio-welcome"><div class="studio-welcome-copy"><h1 aria-label="업무 시작">무엇을 도와드릴까요?</h1><p>규정·처리 순서·서식과 e-사람 사용법을 함께 확인하세요.</p></div></header>
+  <div class="start-primary-grid">
+  <section class="panel question-panel" aria-labelledby="question-title">
+    <div class="section-heading start-purpose"><div><h2 id="question-title">새로 질문하기</h2><p>처리할 일을 입력하면 답변과 근거를 찾아드립니다.</p></div></div>
+    <form id="start-question-form">
+      <label class="sr-only" for="start-question">업무 상황</label>
+      <textarea id="start-question" rows="3" maxlength="3000" required placeholder="예: 부산 출장 정산을 준비해야 해요."></textarea>
+      <details class="start-examples" id="start-examples"><summary>질문 예시</summary><div class="prompt-examples" aria-label="업무 상황 예시"><span>예시</span><button type="button" data-start-example="2026-10-15부터 10-17일까지 부산 출장 다녀왔어요. 정산을 준비해야 해요.">출장정산</button><button type="button" data-start-example="교육 희망자를 취합하고 싶어요. 회신 자료를 모아 누락을 확인해 주세요.">교육희망자 취합</button><button type="button" data-start-example="업무 폴더를 정리하고 자료를 분류하고 싶어요.">업무자료 정리</button></div></details>
+      <div class="composer-footer"><div class="start-composer-note"><label class="local-ai-opt-in"><input id="use-local-ai" type="checkbox">로컬 AI 보조 사용</label><p class="local-ai-hint">기본은 등록 자료로 안내합니다.</p></div><p id="start-message" role="status">입력한 내용으로 바로 답변을 찾습니다. Enter로 전송 · Shift+Enter로 줄바꿈</p><button id="start-ask" class="primary" type="submit">질문하고 시작하기 <span aria-hidden="true">→</span></button></div>
+    </form>
+  </section>
+  <section class="panel recent-section" aria-labelledby="recent-title"><div class="recent-heading"><h2 id="recent-title">하던 업무 이어하기</h2><p>저장한 업무를 열어 다음 할 일을 확인하세요. <a href="calendar.html">업무 달력 열기</a></p></div><div id="recent-work" aria-live="polite"><p class="recent-state">최근 업무를 불러오는 중입니다.</p></div><details class="recent-browse"><summary>다른 업무 찾아보기</summary><div class="toolbar"><a href="travel.html#history">출장 업무함</a><a href="adhoc.html#inbox">취합함</a><a href="folders.html">자료함</a></div></details></section>
+  </div>
+  <details id="start-shortcuts" class="panel start-secondary"><summary>업무를 골라 바로 시작하기</summary><div class="section-label"><h2>새 업무 시작</h2></div>
+  <div class="workspace-grid"><a class="panel workspace-link featured" href="travel.html"><div class="route-card-top"><span class="route-icon" aria-hidden="true">↗</span></div><h2>출장정산</h2><p>출장 정보를 입력하고 증빙과 계산 근거를 확인해 정산서 초안을 저장합니다.</p><span class="route-action">출장정산 시작 →</span></a><a class="panel workspace-link" href="adhoc.html#new"><div class="route-card-top"><span class="route-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3.75h8l4 4V20.25H6z"/><path d="M14 3.75v4h4M9 12h6M9 15.5h6M9 19h4"/></svg></span></div><h2>교육·자료 취합</h2><p>회신 자료를 모아 누락·중복을 확인하고 취합 결과를 저장합니다.</p><span class="route-action">취합 시작 →</span></a><a class="panel workspace-link" href="toolbox.html"><div class="route-card-top"><span class="route-icon" aria-hidden="true">▦</span></div><h2>업무도구함</h2><p>PDF·사진·문서를 정리하고 결과를 저장합니다.</p><span class="route-action">업무도구함 열기 →</span></a><a class="panel workspace-link" href="folders.html"><div class="route-card-top"><span class="route-icon" aria-hidden="true">▱</span></div><h2>업무자료 정리</h2><p>업무 폴더를 연결해 자료를 분류하고 정리 결과를 저장합니다.</p><span class="route-action">업무자료 정리 시작 →</span></a></div></details>
+  <details id="start-environment" class="panel readiness-panel first-run"><summary><strong>실행환경·설정</strong><span id="start-quick-status" role="status" class="environment-line">선택 모델 상태 확인 중 · 등록 근거 자료를 확인합니다.</span></summary><div class="environment-detail"><div class="section-heading"><div><span class="section-kicker">시작 전 확인</span><h2>내 업무환경</h2></div><button id="refresh-start" class="secondary" type="button">새로고침</button></div><a class="knowledge-link" href="folders.html">자료 관리 <span id="knowledge-count">등록 근거 자료를 확인합니다.</span></a><div data-model-status="full" aria-live="polite"></div><div id="workspace-status" aria-live="polite">현재 실행 상태를 확인하고 있습니다.</div><ol class="onboarding"><li><a href="travel.html#organizations">기관·규정 설정 확인</a><span>직접 등록 기관과 공식 계산용 프로필을 구분합니다.</span></li><li><a href="index.html#settings">모델 설정 확인</a><span>Gemma·Llama 또는 모델 없는 안내를 선택합니다.</span></li><li><a href="travel.html#demo">합성 출장 시연 열기</a><span>일반출장·교육·오류 탐지 사례를 확인합니다. 실제 청구용 자료가 아닙니다.</span></li><li><a href="local-ai.html">로컬 AI 2종 실제 검증</a><span>로컬 모델의 실제 응답 성공을 확인합니다.</span></li></ol></div></details>
+  <footer><a href="travel-guide.html">실행·사용 안내</a><span>근거를 확인하고 담당자의 검토로 마무리합니다.</span></footer>
+</main>
+<script src="workspace-flow.js?v=69"></script><script src="model-status.js?v=48"></script><script src="start.js?v=69"></script>
+<script src="change-inbox-badge.js?v=27"></script></body></html>
+

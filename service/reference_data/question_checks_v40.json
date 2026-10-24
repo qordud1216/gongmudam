@@ -1,0 +1,879 @@
+[
+  {
+    "id": "domestic-seoul",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 기준 서울 출장 숙박비 상한액은 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "100,000",
+      "제2호"
+    ]
+  },
+  {
+    "id": "domestic-busan",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 기준 부산 출장 숙박비 상한액은 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "80,000",
+      "제2호"
+    ]
+  },
+  {
+    "id": "domestic-gangneung",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 기준 강릉 출장 숙박비 상한액은 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "70,000",
+      "제2호"
+    ]
+  },
+  {
+    "id": "domestic-daily",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국내 출장 일비와 식비는 하루 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "25,000원"
+    ]
+  },
+  {
+    "id": "domestic-first",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제1호 국내 출장 숙박비도 서울 10만원 상한인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "제1호 숙박비는 실비"
+    ]
+  },
+  {
+    "id": "domestic-table",
+    "category": "추가 공식근거",
+    "question": "국내 출장 여비 금액표를 보여줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ]
+  },
+  {
+    "id": "travel-group",
+    "category": "추가 공식근거",
+    "question": "국가공무원 여비 지급구분 제1호와 제2호는 어떻게 구분해요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 "
+    ],
+    "require_articles": [
+      "별표 1 "
+    ]
+  },
+  {
+    "id": "foreign-가",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국외 출장 가등급의 숙박비와 식비는 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_foreign"
+    ],
+    "summary_facts": [
+      "176달러",
+      "81달러",
+      "원화 금액이 아니"
+    ]
+  },
+  {
+    "id": "foreign-나",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국외 출장 나등급의 숙박비와 식비는 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_foreign"
+    ],
+    "summary_facts": [
+      "137달러",
+      "59달러",
+      "원화 금액이 아니"
+    ]
+  },
+  {
+    "id": "foreign-다",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국외 출장 다등급의 숙박비와 식비는 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_foreign"
+    ],
+    "summary_facts": [
+      "106달러",
+      "44달러",
+      "원화 금액이 아니"
+    ]
+  },
+  {
+    "id": "foreign-라",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국외 출장 라등급의 숙박비와 식비는 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_foreign"
+    ],
+    "summary_facts": [
+      "81달러",
+      "37달러",
+      "원화 금액이 아니"
+    ]
+  },
+  {
+    "id": "foreign-tokyo",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 도쿄 출장 호텔비 상한은 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_foreign"
+    ],
+    "summary_facts": [
+      "176달러"
+    ]
+  },
+  {
+    "id": "foreign-table",
+    "category": "추가 공식근거",
+    "question": "국외 출장 여비 지급표를 보여줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ]
+  },
+  {
+    "id": "foreign-no-grade",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 미국 출장 호텔비 얼마까지 받을 수 있어요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "foreign-no-group",
+    "category": "추가 공식근거",
+    "question": "국가공무원 도쿄 출장 숙박비 얼마예요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "local-travel-scope",
+    "category": "추가 공식근거",
+    "question": "지방공무원 서울 출장 숙박비 상한은 얼마예요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "historical-rate",
+    "category": "추가 공식근거",
+    "question": "2025년 국가공무원 서울 출장 숙박비 상한은 얼마인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "fuel-detail",
+    "category": "추가 공식근거",
+    "question": "국가공무원 자가용 출장 100km 기름값은 얼마로 계산해요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "private-car-rule",
+    "category": "추가 공식근거",
+    "question": "국가공무원 자가용 출장의 운임과 연료비 지급 원칙은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 "
+    ],
+    "require_articles": [
+      "별표 2 "
+    ],
+    "answer_facts": [
+      "철도운임",
+      "버스운임"
+    ]
+  },
+  {
+    "id": "지방공무원-marriage",
+    "category": "추가 공식근거",
+    "question": "지방공무원 본인 결혼휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "본인 결혼은 5일"
+    ]
+  },
+  {
+    "id": "지방공무원-child-marriage",
+    "category": "추가 공식근거",
+    "question": "지방공무원 자녀 결혼휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "자녀 결혼은 1일"
+    ]
+  },
+  {
+    "id": "지방공무원-birth",
+    "category": "추가 공식근거",
+    "question": "지방공무원 배우자 출산휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "20일"
+    ]
+  },
+  {
+    "id": "지방공무원-twins",
+    "category": "추가 공식근거",
+    "question": "지방공무원 배우자가 쌍둥이를 출산하면 휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "25일"
+    ]
+  },
+  {
+    "id": "지방공무원-adoption",
+    "category": "추가 공식근거",
+    "question": "지방공무원 본인 입양휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "20일"
+    ]
+  },
+  {
+    "id": "지방공무원-sibling",
+    "category": "추가 공식근거",
+    "question": "지방공무원 형제자매 사망 휴가는 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_articles": [
+      "별표 1 ",
+      "제7조의7("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "3일"
+    ]
+  },
+  {
+    "id": "국가공무원-marriage",
+    "category": "추가 공식근거",
+    "question": "국가공무원 본인 결혼휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "본인 결혼은 5일"
+    ]
+  },
+  {
+    "id": "국가공무원-child-marriage",
+    "category": "추가 공식근거",
+    "question": "국가공무원 자녀 결혼휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "자녀 결혼은 1일"
+    ]
+  },
+  {
+    "id": "국가공무원-birth",
+    "category": "추가 공식근거",
+    "question": "국가공무원 배우자 출산휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "20일"
+    ]
+  },
+  {
+    "id": "국가공무원-twins",
+    "category": "추가 공식근거",
+    "question": "국가공무원 배우자가 쌍둥이를 출산하면 휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "25일"
+    ]
+  },
+  {
+    "id": "국가공무원-adoption",
+    "category": "추가 공식근거",
+    "question": "국가공무원 본인 입양휴가 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "20일"
+    ]
+  },
+  {
+    "id": "국가공무원-sibling",
+    "category": "추가 공식근거",
+    "question": "국가공무원 형제자매 사망 휴가는 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "3일"
+    ]
+  },
+  {
+    "id": "national-parent",
+    "category": "추가 공식근거",
+    "question": "국가공무원 아버지 사망 휴가는 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제20조("
+    ],
+    "require_rules": [
+      "extended-occasion"
+    ],
+    "summary_facts": [
+      "5일"
+    ]
+  },
+  {
+    "id": "local-parent",
+    "category": "추가 공식근거",
+    "question": "지방공무원 아버지 사망 휴가는 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "local-grandparent",
+    "category": "추가 공식근거",
+    "question": "지방공무원 할머니 사망 휴가는 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "sibling-marriage",
+    "category": "추가 공식근거",
+    "question": "지방공무원 형제 결혼 경조사휴가 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "grandchild",
+    "category": "추가 공식근거",
+    "question": "국가공무원 손자녀 사망 경조사휴가 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "sibling-spouse",
+    "category": "추가 공식근거",
+    "question": "국가공무원 본인의 형제자매 배우자 사망 휴가 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "occasion-use",
+    "category": "추가 공식근거",
+    "question": "지방공무원 배우자 출산휴가 분할과 사용기한이 궁금해요",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "occasion-no-scope",
+    "category": "추가 공식근거",
+    "question": "배우자 출산휴가 며칠이에요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "occasion-no-relation",
+    "category": "추가 공식근거",
+    "question": "지방공무원 결혼휴가 며칠인가요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "inspection-2999만원",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 계약금액 2999만원이면 검사조서를 생략해도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_rules": [
+      "extended-goods_inspection_limit"
+    ],
+    "summary_facts": [
+      "3천만원 미만",
+      "정확히 3천만원"
+    ]
+  },
+  {
+    "id": "inspection-3000만원",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 계약금액 3000만원이면 검사조서를 생략해도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_rules": [
+      "extended-goods_inspection_limit"
+    ],
+    "summary_facts": [
+      "3천만원 미만",
+      "정확히 3천만원"
+    ]
+  },
+  {
+    "id": "inspection-4000만원",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 계약금액 4000만원이면 검사조서를 생략해도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_rules": [
+      "extended-goods_inspection_limit"
+    ],
+    "summary_facts": [
+      "3천만원 미만",
+      "정확히 3천만원"
+    ]
+  },
+  {
+    "id": "inspection-vs-document",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 2천만원이면 검사 자체도 생략할 수 있나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_articles": [
+      "제17조(",
+      "제65조("
+    ],
+    "require_rules": [
+      "extended-goods_inspection_limit"
+    ],
+    "summary_facts": [
+      "검사 자체의 생략"
+    ]
+  },
+  {
+    "id": "inspection-deadline",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 납품 완료 후 검사는 며칠 안에 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제64조("
+    ],
+    "require_articles": [
+      "제64조("
+    ],
+    "require_rules": [
+      "extended-goods_inspection_deadline"
+    ],
+    "summary_facts": [
+      "14일",
+      "7일"
+    ]
+  },
+  {
+    "id": "payment-days",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 대금은 청구 후 며칠 안에 줘야 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조(",
+      "제67조("
+    ],
+    "require_articles": [
+      "제18조(",
+      "제67조("
+    ],
+    "require_rules": [
+      "extended-goods_payment_deadline"
+    ],
+    "summary_facts": [
+      "5일",
+      "토요일과 공휴일",
+      "3일",
+      "고시"
+    ]
+  },
+  {
+    "id": "payment-number",
+    "category": "추가 공식근거",
+    "question": "지자체 납품 대금은 청구 후 5일 안에 줘야 한다는데 맞아?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조(",
+      "제67조("
+    ],
+    "require_articles": [
+      "제18조(",
+      "제67조("
+    ],
+    "require_rules": [
+      "extended-goods_payment_deadline"
+    ]
+  },
+  {
+    "id": "quote-principle",
+    "category": "추가 공식근거",
+    "question": "지자체 물품 수의계약 견적서는 몇 인에게 받아야 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제30조("
+    ],
+    "require_articles": [
+      "제30조("
+    ],
+    "require_rules": [
+      "extended-goods_quote"
+    ],
+    "summary_facts": [
+      "2인 이상",
+      "2천만원",
+      "5천만원"
+    ]
+  },
+  {
+    "id": "quote-one",
+    "category": "추가 공식근거",
+    "question": "물품 수의계약 견적서는 1인에게 받아도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제30조("
+    ],
+    "require_articles": [
+      "제30조("
+    ],
+    "require_rules": [
+      "extended-goods_quote"
+    ]
+  },
+  {
+    "id": "late-interest",
+    "category": "추가 공식근거",
+    "question": "지방자치단체 납품 대가 지급 지체이자는 어떤 이율과 산식으로 계산하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조(",
+      "제68조("
+    ],
+    "require_articles": [
+      "제18조(",
+      "제68조("
+    ],
+    "answer_facts": [
+      "연체이자율"
+    ]
+  },
+  {
+    "id": "national-goods",
+    "category": "추가 공식근거",
+    "question": "국가기관 물품 검사조서 생략 금액 기준 알려줘",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "compound-mixed-scope",
+    "category": "추가 공식근거",
+    "question": "국가공무원 출장 정산 기한이랑 지자체 물품 견적 몇 장 받아야 하는지 알려줘",
+    "outcome": "clarify"
+  },
+  {
+    "id": "compound-new",
+    "category": "추가 공식근거",
+    "question": "출장 정산 기한이랑 물품 견적 몇 장 받아야 하는지 알려줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2(",
+      "제30조("
+    ],
+    "require_articles": [
+      "제8조의2(",
+      "제30조("
+    ]
+  },
+  {
+    "id": "daily-car-amount",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 국내 출장에 공무용 차량을 타면 일비는 얼마인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 2 ",
+      "제16조("
+    ],
+    "require_rules": [
+      "extended-travel_rate_domestic"
+    ],
+    "summary_facts": [
+      "일비를 2분의 1"
+    ]
+  },
+  {
+    "id": "provided-meal",
+    "category": "추가 공식근거",
+    "question": "국가공무원 국내 교육 출장에서 식사를 제공받으면 식비는 얼마로 감액하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "foreign-grade-conflict",
+    "category": "추가 공식근거",
+    "question": "국가공무원 제2호 도쿄는 나등급 맞죠? 출장 호텔비 상한 얼마예요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "foreign-compare-groups",
+    "category": "추가 공식근거",
+    "question": "국가공무원 국외 출장 제1호가목과 제2호 가등급 숙박비 금액표를 비교해줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "require_articles": [
+      "별표 4 ",
+      "제16조("
+    ],
+    "forbid_rules": [
+      "extended-travel_rate_foreign"
+    ]
+  }
+]

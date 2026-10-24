@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>서무비서 · 업무 달력</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="travel.css"><link rel="stylesheet" href="workspace.css"><link rel="stylesheet" href="design.css?v=15"><link rel="stylesheet" href="page-purpose.css?v=49">
+  <link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="studio.css?v=61"><link rel="stylesheet" href="calendar.css?v=67"><link rel="stylesheet" href="education-calendar.css?v=65"><link rel="stylesheet" href="calendar-agenda.css?v=67">
+</head>
+<body class="calendar-page studio-ui">
+<a class="skip-link" href="#calendar">달력으로 바로가기</a>
+<aside class="sidebar">
+  <a class="brand" href="start.html"><span class="logo">서</span><span>서무비서<small>공통 업무를 더 가볍게</small></span></a>
+  <div class="workspace"><span class="eyebrow">내 업무 공간</span><strong>기관 맞춤 서무 도우미</strong><span>2026 공공 AI 대전환 챌린지</span></div>
+  <nav class="common-navigation" aria-label="주 메뉴">
+    <a class="nav" href="start.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>업무 시작</span></a><a class="nav active" href="calendar.html" aria-current="page"><span class="nav-icon" aria-hidden="true">◷</span><span>업무 달력</span></a>
+    <a class="nav" href="index.html#chat"><span class="nav-icon" aria-hidden="true">◇</span><span>서무 안내</span></a>
+    <a class="nav" href="folders.html"><span class="nav-icon" aria-hidden="true">▱</span><span>업무자료 정리</span></a>
+    <a class="nav" href="adhoc.html#inbox"><span class="nav-icon" aria-hidden="true">▤</span><span>자료 취합</span></a>
+    <a class="nav" href="travel.html"><span class="nav-icon" aria-hidden="true">↗</span><span>출장정산</span></a>
+    <a class="nav" href="toolbox.html"><span class="nav-icon" aria-hidden="true">▦</span><span>업무도구함</span></a>
+    
+    <details class="navigation-settings"><summary>관리 · 설정</summary>
+      <small class="sb-section-hd">자료 관리</small>
+      <a class="nav" href="index.html#home"><span class="nav-icon" aria-hidden="true">⌂</span><span>업무 현황</span></a>
+      <a class="nav" href="index.html#cards"><span class="nav-icon" aria-hidden="true">▤</span><span>업무 절차 카드</span></a>
+      <a class="nav" href="index.html#docs"><span class="nav-icon" aria-hidden="true">▦</span><span>규정·지침·서식</span></a>
+      <a class="nav" href="index.html#forms"><span class="nav-icon" aria-hidden="true">▣</span><span>서식 칸 정의</span></a>
+      <a class="nav" href="adhoc.html#templates"><span class="nav-icon" aria-hidden="true">▦</span><span>기관 취합 서식</span></a>
+      <small class="sb-section-hd">관리 · 설정</small>
+      <a class="nav" href="travel.html#organizations"><span class="nav-icon" aria-hidden="true"></span><span>기관 설정</span></a>
+      <a class="nav" href="index.html#settings"><span class="nav-icon" aria-hidden="true"></span><span>모델 설정</span></a>
+      <a class="nav" href="local-ai.html"><span class="nav-icon" aria-hidden="true">◉</span><span>로컬 AI 검증</span></a>
+    </details>
+  </nav>
+  <div class="side-note"><span class="side-status"><i aria-hidden="true"></i> 로컬 업무 도우미</span><p>일정은 업무 흐름을 한눈에 보고 조율하는 데 활용합니다.</p></div>
+</aside>
+<main>
+  <div class="workspace-topbar"><span>내 업무 공간 <span aria-hidden="true">/</span> <b>업무 달력</b></span><a href="travel-guide.html#calendar-help">사용 안내 <span aria-hidden="true">↗</span></a></div>
+  <header class="calendar-heading"><div><h1>업무 달력</h1><p>출장, 자료 취합, 추적 중인 업무와 직접 등록한 일정을 함께 살펴보세요.</p></div><span class="calendar-timezone">한국 표준시 · Asia/Seoul · 월요일 시작</span></header>
+  <div id="calendar-message" class="calendar-message" role="status" aria-live="polite" hidden></div>
+  <details id="calendar-work-overview" class="calendar-work-overview panel">
+    <summary>할 일·마감 알림 <span id="calendar-overview-scope" hidden></span><span id="calendar-overview-counts" aria-live="polite">확인 중</span></summary>
+    <section id="calendar-agenda" class="calendar-agenda" aria-label="업무 요약과 알림"></section>
+  </details>
+  <section class="calendar-panel panel" aria-label="업무 달력">
+    <div class="calendar-toolbar">
+      <div class="calendar-nav-group" aria-label="달력 이동">
+        <button id="calendar-prev" class="secondary" type="button" aria-label="이전 기간">이전</button>
+        <button id="calendar-today" class="secondary" type="button">오늘</button>
+        <button id="calendar-next" class="secondary" type="button" aria-label="다음 기간">다음</button>
+      </div>
+      <h2 id="calendar-range" aria-live="polite">달력을 불러오는 중</h2>
+      <div class="calendar-view-switch" role="group" aria-label="달력 보기">
+        <button type="button" data-view="dayGridMonth" aria-pressed="true">월</button>
+        <button type="button" data-view="timeGridWeek" aria-pressed="false">주</button>
+        <button type="button" data-view="timeGridDay" aria-pressed="false">일</button>
+        <button type="button" data-view="listWeek" aria-pressed="false">목록</button>
+      </div>
+      <button id="calendar-add" class="primary" type="button">일정 추가</button>
+    </div>
+    <details class="calendar-tools-disclosure"><summary>검색·날짜 이동·내보내기</summary><div class="calendar-tools">
+      <fieldset class="calendar-filters"><legend>일정 출처</legend>
+        <label><input type="checkbox" data-source="manual" checked> 직접 등록 · 업무 계획</label>
+        <label><input type="checkbox" data-source="travel" checked> 출장</label>
+        <label><input type="checkbox" data-source="collection" checked> 자료 취합</label>
+        <label><input type="checkbox" data-source="tracked" checked> 추적 업무</label>
+      </fieldset>
+      <div class="calendar-search-row"><label class="calendar-search">일정 검색<input id="calendar-search" type="search" maxlength="120" placeholder="제목·장소·메모 검색"></label><button id="calendar-free-slots" class="secondary" type="button">빈 시간 찾기</button></div>
+    </div><div class="calendar-tools-extra"><label class="date-jump">날짜로 이동<input id="calendar-date" type="date" aria-label="표시할 날짜 선택"></label><a id="calendar-export" class="secondary calendar-export" href="/api/calendar/export.ics" download>현재 기간 내보내기</a></div></details>
+    <div id="calendar-state" class="calendar-state" role="status" aria-live="polite">달력을 불러오는 중입니다.</div>
+    <div class="calendar-scroll"><div id="calendar" aria-label="일정 달력"></div></div><p class="calendar-scroll-hint">월·주 보기에서 모든 날짜를 보려면 달력을 좌우로 이동하세요.</p>
+  </section>
+  <p class="calendar-disclaimer">달력은 일정 확인과 조율을 돕습니다. 일정 표시가 실제 업무의 완료·승인·제출을 뜻하지 않습니다.</p>
+</main>
+<dialog id="free-slots-dialog" class="calendar-dialog compact-dialog" aria-labelledby="free-slots-title">
+  <form id="free-slots-form" method="dialog" novalidate>
+    <div class="dialog-heading"><div><span class="eyebrow">업무 일정 조율</span><h2 id="free-slots-title">빈 시간 찾기</h2></div><button id="free-slots-close" class="dialog-close" type="button">닫기</button></div>
+    <p class="calendar-help">등록된 일정 사이에서 한국 표준시 평일 09:00–18:00의 빈 시간을 찾습니다.</p>
+    <div class="field-row"><label for="free-slots-date">날짜</label><input id="free-slots-date" type="date" required></div>
+    <div class="field-row"><label for="free-slots-minutes">필요 시간</label><select id="free-slots-minutes"><option value="30">30분</option><option value="60">1시간</option><option value="90">1시간 30분</option><option value="120">2시간</option></select></div>
+    <button id="free-slots-search" class="primary" type="submit">빈 시간 검색</button>
+    <p id="free-slots-state" class="calendar-state" role="status" aria-live="polite"></p><ul id="free-slots-results" class="free-slots-results"></ul>
+  </form>
+</dialog>
+<dialog id="event-dialog" class="calendar-dialog" aria-labelledby="event-dialog-title">
+  <form id="event-form" method="dialog" novalidate>
+    <div class="dialog-heading"><div><span id="event-dialog-kicker" class="eyebrow">직접 등록 일정</span><h2 id="event-dialog-title">일정 추가</h2></div><button id="event-close" class="dialog-close" type="button" aria-label="닫기">닫기</button></div>
+    <p class="calendar-help">입력한 시각은 한국 표준시(UTC+09:00)로 저장됩니다. 종일 일정은 실제 시작 날짜와 마지막 날짜를 선택하세요.</p>
+    <p id="event-error" class="form-error" role="alert" hidden></p>
+    <div id="scope-row" class="field-row" hidden><label for="event-scope">반복 일정 적용 범위</label><select id="event-scope"><option value="occurrence">선택한 날짜만</option><option value="series">반복 일정 전체</option></select><p id="scope-help" class="calendar-help"></p></div>
+    <label for="event-title">일정 이름<input id="event-title" maxlength="200" required></label>
+    <div class="field-row"><label for="event-kind">일정 종류</label><select id="event-kind"><option value="event">일정</option><option value="focus">집중 시간</option><option value="deadline">마감</option></select></div>
+    <label class="check-line"><input id="event-all-day" type="checkbox"> 종일 일정</label>
+    <div class="date-fields">
+      <label for="event-start-date">시작 날짜<input id="event-start-date" type="date" required></label>
+      <label for="event-start-time" id="start-time-label">시작 시각<input id="event-start-time" type="time" value="09:00"></label>
+      <label for="event-end-date" id="end-date-label">종료 날짜<input id="event-end-date" type="date" required></label>
+      <label for="event-end-time" id="end-time-label">종료 시각<input id="event-end-time" type="time" value="10:00"></label>
+    </div>
+    <p id="date-help" class="calendar-help">종일 일정은 실제 첫 날짜와 마지막 날짜를 선택합니다.</p>
+    <label for="event-location">장소 · 선택<input id="event-location" maxlength="200"></label>
+    <label for="event-notes">메모 · 선택<textarea id="event-notes" rows="3" maxlength="3000"></textarea></label>
+    <div class="field-row"><label for="event-work-kind">연결할 업무 · 선택</label><select id="event-work-kind"><option value="">연결 없음</option><option value="travel">출장 업무</option><option value="collection">자료 취합</option><option value="folder">업무자료</option><option value="tracked">추적 업무</option></select></div>
+    <label id="work-id-row" for="event-work-id" hidden>업무 선택<select id="event-work-id"><option value="">연결할 업무 선택</option></select></label>
+    <a id="event-work-open" class="info-link" hidden target="_blank" rel="noopener">연결한 업무 열기</a>
+    <section id="recurrence-fields" class="recurrence-fields" aria-labelledby="recurrence-title">
+      <h3 id="recurrence-title">반복 설정</h3>
+      <label for="event-recurrence">반복<select id="event-recurrence"><option value="none">반복 안 함</option><option value="daily">매일</option><option value="weekly">매주</option><option value="monthly">매월</option></select></label><p class="calendar-help">매월 반복은 시작일과 같은 날짜가 없는 달을 건너뜁니다.</p>
+      <div id="repeat-options" class="repeat-options" hidden><label for="event-interval">간격<input id="event-interval" type="number" min="1" max="30" step="1" value="1"></label><label for="event-repeat-until">반복 종료일<input id="event-repeat-until" type="date"></label><p class="calendar-help">반복 종료일은 시작일로부터 2년 안에서 선택하세요.</p></div>
+    </section>
+    <div id="conflict-warning" class="conflict-warning" role="status" hidden></div>
+    <div class="dialog-actions"><button id="event-delete" class="danger-button" type="button" hidden>삭제</button><span></span><button id="event-cancel" class="secondary" type="button">취소</button><button id="event-save" class="primary" type="submit">저장</button></div>
+  </form>
+</dialog>
+<dialog id="delete-dialog" class="calendar-dialog compact-dialog" aria-labelledby="delete-title">
+  <form method="dialog"><div class="dialog-heading"><h2 id="delete-title">일정을 삭제할까요?</h2></div><p id="delete-copy"></p><div class="dialog-actions"><button id="delete-cancel" class="secondary" type="button">취소</button><button id="delete-confirm" class="danger-button" type="button">삭제</button></div></form>
+</dialog>
+<dialog id="info-dialog" class="calendar-dialog compact-dialog" aria-labelledby="info-title">
+  <div class="dialog-heading"><div><span id="info-source" class="eyebrow"></span><h2 id="info-title"></h2></div><button id="info-close" class="dialog-close" type="button">닫기</button></div>
+  <dl class="event-info"><dt>시간</dt><dd id="info-time"></dd><dt>장소</dt><dd id="info-location"></dd><dt>메모</dt><dd id="info-notes"></dd></dl>
+  <a id="info-work-link" class="primary info-link" hidden>연결한 업무 열기</a>
+  <p class="calendar-help">일정 표시는 업무의 완료·승인 여부를 뜻하지 않습니다.</p>
+</dialog>
+<script src="lib/calendar/index.global.min.js"></script>
+<script src="lib/calendar/ko.global.min.js"></script>
+<script src="education-calendar.js?v=65"></script>
+<script src="calendar-agenda.js?v=67"></script>
+<script src="calendar.js?v=67"></script>
+</body>
+</html>

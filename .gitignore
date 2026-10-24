@@ -1,0 +1,30 @@
+# Local environments and generated runtime state
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+**/config.json
+service/data/
+service/output/
+desktop/runtime-logs/
+desktop/evidence/
+desktop/data/*
+!desktop/data/agencies-v1.sqlite
+!desktop/data/agencies-v1.json
+.local-verification/
+work/
+tmp/
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+.DS_Store
+Thumbs.db
+
+# Bundled public sources, font licenses, OCR assets and offline wheels are intentional.

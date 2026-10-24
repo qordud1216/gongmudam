@@ -1,0 +1,34 @@
+.guidance-panel { margin:16px 0 20px; padding:0; color:#30483f; line-height:1.8; overflow-wrap:anywhere; }
+.guidance-panel h2 { margin:0 0 8px; color:#234c3a; font-size:18px; }
+.guidance-panel h3 { margin:17px 0 6px; color:#365c4b; font-size:13px; }
+.guidance-panel p,.guidance-panel ul,.guidance-panel ol { margin:6px 0; }
+.guidance-panel li { padding:2px 0; }
+.guidance-context { color:#566d62; }
+.guidance-note { color:#61757a; font-size:12px; }
+.guidance-ref { color:#496b58; font-size:12px; white-space:nowrap; }
+.guidance-ref { padding:0; border:0; background:transparent; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.guidance-details { margin-top:12px; border-top:1px solid #e7ede8; padding-top:10px; }
+.guidance-details summary { cursor:pointer; color:#486554; font-size:12px; font-weight:600; }
+.guidance-panel a { color:#286746; text-underline-offset:3px; }
+.guidance-panel a:focus-visible,.guidance-details summary:focus-visible { outline:2px solid #347653; outline-offset:3px; border-radius:3px; }
+.task-followup { margin-top:16px; border-top:1px solid #e4ebe6; padding-top:12px; }
+.task-followup>summary { cursor:pointer; color:#506b5c; font-size:12px; }
+.task-followup-content { padding-top:10px; }
+.task-followup-content .primary { min-height:40px; }
+.chat-composer { flex:1; min-width:0; }
+.chat-composer textarea { display:block; width:100%; }
+.chat-composer-options { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:3px 12px; padding:5px 2px 0; }
+.chat-composer-options .local-ai-opt-in { margin:0; }
+.start-composer-note { min-width:0; max-width:100%; }
+.start-composer-note .local-ai-opt-in { margin:0; }
+.start-composer-note .local-ai-hint { overflow-wrap:anywhere; }
+.task-followup-content .secondary { min-height:40px; }
+.local-ai-opt-in { display:flex; align-items:center; gap:8px; margin:0 0 0 auto; color:#536c60; font-size:12px; }
+.local-ai-opt-in input { accent-color:#286746; }
+.local-ai-hint { margin:0; color:#53666b; font-size:12px; }
+.studio-ui .start-composer-note .local-ai-hint { font-size:12px; color:#53666b; }
+@media(max-width:640px) {
+  .guidance-panel { margin:12px 0 16px; }
+  .local-ai-opt-in { margin:0; }
+  .chat-composer-options { justify-content:flex-start; }
+}

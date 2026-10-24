@@ -1,0 +1,9 @@
+# Root documentation and launchers use predictable line endings.
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+*.bat text eol=crlf
+
+# Preserve every byte of the verified source snapshots, including manifests.
+service/** -text
+desktop/** -text

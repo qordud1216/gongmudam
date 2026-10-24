@@ -1,0 +1,6 @@
+.work-attachments{margin:14px 0;padding:16px;border:1px solid var(--line,#d8dee8);border-radius:12px;background:var(--surface,#fff)}
+.work-attachments h3{margin:0 0 8px;font-size:1rem}
+.work-attachments>a{display:inline-block;margin:2px 0 8px}
+.work-attachments-list{display:grid;gap:6px}
+.work-attachment-item{overflow-wrap:anywhere}
+.work-attachments-error{color:#a32929}

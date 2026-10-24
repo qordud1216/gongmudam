@@ -1,0 +1,13 @@
+#toolbox-output-dialog{width:min(580px,calc(100vw - 28px));max-height:calc(100dvh - 36px);overflow:auto;border:1px solid #b7d1ca;border-radius:16px;padding:24px;background:#fff;color:#183a34;box-shadow:0 22px 80px #102d3655}
+#toolbox-output-dialog::backdrop{background:#112d3c88}
+#toolbox-output-dialog h2{margin:0 0 18px;font-size:22px}
+#toolbox-output-dialog label{display:grid;gap:6px;margin:13px 0;font-weight:700}
+#toolbox-output-dialog label[hidden],#toolbox-output-open[hidden],#toolbox-output-reopen[hidden]{display:none!important}
+#toolbox-output-dialog select{min-width:0;width:100%;box-sizing:border-box;padding:10px;border:1px solid #bfd3cd;border-radius:8px;font:inherit;background:#fff;color:#183a34}
+#toolbox-output-refresh{border:0;background:transparent;color:#087568;padding:3px 0;text-decoration:underline;cursor:pointer}
+#toolbox-output-dialog .handoff-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+#toolbox-output-status{overflow-wrap:anywhere;white-space:pre-wrap}
+#toolbox-output-status.handoff-error{color:#ab3030}
+#toolbox-output-open{display:inline-block;font-weight:700;color:#087568}
+#toolbox-output-reopen{margin:0 0 14px}
+@media(max-width:600px){#toolbox-output-dialog{padding:18px}#toolbox-output-dialog .handoff-actions .btn{flex:1 1 130px}}

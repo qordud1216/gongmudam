@@ -1,0 +1,20 @@
+{
+  "snapshotId": "5aea9b34-b70c-4522-896f-849d785aa817",
+  "sourceUrl": "https://www.code.go.kr/stdcode/orgCodeL.do",
+  "sourceUpdatedAt": "2026-10-21",
+  "fetchedAt": "2026-10-22T08:35:02.749Z",
+  "sha256": "c781238782ea826786e1a8b6a3a5dfb7b8620b830ad36920bc6511b71d3d1141",
+  "counts": {
+    "total": 472858,
+    "active": 133746,
+    "abolished": 339112
+  },
+  "exportedAt": "2026-10-24T08:53:20.616264+00:00",
+  "exportCounts": {
+    "total": 133768,
+    "active": 133746
+  },
+  "derivation": "LEX-FLOW active agency records plus their ancestors; no other source tables",
+  "databaseSha256": "dd646a9cfe6d69ee9176a6bba78ef0c3dca9a6aba3dd3053105ef0db17f04c0e",
+  "databaseBytes": 58920960
+}

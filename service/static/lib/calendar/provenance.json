@@ -1,0 +1,20 @@
+[
+  {
+    "file": "index.global.min.js",
+    "source": "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js",
+    "bytes": 283987,
+    "sha256": "223ff800a0b0b87a1c96c1d127a9a981434e14f88a7b1662fecade17c78ea203"
+  },
+  {
+    "file": "ko.global.min.js",
+    "source": "https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.19/locales/ko.global.min.js",
+    "bytes": 387,
+    "sha256": "05372da33c530547d73c7a8cc64a2eb98858e15b89b6e920eff938941a8d851e"
+  },
+  {
+    "file": "LICENSE.md",
+    "source": "https://raw.githubusercontent.com/fullcalendar/fullcalendar/v6.1.19/LICENSE.md",
+    "bytes": 1066,
+    "sha256": "4c0b0dae26c99e3b11be70b990a703be4deb75e21884104582e0e217786d3209"
+  }
+]

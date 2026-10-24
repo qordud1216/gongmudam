@@ -1,0 +1,48 @@
+LEX-FLOW 기관 찾기 재사용 검토 — 2026-10-24
+
+원본: C:\AI작업\프로그램 제작\Lex-flow
+읽기 전용으로 기존 .graphify-pilot/semantic-docs.json 관계 정보와 관련 소스를 확인했다. 원본 코드·DB·환경설정은 수정하지 않았다.
+
+관련 코드
+src/agencies/types.ts:1 — 기관코드·전체명·약칭·상위/최상위기관·기관유형·폐지상태
+src/agencies/repository.ts:26 — 기관 상세, ancestors, children, context
+src/agencies/repository.ts:51 — 기관 검색, 활성/유형/상위기관 필터와 순위
+src/app.ts:186 — 기관 검색·상세 API
+src/agencies/import.ts — 공식 ZIP 검사, 해시, 파싱·트랜잭션 교체
+src/agencies/syncManager.ts — 명시적 동기화 관리
+
+조회 계약
+GET /api/agencies?q=&status=active&typeLarge=&parent=&page=1&limit=30
+반환: {items, total, page, limit}
+GET /api/agencies/:code
+반환: {agency, ancestors, children, childrenTotal, context}
+context: scope(local/national/null), metro, local, lawOrg, warnings
+조회는 로컬 SQLite/FTS5; 갱신만 네트워크 사용.
+
+원천 및 스냅샷
+공식 행정표준코드: https://www.code.go.kr/stdcode/orgCodeL.do
+원본 프로젝트 문서의 스냅샷: 기준일 2026-10-21, 수집일 2026-10-22.
+전체 472,858 / 현존 133,746 / 폐지 339,112. 원본 문서상의 스냅샷 수치이며 실시간 보장은 아니다.
+기관 계층의 부모 누락·알 수 없는 깊이 같은 원천 예외를 확인 필요로 보존하는 구조가 있다.
+
+권장 연결
+1. 기관명 검색 → 공식 코드와 상위기관 경로를 보고 선택.
+2. 기관코드·공식명·분류·지역 후보·출처·기준일을 프로필에 보관.
+3. 국가/지방 직원 신분과 내부 부서는 사용자가 별도로 확인.
+4. 확인한 프로필로 등록 규정팩을 좁히고 대상·시행일·예외 조건을 추가 검사.
+5. 동명/폐지기관·알 수 없는 분류·부서 목록 미제공에는 수동 확인 경로 유지.
+
+기관의 national/local 값은 검색·분류용 메타데이터다. 직원의 공무원 신분·인사체계나 개별 법령 적용 대상을 증명하지 않는다. 기관코드 계층은 모든 기관의 내부 부서 명부를 보장하지 않는다.
+
+2026-10-24 B안 연결 완료
+- agency_directory.py: 검색 순위·시청/군청/구청 별칭·기관 상세와 상위기관 경로를 독립 이식.
+- server.py: 표준 라이브러리 Python 서버, 같은 출처의 GET /api/agencies 및 GET /api/agencies/{code} 제공.
+- agency-picker.js: 검색·페이지 이동·상세 선택·지역 채우기·수동 확인·취소·직접 입력.
+- tools/export_agencies.py: LEX 원본을 읽기 전용으로 열어 기관 테이블의 현존 기관과 필요한 조상만 복사.
+- data/agencies-v1.sqlite: 현존 133,746개 + 조상 22개. 다른 법령·사용자·설정 테이블은 포함하지 않음.
+- data/agencies-v1.json: 원천 ZIP 해시, 기준일·수집일·내보내기 시각, 복사 DB 해시를 보관.
+- 기관의 context.scope로 사용자 신분을 자동 결정하지 않음. 새 기관 선택 시 라디오를 해제해 사용자가 확인.
+- 공식 상위기관 또는 공식 기관명의 시·도 전체 명칭을 확인할 수 있을 때만 지역 제안. 나머지는 수동 선택.
+- profile schema_version2의 agency 필드에 코드·공식명·부모·경로·지역 제안과 출처를 저장. 구 스키마1 호환.
+
+실제 서무비서 앱/등록 규정팩에 대한 통합과 새 원천 자료의 주기 갱신은 이번 변경에 포함하지 않았다. 이식한 B안 검색은 원본 LEX 서버 없이 독립 동작한다.

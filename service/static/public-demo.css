@@ -1,0 +1,3 @@
+.public-notice{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 20px;background:#fff0cb;color:#513b12;border-bottom:1px solid #e5cb8c;text-align:center;font-size:13px;min-height:48px}.public-notice a{color:#174f45;margin-left:12px;font-weight:700}body{padding-top:55px!important}
+@media(min-width:761px){.sidebar,#sidebar{top:55px!important;height:calc(100vh - 55px)!important}}
+@media(max-width:760px){.public-notice{font-size:11px;padding:7px 10px;min-height:50px}body{padding-top:65px!important}.sidebar,#sidebar{top:auto!important;height:auto!important}}

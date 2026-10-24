@@ -1,0 +1,8 @@
+#view-chat .chat-request-context{display:block;margin:.25rem 0;color:#68717d;font-size:.85rem;line-height:1.45;overflow-wrap:anywhere}
+#view-chat #chat-status:empty{display:none}
+#view-chat #chat-status:not(:empty){margin:.5rem 0;line-height:1.45;overflow-wrap:anywhere}
+#view-chat .chat-retry{display:block;margin-top:.4rem}
+@media(min-width:761px){
+ #view-chat .chat-wrap:has(.knowledge-catalog-details[open]){height:auto;min-height:calc(100dvh - 72px)}
+ #view-chat .chat-wrap:has(.knowledge-catalog-details[open]) .chat-log{flex:none;height:min(65dvh,520px);min-height:260px}
+}

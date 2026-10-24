@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서무비서</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="model-status.css?v=48">
+<link rel="stylesheet" href="design.css?v=46"><link rel="stylesheet" href="answer-tree.css?v=37"><link rel="stylesheet" href="workflow-chat.css?v=37"><link rel="stylesheet" href="answer-record.css?v=46"><link rel="stylesheet" href="knowledge-catalog.css?v=47"><link rel="stylesheet" href="chat-request.css?v=47"><link rel="stylesheet" href="page-purpose.css?v=49"><link rel="stylesheet" href="chat-focus.css?v=51">
+<link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="studio.css?v=61">
+<link rel="stylesheet" href="guidance-ui.css?v=69">
+</head>
+<body class="studio-ui">
+<aside id="sidebar">
+  <div class="sb-top">
+    <div class="sb-logo"><div class="sb-logo-icon">서</div>
+      <div><div class="sb-logo-title">서무비서</div><div class="sb-logo-sub">규정·서식 근거 서무 안내</div></div></div>
+    <div class="sb-user" id="sbUser" title="설정에서 바꿀 수 있습니다"><div class="sb-avatar" id="sbAvatar">?</div>
+      <div><div class="sb-uname" id="sbName">사용자</div><div class="sb-urole" id="sbRole"></div></div></div>
+  </div>
+  <nav class="sb-mid common-navigation" aria-label="주 메뉴"><a class="sb-item" href="start.html"><span class="sb-item-ico" aria-hidden="true">⌂</span><span>업무 시작</span></a><a class="sb-item" href="index.html#chat" data-view="chat"><span class="sb-item-ico" aria-hidden="true">◇</span><span>서무 안내</span></a><details class="navigation-settings"><summary>필요할 때 쓰는 업무 도구</summary><a class="sb-item" href="calendar.html"><span class="sb-item-ico" aria-hidden="true"></span><span>업무 달력</span></a><a class="sb-item" href="folders.html"><span class="sb-item-ico" aria-hidden="true">▱</span><span>업무자료 정리</span></a><a class="sb-item" href="adhoc.html#inbox"><span class="sb-item-ico" aria-hidden="true">▤</span><span>자료 취합</span></a><a class="sb-item" href="travel.html"><span class="sb-item-ico" aria-hidden="true">↗</span><span>출장정산</span></a><a class="sb-item" href="toolbox.html"><span class="sb-item-ico" aria-hidden="true">▦</span><span>업무도구함</span></a></details><details class="navigation-settings"><summary>관리 · 설정</summary><small class="sb-section-hd">자료 관리</small><a class="sb-item" href="index.html#home" data-view="home"><span class="sb-item-ico" aria-hidden="true">⌂</span><span>업무 현황</span></a><a class="sb-item" href="index.html#cards" data-view="cards"><span class="sb-item-ico" aria-hidden="true">▤</span><span>업무 절차 카드</span></a><a class="sb-item" href="index.html#docs" data-view="docs"><span class="sb-item-ico" aria-hidden="true">▦</span><span>규정·지침·서식</span></a><a class="sb-item" href="index.html#forms" data-view="forms"><span class="sb-item-ico" aria-hidden="true">▣</span><span>서식 칸 정의</span></a><a class="sb-item" href="adhoc.html#templates"><span class="sb-item-ico" aria-hidden="true">▦</span><span>기관 취합 서식</span></a><small class="sb-section-hd">관리 · 설정</small><a class="sb-item" href="travel.html#organizations"><span class="sb-item-ico" aria-hidden="true"></span><span>기관 설정</span></a><a class="sb-item" href="index.html#settings" data-view="settings"><span class="sb-item-ico" aria-hidden="true"></span><span>모델 설정</span></a><a class="sb-item" href="local-ai.html"><span class="sb-item-ico" aria-hidden="true">◉</span><span>로컬 AI 검증</span></a></details></nav>
+  <div class="sb-foot"><div id="modeBadge" class="badge" data-model-status="compact">모델 상태 확인 중…</div>
+    <label class="sb-today">기준 날짜 <input type="date" id="today"></label></div>
+</aside>
+
+<main id="main-content">
+<!-- 홈 -->
+<section id="view-home" class="view on">
+  <div class="page-hd"><h2>오늘 할 일</h2><span class="muted" id="homeToday"></span></div>
+  <div class="card ask-quick">
+    <b>무슨 일을 처리하시나요?</b>
+    <div class="row"><input id="quickQ" style="flex:1" placeholder="예: 어제 서울 출장 다녀왔어요. 정산 언제까지 해야 하나요?"><button class="primary" id="quickBtn">서무비서에게 묻기</button></div>
+  </div>
+  <div class="home-grid">
+    <div class="card"><div class="card-hd"><b>다가오는 기한</b><span class="muted">등록한 업무의 남은 단계</span></div><ul id="upcoming" class="timeline"></ul></div>
+    <div class="card"><div class="card-hd"><b>진행 중인 업무</b><span class="muted">단계를 끝내면 체크하세요</span></div><div id="taskList"></div></div>
+  </div>
+</section>
+
+<!-- 대화 -->
+<section id="view-chat" class="view">
+  <div class="chat-wrap">
+    <div class="chat-head"><div class="ai-ico">AI</div><div><h1 class="purpose-chat-title">서무 안내</h1>
+      <div class="chat-sub">업무 상황을 말하면 처리 순서와 기한, 서식, 근거를 함께 확인합니다.</div></div>
+      <button class="small ghost" id="chatClear">대화 지우기</button></div>
+    <details id="chat-options" class="chat-options">
+      <summary><span>자료·업무 설정</span><span id="chat-options-summary">자료 확인 중</span></summary>
+      <div class="chat-options-body">
+        <section class="chat-settings-library">
+          <div class="row wrap"><label>질문할 자료<select id="knowledge-library"><option value="">전체 등록 자료</option></select></label><a href="folders.html">답변 근거 등록하기</a><span id="knowledge-count" class="muted"></span></div>
+          <div id="knowledge-catalog"></div>
+        </section>
+        <section class="chat-settings-work">
+          <span class="chat-layers">적용 범위
+            <label><input type="checkbox" class="layer" value="공통" checked>공통</label>
+            <label><input type="checkbox" class="layer" value="기관" checked>기관</label>
+            <label><input type="checkbox" class="layer" value="개인" checked>개인</label></span>
+          <label class="chat-reference-date-label">질문 기준 날짜 <input type="date" id="chat-reference-date"></label>
+          <section id="chat-workflow-options"><h2>교육 진행표 수정 대상</h2><p class="muted">교육 취합 진행표를 대화로 수정할 때만 선택하세요.</p></section>
+        </section>
+        <p class="workspace-scope">근거의 합성·실제 자료 표시를 확인하세요. 출장정산에서는 기관과 공식 계산 기준을 별도로 확인합니다.</p>
+      </div>
+    </details>
+    <p id="chat-options-alert" role="status" hidden></p>
+    <div id="chatLog" class="chat-log"></div>
+    <details id="chat-examples-options" class="chat-examples-options"><summary>질문 예시</summary><div class="chat-examples" id="chatExamples">
+      <a href="#" class="ex">어제 서울 출장 다녀왔어요. 정산은 언제까지 하나요?</a>
+      <a href="#" class="ex">11월 20일에 어린이 안전체험 행사를 열어요</a>
+      <a href="#" class="ex">소화기 어제 납품받았어요</a>
+      <a href="#" class="ex">휴가·휴무 종류와 차이를 알려주세요</a>
+    </div></details>
+    <p id="chat-status" class="muted" role="status" aria-live="polite"></p><div class="chat-input"><div class="chat-composer"><textarea id="query" rows="2" aria-label="서무 업무 상황" placeholder="예: 공가를 쓰려면 무엇을 확인하나요? / 출장 정산을 준비해야 해요."></textarea><div class="chat-composer-options"><label class="local-ai-opt-in"><input id="use-local-ai" type="checkbox">로컬 AI 보조 사용</label><p class="local-ai-hint">기본은 등록 자료로 안내합니다.</p></div></div>
+      <button id="askBtn" class="primary">보내기</button></div>
+  </div>
+</section>
+
+<!-- 절차 카드 -->
+<section id="view-cards" class="view">
+  <div class="page-hd"><h2>업무 절차 카드</h2><span class="muted">자주 하는 서무 업무의 단계·기한 규칙·필요 서식·근거 조문</span></div>
+  <div class="split">
+    <div class="list card">
+      <div class="row"><b>절차 카드</b><button id="newCard" class="small">+ 새 카드</button></div>
+      <ul id="cardList"></ul>
+    </div>
+    <div class="card" id="cardEditor"><p class="muted">왼쪽에서 카드를 고르거나 새 카드를 만드세요.</p></div>
+  </div>
+</section>
+
+<!-- 자료 -->
+<section id="view-docs" class="view">
+  <div class="page-hd"><h2>규정·지침·서식 자료</h2><span class="muted">등록한 자료가 안내의 근거가 됩니다</span></div>
+  <div class="card">
+    <b>새 자료 등록</b>
+    <p class="muted">한글(hwp·hwpx)·PDF·워드(docx)·엑셀(xlsx)·텍스트(txt·md·csv)를 올릴 수 있습니다. 올린 파일은 사본으로 보관하며 원본은 바꾸지 않습니다.</p>
+    <form id="uploadForm" class="row wrap">
+      <input type="file" name="file" required>
+      <input name="title" placeholder="자료 이름(비우면 파일 이름)">
+      <select name="kind"></select>
+      <select name="layer"></select>
+      <input name="note" placeholder="메모(선택)">
+      <button class="primary">등록</button>
+    </form>
+  </div>
+  <div class="split">
+    <div class="list card"><b>등록된 자료</b><ul id="docList"></ul></div>
+    <div class="card" id="docView"><p class="muted">자료를 고르면 조문(근거 단위) 목록이 나옵니다.</p></div>
+  </div>
+</section>
+
+<!-- 서식 정의 -->
+<section id="view-forms" class="view">
+  <div class="page-hd"><h2>서식 칸 정의</h2><span class="muted">서식 초안을 채울 칸과 값 출처</span></div>
+  <div class="split">
+    <div class="list card">
+      <div class="row"><b>서식</b><button id="newForm" class="small">+ 새 서식</button></div>
+      <ul id="formList"></ul>
+    </div>
+    <div class="card" id="formEditor"><p class="muted">서식을 고르면 채울 칸을 고칠 수 있습니다.</p></div>
+  </div>
+</section>
+
+<!-- 설정 -->
+<section id="view-settings" class="view">
+  <div class="page-hd"><div><h1>로컬 AI 설정</h1><p class="muted">사용할 모델을 고르고, 실제 연결 상태를 확인하세요.</p></div><a class="secondary" href="local-ai.html">로컬 AI 비교 검증</a></div>
+  <div class="card" data-model-status="full" aria-live="polite"></div>
+  <div class="card model-connections">
+    <h3>모델 연결</h3>
+    <p class="muted">오프라인은 AI 없이 동작합니다. OpenAI 호환 API는 주소·모델명·키가 서로 맞아야 연결됩니다.</p>
+    <div id="llmProfiles"></div>
+  </div>
+  <div class="card">
+    <details class="settings-fold"><summary>내 정보 · 서식 초안에 사용</summary><span class="muted">서식 초안의 소속·직급·성명 칸에 들어갑니다.</span>
+    <form id="profileForm" class="row wrap"></form></details>
+  </div>
+  <div class="card">
+    <details class="settings-fold"><summary>모의데이터 관리</summary><p class="muted">등록 자료·절차 카드·서식·진행 업무를 모두 지우고 처음 상태(가상 기관 '가람시소방서' 모의데이터)로 되돌립니다.</p>
+    <button id="resetBtn" class="danger">모의데이터 다시 불러오기</button></details>
+  </div>
+</section>
+</main>
+
+<dialog id="dlg"><div id="dlgBody"></div></dialog>
+<script src="workspace-flow.js?v=69"></script><script src="knowledge-chat.js?v=69"></script><script src="answer-tree.js?v=37"></script><script src="workflow-chat.js?v=51"></script><script src="task-links.js?v=69"></script><script src="answer-record.js?v=69"></script><script src="model-status.js?v=48"></script><script src="chat-options.js?v=51"></script><script src="guidance-ui.js?v=69"></script><script src="app.js?v=69"></script>
+<script src="change-inbox-badge.js?v=27"></script></body>
+</html>
+

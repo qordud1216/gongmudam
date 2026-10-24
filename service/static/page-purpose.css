@@ -1,0 +1,49 @@
+.page-purpose {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.page-purpose h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.page-purpose p,
+.start-purpose p,
+.page-purpose .purpose-result {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.page-purpose .purpose-result {
+  flex: 0 0 auto;
+  color: #64748b;
+}
+
+.purpose-chat-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.start-purpose {
+  align-items: flex-start;
+}
+
+.start-purpose p {
+  margin: 6px 0 0;
+}
+
+@media (max-width: 700px) {
+  .page-purpose {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .page-purpose h1 {
+    font-size: 24px;
+  }
+}

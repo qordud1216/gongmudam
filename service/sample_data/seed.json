@@ -1,0 +1,116 @@
+{
+  "_설명": "서무비서 모의데이터. 기관·인물·조문·금액은 모두 가상이다. 처음 실행할 때와 '설정 > 모의데이터 다시 불러오기'에서 이 파일을 읽는다.",
+  "profile": {"소속": "가람시소방서 예방안전과(가상)", "직급": "소방장", "성명": "홍길동(가상)"},
+  "documents": [
+    {"id": "rule-travel", "path": "규정자료/01_공통_여비규정_가상.hwpx", "title": "가람시 공무원 여비 규정(가상)", "kind": "규정", "layer": "공통"},
+    {"id": "guide-purchase", "path": "규정자료/02_공통_물품구매지침_가상.pdf", "title": "물품 구매 및 계약 사무 처리 지침(가상)", "kind": "지침", "layer": "공통"},
+    {"id": "guide-leave", "path": "규정자료/03_공통_연가복무안내_가상.docx", "title": "연가·복무 처리 안내(가상)", "kind": "지침", "layer": "공통"},
+    {"id": "rule-agency", "path": "규정자료/04_기관_행정업무처리기준_가상.hwpx", "title": "가람시소방서 행정업무 처리 기준(가상)", "kind": "규정", "layer": "기관"},
+    {"id": "table-deadline", "path": "규정자료/05_기관_업무별처리기한표_가상.xlsx", "title": "업무별 처리기한 총괄표(가상)", "kind": "지침", "layer": "기관"},
+    {"id": "memo-personal", "path": "규정자료/06_개인_서무담당메모_가상.txt", "title": "서무담당 업무 메모(개인)", "kind": "메모", "layer": "개인"},
+    {"id": "form-travel-doc", "path": "규정자료/07_서식_국내출장여비정산서_가상.hwpx", "title": "국내출장 여비 정산서(기관 서식)", "kind": "서식", "layer": "기관"},
+    {"id": "form-inspect-doc", "path": "규정자료/08_서식_물품검사조서_가상.hwpx", "title": "물품 검사조서(기관 서식)", "kind": "서식", "layer": "기관"}
+  ],
+  "forms": [
+    {"id": "form-travel", "name": "국내출장 여비 정산서", "doc_id": "form-travel-doc", "fields": [
+      {"key": "소속", "label": "소속", "source": "profile:소속"},
+      {"key": "직급", "label": "직급", "source": "profile:직급"},
+      {"key": "성명", "label": "성명", "source": "profile:성명"},
+      {"key": "출장 기간", "label": "출장 기간", "source": "base:출장 시작일~출장 종료일", "hint": "예: 2026. 10. 13.~2026. 10. 15."},
+      {"key": "출장지", "label": "출장지", "source": "ask", "hint": "도시나 기관 이름"},
+      {"key": "출장 목적", "label": "출장 목적", "source": "ask", "hint": "회의·교육 등 출장 이유"},
+      {"key": "출장 신청 문서번호", "label": "출장 신청 문서번호", "source": "ask", "hint": "결재 문서 번호"},
+      {"key": "운임", "label": "운임(원)", "source": "ask", "hint": "교통비 금액"},
+      {"key": "숙박비", "label": "숙박비(원)", "source": "ask", "hint": "숙박비 금액"},
+      {"key": "일비·식비", "label": "일비·식비(원)", "source": "ask", "hint": "일비와 식비 합계"},
+      {"key": "합계", "label": "합계(원)", "source": "", "hint": "직접 계산해 입력"},
+      {"key": "작성일", "label": "작성일", "source": "today"}
+    ]},
+    {"id": "form-inspect", "name": "물품 검사조서", "doc_id": "form-inspect-doc", "fields": [
+      {"key": "품명", "label": "품명", "source": "ask", "hint": "납품받은 물품 이름"},
+      {"key": "규격·수량", "label": "규격·수량", "source": "ask", "hint": "예: 소화기 3.3kg 20개"},
+      {"key": "계약 금액", "label": "계약 금액(원)", "source": "ask", "hint": "계약 금액"},
+      {"key": "납품일", "label": "납품일", "source": "base:납품일"},
+      {"key": "검사일", "label": "검사일", "source": "today"},
+      {"key": "검사 결과", "label": "검사 결과", "source": "", "hint": "합격 또는 불합격"},
+      {"key": "검사자", "label": "검사자 소속·성명", "source": "profile:성명"}
+    ]}
+  ],
+  "cards": [
+    {"id": "card-travel", "title": "국내 출장 여비 정산", "category": "여비", "layer": "기관", "status": "확정",
+     "keywords": "출장 정산 여비 복귀 다녀와서 영수증 교통비 숙박비 KTX 일비 식비 출장비",
+     "summary": "출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.",
+     "base_dates": ["출장 시작일", "출장 종료일"],
+     "steps": [
+       {"title": "출장 결과 보고(복명)", "detail": "복귀한 날 부서장에게 출장 결과를 보고합니다. 단순 서류 전달 같은 경미한 출장은 생략할 수 있습니다.",
+        "deadline": {"base": "출장 종료일", "offset": 0, "unit": "일"}, "forms": [],
+        "basis": [{"doc_id": "rule-travel", "label": "제13조(출장 결과 보고)"}]},
+       {"title": "증빙서류 모으기", "detail": "승차권·숙박 영수증을 모읍니다. 자가용을 썼다면 이동 거리를 적어 둡니다.",
+        "tip": "영수증을 잃어버렸으면 카드 사용 내역으로 대신할 수 있습니다(여비 규정 제12조③).",
+        "deadline": {"base": "출장 종료일", "offset": 1, "unit": "업무일"}, "forms": [],
+        "basis": [{"doc_id": "rule-travel", "label": "제7조(운임)"}, {"doc_id": "rule-travel", "label": "제8조(숙박비)"}]},
+       {"title": "여비 정산서 작성·제출", "detail": "국내출장 여비 정산서에 증빙을 붙여 행정팀에 냅니다. 출장 신청 결재 문서 번호를 함께 적습니다.",
+        "tip": "공통 규정은 7일 이내지만 우리 기관 기준은 다음 업무일부터 3업무일 이내입니다. 12월에 끝난 출장은 회계연도 마감 때문에 12월 26일까지입니다(기관 기준 제3조②).",
+        "deadline": {"base": "출장 종료일", "offset": 3, "unit": "업무일",
+                     "month_cap": {"month": 12, "day": 26, "basis": "행정업무 처리 기준 제3조②"}}, "forms": ["form-travel"],
+        "basis": [{"doc_id": "rule-agency", "label": "제3조(출장 여비 정산 기한)"}, {"doc_id": "rule-travel", "label": "제12조(여비의 정산)"}]},
+       {"title": "정산 결과 확인", "detail": "행정팀이 정산서를 받은 날부터 10일 이내에 차액을 지급하거나 반납을 통지합니다. 통지가 오면 반납·수령을 확인합니다.",
+        "deadline": null, "forms": [],
+        "basis": [{"doc_id": "rule-travel", "label": "제12조(여비의 정산)"}]}
+     ]},
+    {"id": "card-purchase", "title": "소액 물품 구매와 검수", "category": "계약·물품", "layer": "기관", "status": "확정",
+     "keywords": "물품 구매 구입 사야 견적 납품 검수 검사 대금 비품 소모품",
+     "summary": "2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.",
+     "base_dates": ["물품 사용 예정일", "납품일"],
+     "steps": [
+       {"title": "물품 구매 요구서 제출", "detail": "사용 예정일 14일 전까지 계약 담당자에게 구매 요구서를 냅니다.",
+        "deadline": {"base": "물품 사용 예정일", "offset": -14, "unit": "일"}, "forms": [],
+        "basis": [{"doc_id": "guide-purchase", "label": "제3조(구매 요구)"}]},
+       {"title": "견적서 2곳 이상 받기", "detail": "2인 이상에게 견적서를 받아 가장 낮은 금액을 낸 업체와 계약합니다.", "deadline": null, "forms": [],
+        "basis": [{"doc_id": "guide-purchase", "label": "제4조(견적)"}]},
+       {"title": "납품 검수·검사조서 제출", "detail": "납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 냅니다.",
+        "tip": "공통 지침은 14일이지만 기관 기준은 5업무일입니다.",
+        "deadline": {"base": "납품일", "offset": 5, "unit": "업무일"}, "forms": ["form-inspect"],
+        "basis": [{"doc_id": "rule-agency", "label": "제4조(물품 검수)"}, {"doc_id": "guide-purchase", "label": "제6조(검사)"}]},
+       {"title": "대금 지급 확인", "detail": "검사 후 업체가 대금을 청구하면 청구일부터 5일 이내에 지급되는지 확인합니다.", "deadline": null, "forms": [],
+        "basis": [{"doc_id": "guide-purchase", "label": "제7조(대금 지급)"}]}
+     ]},
+    {"id": "card-event", "title": "대외 행사 준비와 결과 보고", "category": "행사", "layer": "기관", "status": "확정",
+     "keywords": "행사 교육 안전체험 캠페인 준비 계획 안내문 결과보고 개최",
+     "summary": "행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.",
+     "base_dates": ["행사일"],
+     "steps": [
+       {"title": "행사 계획 결재", "detail": "행사일 21일 전까지 계획을 결재받습니다.", "deadline": {"base": "행사일", "offset": -21, "unit": "일"}, "forms": [],
+        "basis": [{"doc_id": "rule-agency", "label": "제5조(행사 준비 일정)"}]},
+       {"title": "행사 물품 구매 요구", "detail": "필요한 물품은 행사일 14일 전까지 구매를 요구합니다. 이후 '소액 물품 구매와 검수' 절차를 따릅니다.",
+        "tip": "검수에 5업무일이 걸리므로 행사 직전 납품은 피합니다.",
+        "deadline": {"base": "행사일", "offset": -14, "unit": "일"}, "forms": [],
+        "basis": [{"doc_id": "rule-agency", "label": "제5조(행사 준비 일정)"}]},
+       {"title": "참석 안내문 발송", "detail": "행사일 7일 전까지 안내문을 보냅니다.", "deadline": {"base": "행사일", "offset": -7, "unit": "일"}, "forms": [],
+        "basis": [{"doc_id": "rule-agency", "label": "제5조(행사 준비 일정)"}]},
+       {"title": "행사 결과 보고", "detail": "행사 다음 업무일부터 5업무일 이내에 결과를 보고합니다.", "deadline": {"base": "행사일", "offset": 5, "unit": "업무일"}, "forms": [],
+        "basis": [{"doc_id": "rule-agency", "label": "제5조(행사 준비 일정)"}]}
+     ]},
+    {"id": "card-leave", "title": "연가 신청", "category": "복무", "layer": "공통", "status": "초안",
+     "keywords": "연가 휴가 쉬려고 연차 쉬고 복무",
+     "summary": "연가를 쓰기 전 복무관리시스템 신청과 승인 절차입니다.",
+     "base_dates": ["연가 시작일"],
+     "steps": [
+       {"title": "복무관리시스템에 연가 신청", "detail": "사용하려는 날의 전 업무일까지 신청하고 부서장 승인을 받습니다.",
+        "tip": "교대근무자는 근무표 조정을 위해 7일 전까지 신청합니다(제3조).",
+        "deadline": {"base": "연가 시작일", "offset": -1, "unit": "업무일"}, "forms": [],
+        "variants": [
+          {"id": "shift", "label": "교대근무자", "basis": "연가·복무 처리 안내 제3조",
+           "keywords": ["교대근무", "교대 근무", "교대자", "교대제", "2교대", "3교대", "교대 직원"],
+           "deadline": {"base": "연가 시작일", "offset": -7, "unit": "일"},
+           "detail": "교대근무자는 근무표 조정을 위해 사용하려는 날 7일 전까지 복무관리시스템에 신청하고 부서장 승인을 받습니다."},
+          {"id": "urgent", "label": "질병·사고로 미리 신청하지 못한 경우", "basis": "연가·복무 처리 안내 제2조",
+           "keywords": ["아파서", "아프", "몸이 안 좋", "병원", "질병", "사고", "다쳐서", "다쳤"],
+           "priority": 1, "priority_note": "이미 지난 연가를 미리 신청하지 못한 사정이므로",
+           "deadline": null, "note": "당일 오전 중 부서장에게 알리고 복귀한 날 신청합니다",
+           "detail": "질병·사고 등으로 미리 신청하지 못했다면 당일 오전 중 부서장에게 알리고, 복귀한 날 복무관리시스템에 신청합니다."}
+        ],
+        "basis": [{"doc_id": "guide-leave", "label": "제1조(연가 신청)"}, {"doc_id": "guide-leave", "label": "제2조(긴급한 연가)"}, {"doc_id": "guide-leave", "label": "제3조(교대근무자)"}]}
+     ]}
+  ]
+}

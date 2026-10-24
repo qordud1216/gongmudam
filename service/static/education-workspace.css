@@ -1,0 +1,46 @@
+/* v62: one education job, its current step, sources and outputs. */
+.studio-ui #education-desk { min-width:0; }
+.studio-ui .education-desk {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  grid-template-rows:auto 1fr;
+  align-items:start;
+  column-gap:22px;
+}
+.studio-ui .education-desk > #education-workflow { grid-column:1; grid-row:1; margin-top:0; }
+.studio-ui .education-desk > #education-work-pane { grid-column:1; grid-row:2; min-width:0; }
+.studio-ui .education-desk > #education-resources { grid-column:2; grid-row:1 / span 2; min-width:0; }
+.studio-ui #education-resources .panel,
+.studio-ui #education-resources .work-attachments { margin:0 0 16px; padding:20px; border-radius:16px; }
+.studio-ui #education-resources h3 { margin:0; font-size:17px; line-height:1.5; font-weight:650; }
+.studio-ui #education-resources .help { font-size:13px; line-height:1.65; margin:8px 0; }
+.studio-ui .education-resource-heading { display:flex; gap:8px; justify-content:space-between; align-items:center; }
+.studio-ui .education-resource-heading button { flex:none; font-size:13px; padding:8px 4px; min-height:44px; }
+.studio-ui .education-folder { padding:12px 0; border-top:1px solid var(--line,#d8dee8); overflow-wrap:anywhere; }
+.studio-ui .education-folder > a { display:inline-flex; align-items:center; min-height:44px; font-size:15px; font-weight:600; }
+.studio-ui #education-resources :is(summary,label) { font-size:13px; line-height:1.6; }
+.studio-ui #education-resources summary { min-height:44px; padding:11px 0; cursor:pointer; }
+.studio-ui .education-folder ul { margin:0 0 8px; padding-left:18px; font-size:13px; line-height:1.7; }
+.studio-ui #education-folder-form { display:grid; gap:10px; }
+.studio-ui #education-folder-form label { font-size:13px; }
+.studio-ui #education-folder-form select { width:100%; min-width:0; max-width:100%; font-size:14px; }
+.studio-ui #education-resources :is(.secondary,.education-resource-link) { font-size:13px; min-height:44px; }
+.studio-ui .education-resource-link { display:inline-flex; align-items:center; line-height:1.7; }
+.studio-ui #education-resources .work-attachments > a { display:inline-flex; align-items:center; min-height:44px; font-size:14px; }
+.studio-ui #education-resources .work-attachment-item > a { display:inline-flex; align-items:center; min-height:44px; font-size:14px; }
+.studio-ui .education-saved-output { margin:6px 0 12px; overflow-wrap:anywhere; }
+.studio-ui .education-saved-output a { display:inline-flex; align-items:center; min-height:44px; font-size:14px; font-weight:600; }
+.studio-ui .education-saved-output small { display:block; font-size:12px; color:var(--muted,#52685c); }
+.studio-ui .education-desk #workflow-stage-detail { margin-top:16px; }
+.studio-ui .education-desk #export-panel { scroll-margin-top:20px; }
+@media(max-width:1199px) {
+  .studio-ui .education-desk { grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto auto; }
+  .studio-ui .education-desk > #education-workflow { grid-column:1; grid-row:1; }
+  .studio-ui .education-desk > #education-resources { grid-column:1; grid-row:2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+  .studio-ui .education-desk > #education-work-pane { grid-column:1; grid-row:3; }
+  .studio-ui #education-resources .panel,
+  .studio-ui #education-resources .work-attachments { padding:17px; }
+}
+@media(max-width:900px) {
+  .studio-ui .education-desk > #education-resources { grid-template-columns:minmax(0,1fr); gap:0; }
+}

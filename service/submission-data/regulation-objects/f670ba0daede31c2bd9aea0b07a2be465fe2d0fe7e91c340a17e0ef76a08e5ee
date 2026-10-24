@@ -1,0 +1,6966 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<title>성과·보수제도 게시판&lt; 성과·보수제도&lt; 공무원 인사제도&lt; 인사혁신처</title>
+
+
+<meta name="title" content="성과·보수제도 게시판" />
+
+
+
+
+
+
+<meta name="build" content="2025.12.30" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="author" content="인사혁신처">
+<meta name="subject" content="인사혁신처">
+<meta name="keywords" content="인사혁신처, 인사처, 인사혁신, 인사 혁신, 혁신, 혁신처, 인사 혁신처, 인사혁신처 대표 홈페이지">
+<meta property="og:description" content="인사혁신처 홈페이지에 오신것을 환영합니다.">
+<meta name="description" lang="ko" content="공무원인사제도, 채용제도, 승진, 보직, 보수, 연금, 인재개발, 복무, 윤리, 노사, 전자인사">
+<meta property="og:title" content="인사혁신처">
+  
+ <link rel="shortcut icon" href="/mpm/common/images/favicon3.png" type="image/png">
+  <!--
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/1024.png" sizes="1024x1024" />
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/512.png" sizes="512x512" />
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/114.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="/mpm/common/images/ios-icons/57.png" sizes="57x57" />
+-->
+  
+
+
+
+
+<link type="text/css" href="/mpm/common/css/common.css?v=20261020025830" media='all' rel='stylesheet' />
+<link type="text/css" href="/mpm/common/css/font-awesome.min.css?v=20261020025830" media='all' rel='stylesheet' />
+
+
+<link type="text/css" href="/mpm/common/css/jquery.bxslider.css?v=20261020025830" media='all' rel='stylesheet' />
+<link type="text/css" href="/mpm/common/css/common-ui.css?v=20261020025830" media='all' rel='stylesheet' />
+<link type="text/css" href="/mpm/common/css/board.css?v=20261020025830" media='all' rel='stylesheet' />
+<link type="text/css" href="/mpm/common/css/layout.css?v=20261020025830" media='all' rel='stylesheet' />
+<link type="text/css" href="/mpm/common/css/sub.css?v=20261020025830" media='all' rel='stylesheet' />
+
+
+<link type="text/css" href="/mpm/common/css/content.css?v=20261020025830" media='all' rel='stylesheet' />
+
+
+
+
+
+
+
+<link type="text/css" href="/mpm/common/css/newmain.css?v=20261020025830" media='all' rel='stylesheet' />
+
+
+
+  <link rel="stylesheet" href="/mpm/common/css/print.css" media="print">
+  <!--[if IE]>
+<![endif]-->
+<script src="/mpm/common/js/jquery-1.8.2.min.js"></script>
+<script src="/resources/js/jquery.ui/js/jquery-ui-1.9.0.custom.min.js"></script>
+<!--[if lt IE 9]>
+<script src="/mpm/common/js/jquery.pseudo.js"></script>
+<script src="/mpm/common/js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body id="subPage">
+	<!-- S - Skip To Content -->
+	<div class="skip-nav"><a href="#content">본문 바로 가기</a><a href="#topmenu">대메뉴 바로 가기</a></div>
+	<div class="nm_skipnav_mob">
+        <a href="#content">본문 바로 가기</a>
+        <a href="#nm_mob_menu">대메뉴 바로 가기</a>
+    </div>
+	<!-- E - Skip To Content -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- mobile-header -->
+
+
+
+<script type="text/javascript">
+var blackArr = new Array('innerhtml',
+		'javascript','onmousewheel','onactive','onfocusout',
+		'expression','charset','ondataavailable','oncut','onkeyup',
+		'applet','document','onafteripudate','onclick','onkeypress',
+		/*'meta',*/'onmousedown','onchange','onload',
+		'xml','onbeforeactivate','onbeforecut','onbounce',
+		'blink','append','onbeforecopy','ondbclick','onmouseenter',
+		'binding','onbeforedeactivate','ondeactivate','onmouseout',
+		'alert','ondatasetchaged','ondrag','onmouseover',
+        'script','msgbox','cnbeforeprint','ondragend','onsubmit',
+/*'embed',*//*'refresh',*/'cnbeforepaste','ondragenter','onmouseend',
+/*'void',*/'onbeforeeditfocus','ondragleave','onresizestart',
+/*'iframe',*/'cookie','onbeforeuload','ondragover','onuload',
+/*'frame',*/'href','onbeforeupdate','ondragstart','onselectstart',
+		'frameset','onpaste','onpropertychange','ondrop','onreset',
+		'ilayer','onresize','ondatasetcomplete','onerror','onmove',
+		'onselect','oncellchange','onfinish','onstop',
+		'bgsound','onlayoutcomplete','onfocus','onrowexit',
+		'onblur','onselectionchange','vbscript','onerrorupdate',
+		'onbefore','onstart','onrowsinserted','onkeydown','onfilterchage',
+		'onmouseup','onfocusin','oncontrolselected','onrowsdelete','onlosecapture',
+		'onrowenter','onhelp','onreadystatechange','onmouseleave','onmousemove',
+		'oncontextmenu');
+
+
+
+  /*
+function keypress_search(){
+	var sch_word = $("#search-text").val();
+	var clik = 0;
+	for(var i = 0;i<blackArr.length;i++){
+			if(sch_word.toLowerCase().match(blackArr[i]) != null){
+				alert(blackArr[i]+" 는 사용하실 수 없습니다.");
+				$('#search-text').focus();
+				clik=1;
+			}
+	}
+	if(clik == 1){
+		return false;
+	}else{
+		document.searchform.action="/search/search.do";
+  		document.searchform.submit();
+	}
+  }
+*/  
+  
+function checkSearch(formObj) {
+    var $input = $(formObj).find("input[name='kwd']");
+    var sch_word = $input.val().trim();
+    
+    if (sch_word === "") {
+        alert("검색어를 입력하세요.");
+        $input.focus();
+        return false;
+    }
+    
+    for (var i = 0; i < blackArr.length; i++) {
+        if (sch_word.toLowerCase().indexOf(blackArr[i]) !== -1) {
+            alert(blackArr[i] + " 는 사용하실 수 없습니다.");
+            $input.focus();
+            return false;
+        }
+    }
+    return true; // true를 반환하면 form의 action으로 자동 submit 됩니다.
+}
+</script>
+<!-- s : header -->
+  
+<!-- s : header -->
+<div class="nm_eg">
+	<div class="nm_left">	
+		<p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+	</div>
+	<div class="nm_right">
+		
+		<ul class="nm_header_links">
+          
+            
+            
+            
+            
+            
+            <li class="taegugki_banner">
+              <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" class="nm_link_flag" onclick="window.open(this.href, '', 'width=850, height=750'); return false;" title="국가상징 페이지 새 창 열림">국가상징</a>
+            </li>
+            <li class="lan_link"><button type="button" class="lan_btn" aria-label="다국어 홈페이지">다국어</button>
+              <ul>
+                <li>
+                  <a href="/youth/" target="_blank" title="인사혁신처 어린이&middot;청소년 사이트 새 창 열림">어린이·청소년</a>
+                </li>
+                <li>
+                  <a href="/english/" target="_blank" title="인사혁신처 영문 사이트 새 창 열림">ENGLISH</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/mpm/useinfo/sitemap/" title="누리집 지도 바로가기">누리집 지도</a>
+            </li>
+		</ul>
+	</div>
+</div>  
+  
+<header class="nm_header">
+		
+	<div class="nm_header_nav">
+		<h1>
+			<a class="nm_home" href="/mpm" title="메인페이지 바로가기"><span class="nm_blind">인사혁신처 로고</span></a>
+		</h1>
+		<div class="nm_slogan">
+			<a href="https://www.korea.kr/govVision/" target="_blank" title="123대 국정과제 새창열림"><span class="blind">국민이 주인인 나라 함께 행복한 대한민국</span></a>
+		</div>		
+		<nav class="nm_header_gnb" id="topmenu">
+			<ul>
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>정보공개</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">정보공개</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub1_1 ">
+									
+										<a href="/mpm/open/openData" class="nm_nav_tit" title="사전정보공표">사전정보공표</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub1_2 ">
+									
+									
+
+										<a href="https://www.open.go.kr/infOthbc/infOthbc/infOthbc.do" class="nm_nav_tit" title="정보공개안내 링크가 새창으로 열립니다."  target="_blank">정보공개안내</a>
+
+									
+									
+								</li>
+							
+								<li class="sub1_3 ">
+									
+									
+
+										<a href="https://www.open.go.kr/othicInfo/infoList/infoList.do" class="nm_nav_tit" title="정보공개목록 및 청구 링크가 새창으로 열립니다."  target="_blank">정보공개목록 및 청구</a>
+
+									
+									
+								</li>
+							
+								<li class="sub1_4 ">
+									
+										<a href="/mpm/open/openSecret" class="nm_nav_tit" title="비공개 대상정보 세부기준">비공개 대상정보 세부기준</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub1_5 ">
+									
+										<a href="/mpm/open/publicDataOpen" class="nm_nav_tit" title="공공데이터 개방">공공데이터 개방</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub1_5_1 ">
+													
+														<a href="/mpm/open/publicDataOpen/openPublicData" title="공공데이터 개방">공공데이터 개방</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub1_6 ">
+									
+										<a href="/mpm/open/openPolicy" class="nm_nav_tit" title="정책실명제">정책실명제</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub1_6_1 ">
+													
+														<a href="/mpm/open/openPolicy/openPolicyInfo" title="정책실명제 안내">정책실명제 안내</a>
+													
+													
+												</li>
+											
+												<li class="sub1_6_2 ">
+													
+														<a href="/mpm/open/openPolicy/openPolicyName" title="국민신청실명제">국민신청실명제</a>
+													
+													
+												</li>
+											
+												<li class="sub1_6_3 ">
+													
+														<a href="/mpm/open/openPolicy/openPolicyBiz" title="중점관리 대상사업">중점관리 대상사업</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub1_7 ">
+									
+										<a href="/mpm/open/openVerify" class="nm_nav_tit" title="정부포상공개검증">정부포상공개검증</a>
+									
+									
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>참여민원</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">참여민원</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub2_1 ">
+									
+										<a href="/mpm/minwon/minwonOnline" class="nm_nav_tit" title="전자민원">전자민원</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_1_1 ">
+													
+														<a href="/mpm/minwon/minwonOnline/minwonHandbook" title="민원편람">민원편람</a>
+													
+													
+												</li>
+											
+												<li class="sub2_1_2 ">
+													
+														<a href="/mpm/minwon/minwonOnline/minwonSrch" title="유사 민원 검색">유사 민원 검색</a>
+													
+													
+												</li>
+											
+												<li class="sub2_1_3 ">
+													
+														<a href="/mpm/minwon/minwonOnline/minwonQnA" title="전자민원 FAQ">전자민원 FAQ</a>
+													
+													
+												</li>
+											
+												<li class="sub2_1_4 ">
+													
+														<a href="/mpm/minwon/minwonOnline/minwonApply" title="전자민원신청">전자민원신청</a>
+													
+													
+												</li>
+											
+												<li class="sub2_1_5 ">
+													
+														<a href="/mpm/minwon/minwonOnline/minwonMy" title="나의 민원 보기">나의 민원 보기</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub2_2 ">
+									
+										<a href="/mpm/minwon/minwonPolicy" class="nm_nav_tit" title="정책참여">정책참여</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_2_1 ">
+													
+														<a href="/mpm/minwon/minwonPolicy/policyDiscussion" title="정책토론">정책토론</a>
+													
+													
+												</li>
+											
+												<li class="sub2_2_2 ">
+													
+														<a href="/mpm/minwon/minwonPolicy/policyPublic" title="전자공청회">전자공청회</a>
+													
+													
+												</li>
+											
+												<li class="sub2_2_3 ">
+													
+														<a href="/mpm/minwon/minwonPolicy/policySurvey" title="설문조사">설문조사</a>
+													
+													
+												</li>
+											
+												<li class="sub2_2_4 ">
+													
+														<a href="/mpm/minwon/minwonPolicy/policyIdea" title="국민생각함">국민생각함</a>
+													
+													
+												</li>
+											
+												<li class="sub2_2_5 ">
+													
+														<a href="/mpm/minwon/minwonPolicy/nationParticipation" title="국민참여정책단">국민참여정책단</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub2_3 ">
+									
+										<a href="/mpm/minwon/policyPeople" class="nm_nav_tit" title="국민제안">국민제안</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_3_1 ">
+													
+														<a href="/mpm/minwon/policyPeople/proposal" title="제안제도">제안제도</a>
+													
+													
+												</li>
+											
+												<li class="sub2_3_2 ">
+													
+														<a href="/mpm/minwon/policyPeople/ppSuggestion" title="국민제안">국민제안</a>
+													
+													
+												</li>
+											
+												<li class="sub2_3_3 ">
+													
+														<a href="/mpm/minwon/policyPeople/ppcontest" title="공모제안">공모제안</a>
+													
+													
+												</li>
+											
+												<li class="sub2_3_4 ">
+													
+														<a href="/mpm/minwon/policyPeople/ppMy" title="나의제안보기">나의제안보기</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub2_4 ">
+									
+										<a href="/mpm/minwon/minwonCenter" class="nm_nav_tit" title="신고센터">신고센터</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_4_1 ">
+													
+														<a href="/mpm/minwon/minwonCenter/piComplain" title="공익신고">공익신고</a>
+													
+													
+												</li>
+											
+												<li class="sub2_4_2 ">
+													
+														<a href="/mpm/minwon/minwonCenter/complain" title="인사신문고">인사신문고</a>
+													
+													
+												</li>
+											
+												<li class="sub2_4_3 ">
+													
+														<a href="/mpm/minwon/minwonCenter/mcBudget" title="예산낭비 신고센터">예산낭비 신고센터</a>
+													
+													
+												</li>
+											
+												<li class="sub2_4_4 ">
+													
+														<a href="/mpm/minwon/minwonCenter/mcFavors" title="청탁금지법 신고">청탁금지법 신고</a>
+													
+													
+												</li>
+											
+												<li class="sub2_4_5 ">
+													
+														<a href="/mpm/minwon/minwonCenter/erReport" title="취업·행위제한 신고센터">취업·행위제한 신고센터</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub2_5 ">
+									
+										<a href="/mpm/minwon/regInovation" class="nm_nav_tit" title="규제혁신">규제혁신</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_5_1 ">
+													
+														<a href="/mpm/minwon/regInovation/mcRegIntro" title="규제신문고">규제신문고</a>
+													
+													
+												</li>
+											
+												<li class="sub2_5_2 ">
+													
+													
+														<a href="https://www.better.go.kr/zz.main.PortalMain" title="규제정보포털 링크가 새창으로 열립니다." target="_blank">규제정보포털</a>
+													
+												</li>
+											
+												<li class="sub2_5_3 ">
+													
+														<a href="/mpm/minwon/regInovation/regLegis" title="정부입법 규제법안">정부입법 규제법안</a>
+													
+													
+												</li>
+											
+												<li class="sub2_5_4 ">
+													
+														<a href="/mpm/minwon/regInovation/regReport" title="부처별 보도자료">부처별 보도자료</a>
+													
+													
+												</li>
+											
+												<li class="sub2_5_5 ">
+													
+														<a href="/mpm/minwon/regInovation/regLaw" title="규제법령 정보">규제법령 정보</a>
+													
+													
+												</li>
+											
+												<li class="sub2_5_6 ">
+													
+														<a href="/mpm/minwon/regInovation/regulationPR" title="규제입증요청">규제입증요청</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub2_6 ">
+									
+										<a href="/mpm/minwon/specialperfor" class="nm_nav_tit" title="특별성과 공무원 추천">특별성과 공무원 추천</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub2_6_1 ">
+													
+														<a href="/mpm/minwon/specialperfor/specialperfor" title="특별성과 공무원 추천">특별성과 공무원 추천</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>새소식</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">새소식</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub3_1 ">
+									
+										<a href="/mpm/comm/noti" class="nm_nav_tit" title="공지사항">공지사항</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub3_1_1 ">
+													
+														<a href="/mpm/comm/noti/newsNoitice" title="공지사항">공지사항</a>
+													
+													
+												</li>
+											
+												<li class="sub3_1_2 ">
+													
+														<a href="/mpm/comm/noti/mpmNotice" title="인사혁신처 공고">인사혁신처 공고</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub3_2 ">
+									
+										<a href="/mpm/comm/newsPress" class="nm_nav_tit" title="언론 보도자료">언론 보도자료</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub3_2_1 ">
+													
+														<a href="/mpm/comm/newsPress/newsPressRelease" title="보도자료">보도자료</a>
+													
+													
+												</li>
+											
+												<li class="sub3_2_2 ">
+													
+														<a href="/mpm/comm/newsPress/newsPressExplain" title="설명·정정자료">설명·정정자료</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub3_3 ">
+									
+										<a href="/mpm/comm/policyPR" class="nm_nav_tit" title="주요정책홍보">주요정책홍보</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub3_3_1 ">
+													
+														<a href="/mpm/comm/policyPR/newsPhoto" title="사진뉴스">사진뉴스</a>
+													
+													
+												</li>
+											
+												<li class="sub3_3_2 ">
+													
+														<a href="/mpm/comm/policyPR/newsMovie" title="동영상뉴스">동영상뉴스</a>
+													
+													
+												</li>
+											
+												<li class="sub3_3_3 ">
+													
+														<a href="/mpm/comm/policyPR/mpmFocus" title="카드뉴스">카드뉴스</a>
+													
+													
+												</li>
+											
+												<li class="sub3_3_4 ">
+													
+														<a href="/mpm/comm/policyPR/event" title="이벤트">이벤트</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub3_4 ">
+									
+										<a href="/mpm/comm/newsLetter" class="nm_nav_tit" title="인사 소식지">인사 소식지</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub3_5 ">
+									
+										<a href="/mpm/comm/pblcateList" class="nm_nav_tit" title="간행물">간행물</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub3_6 ">
+									
+										<a href="/mpm/comm/newsInnoHr" class="nm_nav_tit" title="인사이동">인사이동</a>
+									
+									
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>국정과제</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">국정과제</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub4_1 ">
+									
+										<a href="/mpm/mpmVision/task" class="nm_nav_tit" title="인사혁신처 국정과제">인사혁신처 국정과제</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub4_2 ">
+									
+										<a href="/mpm/mpmVision/effectM" class="nm_nav_tit" title="국정성과">국정성과</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub4_2_1 ">
+													
+														<a href="/mpm/mpmVision/effectM/repeffect" title="대표성과">대표성과</a>
+													
+													
+												</li>
+											
+												<li class="sub4_2_2 ">
+													
+														<a href="/mpm/mpmVision/effectM/effect" title="전체성과">전체성과</a>
+													
+													
+												</li>
+											
+												<li class="sub4_2_3 ">
+													
+													
+														<a href="https://www.evaluation.go.kr/performance.jsp" title="정부 국정성과 링크가 새창으로 열립니다." target="_blank">정부 국정성과</a>
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>공무원 인사제도</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">공무원 인사제도</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub5_1 ">
+									
+										<a href="/mpm/info/infoBiz" class="nm_nav_tit" title="승진·보직관리">승진·보직관리</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_1_1 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr01" title="임용 및 임용권자">임용 및 임용권자</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_2 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr02" title="인력관리계획">인력관리계획</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_3 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr03" title="승진제도">승진제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_4 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr05" title="휴직제도">휴직제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_5 ">
+													
+														<a href="/mpm/info/infoBiz/dispatch" title="파견제도">파견제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_6 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr04" title="인사교류">인사교류</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_7 ">
+													
+														<a href="/mpm/info/infoBiz/bizHr06" title="시간선택제 공무원">시간선택제 공무원</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_8 ">
+													
+														<a href="/mpm/info/infoBiz/hrSystemInfo" title="고위공무원단 제도">고위공무원단 제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_9 ">
+													
+														<a href="/mpm/info/infoBiz/openPoSys" title="개방형 직위 제도">개방형 직위 제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_10 ">
+													
+														<a href="/mpm/info/infoBiz/compAppr" title="역량평가제도">역량평가제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_1_11 ">
+													
+														<a href="/mpm/info/infoBiz/bizBoard" title="승진·보직관리 게시판">승진·보직관리 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_2 ">
+									
+										<a href="/mpm/info/infoJobs" class="nm_nav_tit" title="채용제도">채용제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_2_1 ">
+													
+														<a href="/mpm/info/infoJobs/rightProcedures" title="공무원 인재상">공무원 인재상</a>
+													
+													
+												</li>
+											
+												<li class="sub5_2_2 ">
+													
+														<a href="/mpm/info/infoJobs/jobsProcedures01" title="공무원의 종류">공무원의 종류</a>
+													
+													
+												</li>
+											
+												<li class="sub5_2_3 ">
+													
+														<a href="/mpm/info/infoJobs/HrProcedures" title="공무원의 채용">공무원의 채용</a>
+													
+													
+												</li>
+											
+												<li class="sub5_2_4 ">
+													
+														<a href="/mpm/info/infoJobs/jobsBalance" title="균형인사제도">균형인사제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_2_5 ">
+													
+													
+														<a href="https://www.gojobs.go.kr/apmList.do?menuNo=401&mngrMenuYn=N&selMenuNo=400&upperMenuNo=&wd=1829" title="공공채용정보 링크가 새창으로 열립니다." target="_blank">공공채용정보</a>
+													
+												</li>
+											
+												<li class="sub5_2_6 ">
+													
+														<a href="/mpm/info/infoJobs/jobsBoard" title="채용제도 게시판">채용제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_3 on">
+									
+										<a href="/mpm/info/resultPay" class="nm_nav_tit" title="성과·보수제도">성과·보수제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_3_1 ">
+													
+														<a href="/mpm/info/resultPay/bizPay01" title="보수체계">보수체계</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_2 ">
+													
+														<a href="/mpm/info/resultPay/bizPay02" title="봉급제도">봉급제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_3 ">
+													
+														<a href="/mpm/info/resultPay/bizSalary" title="공무원봉급표">공무원봉급표</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_4 ">
+													
+														<a href="/mpm/info/resultPay/bizPay03" title="수당제도">수당제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_5 ">
+													
+														<a href="/mpm/info/resultPay/bizPay04" title="여비제도">여비제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_6 ">
+													
+														<a href="/mpm/info/resultPay/bizPay05" title="성과평가제도">성과평가제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_7 ">
+													
+														<a href="/mpm/info/resultPay/bizSal03" title="성과보수제도">성과보수제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_3_8 on">
+													
+														<a href="/mpm/info/resultPay/payBoard" title="성과·보수제도 게시판">성과·보수제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_4 ">
+									
+										<a href="/mpm/info/retireAnnuity" class="nm_nav_tit" title="연금·복지제도">연금·복지제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_4_1 ">
+													
+														<a href="/mpm/info/retireAnnuity/infoAnnual" title="연금제도">연금제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_4_2 ">
+													
+														<a href="/mpm/info/retireAnnuity/welfare" title="후생복지제도">후생복지제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_4_3 ">
+													
+														<a href="/mpm/info/retireAnnuity/officialArt" title="공무원예술대전">공무원예술대전</a>
+													
+													
+												</li>
+											
+												<li class="sub5_4_4 ">
+													
+														<a href="/mpm/info/retireAnnuity/retireSupport" title="퇴직관리">퇴직관리</a>
+													
+													
+												</li>
+											
+												<li class="sub5_4_5 ">
+													
+														<a href="/mpm/info/retireAnnuity/annuityBoard" title="연금·복지제도 게시판">연금·복지제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_5 ">
+									
+										<a href="/mpm/info/compens" class="nm_nav_tit" title="재해보상제도">재해보상제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_5_1 ">
+													
+														<a href="/mpm/info/compens/compens01" title="공무원 재해보상제도">공무원 재해보상제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_2 ">
+													
+														<a href="/mpm/info/compens/compens02" title="공무원 재해보상 업무 절차">공무원 재해보상 업무 절차</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_3 ">
+													
+														<a href="/mpm/info/compens/compens03" title="공무원 재해보상 급여 종류">공무원 재해보상 급여 종류</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_4 ">
+													
+														<a href="/mpm/info/compens/compens04" title="공무원재해보상심의회">공무원재해보상심의회</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_5 ">
+													
+														<a href="/mpm/info/compens/compens05" title="공무원재해보상연금위원회">공무원재해보상연금위원회</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_6 ">
+													
+														<a href="/mpm/info/compens/compens07" title="공상공무원 전문재활치료">공상공무원 전문재활치료</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_7 ">
+													
+														<a href="/mpm/info/compens/compens06" title="공무원 마음건강센터">공무원 마음건강센터</a>
+													
+													
+												</li>
+											
+												<li class="sub5_5_8 ">
+													
+														<a href="/mpm/info/compens/compensBoard" title="재해보상제도 게시판">재해보상제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_6 ">
+									
+										<a href="/mpm/info/infoEdu" class="nm_nav_tit" title="인재개발제도">인재개발제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_6_1 ">
+													
+														<a href="/mpm/info/infoEdu/eduPolicy01" title="교육훈련일반">교육훈련일반</a>
+													
+													
+												</li>
+											
+												<li class="sub5_6_2 ">
+													
+														<a href="/mpm/info/infoEdu/eduDomestic" title="국내교육훈련">국내교육훈련</a>
+													
+													
+												</li>
+											
+												<li class="sub5_6_3 ">
+													
+														<a href="/mpm/info/infoEdu/eduPolicy03" title="국외교육훈련">국외교육훈련</a>
+													
+													
+												</li>
+											
+												<li class="sub5_6_4 ">
+													
+														<a href="/mpm/info/infoEdu/digitalEdu" title="인재개발플랫폼">인재개발플랫폼</a>
+													
+													
+												</li>
+											
+												<li class="sub5_6_5 ">
+													
+														<a href="/mpm/info/infoEdu/eduBoard" title="인재개발제도 게시판">인재개발제도 게시판</a>
+													
+													
+												</li>
+											
+												<li class="sub5_6_6 ">
+													
+													
+														<a href="https://www.training.go.kr" title="인재개발정보센터 링크가 새창으로 열립니다." target="_blank">인재개발정보센터</a>
+													
+												</li>
+											
+												<li class="sub5_6_7 ">
+													
+													
+														<a href="https://e-learning.nhi.go.kr/" title="나라배움터 링크가 새창으로 열립니다." target="_blank">나라배움터</a>
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_7 ">
+									
+										<a href="/mpm/info/infoService" class="nm_nav_tit" title="복무제도">복무제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_7_1 ">
+													
+														<a href="/mpm/info/infoService/BizService01" title="공무원 휴가제도">공무원 휴가제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_2 ">
+													
+														<a href="/mpm/info/infoService/BizService10" title="유연근무제도">유연근무제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_3 ">
+													
+														<a href="/mpm/info/infoService/BizService02" title="공휴일제도">공휴일제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_4 ">
+													
+														<a href="/mpm/info/infoService/BizService06" title="영리업무금지 및 겸직허가제도">영리업무금지 및 겸직허가제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_5 ">
+													
+														<a href="/mpm/info/infoService/BizService03" title="당직 및 비상근무제도">당직 및 비상근무제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_6 ">
+													
+														<a href="/mpm/info/infoService/BizService07" title="국내출장">국내출장</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_7 ">
+													
+														<a href="/mpm/info/infoService/BizService08" title="공무국외출장">공무국외출장</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_8 ">
+													
+														<a href="/mpm/info/infoService/BizService04" title="징계제도">징계제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_9 ">
+													
+														<a href="/mpm/info/infoService/proactDisEx" title="적극행정 징계면제 제도">적극행정 징계면제 제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_10 ">
+													
+														<a href="/mpm/info/infoService/civilCharter" title="공무원헌장">공무원헌장</a>
+													
+													
+												</li>
+											
+												<li class="sub5_7_11 ">
+													
+														<a href="/mpm/info/infoService/serviceBoard" title="복무제도 게시판">복무제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_8 ">
+									
+										<a href="/mpm/info/infoEthics" class="nm_nav_tit" title="윤리제도">윤리제도</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_8_1 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics01" title="공직자 재산등록·공개·심사제도">공직자 재산등록·공개·심사제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_2 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics02" title="고지거부제도">고지거부제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_3 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics03" title="주식백지신탁심사제도">주식백지신탁심사제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_4 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics06" title="선물신고제도">선물신고제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_5 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics04" title="퇴직공직자 취업제한제도">퇴직공직자 취업제한제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_6 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics05" title="퇴직공직자 행위제한제도">퇴직공직자 행위제한제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_7 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics08" title="부동산 신규취득 제한제도">부동산 신규취득 제한제도</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_8 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthics07" title="공직유관단체">공직유관단체</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_9 ">
+													
+														<a href="/mpm/info/infoEthics/erReportBoard" title="취업·행위제한 신고센터 게시판">취업·행위제한 신고센터 게시판</a>
+													
+													
+												</li>
+											
+												<li class="sub5_8_10 ">
+													
+														<a href="/mpm/info/infoEthics/BizEthicsBoard" title="윤리제도 게시판">윤리제도 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_9 ">
+									
+										<a href="/mpm/info/infoLaborManag" class="nm_nav_tit" title="노사협력">노사협력</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_9_1 ">
+													
+														<a href="/mpm/info/infoLaborManag/LaborManagSummary" title="공무원 노사관계 개요">공무원 노사관계 개요</a>
+													
+													
+												</li>
+											
+												<li class="sub5_9_2 ">
+													
+														<a href="/mpm/info/infoLaborManag/LaborManagBusin" title="노사상생 협력사업">노사상생 협력사업</a>
+													
+													
+												</li>
+											
+												<li class="sub5_9_3 ">
+													
+														<a href="/mpm/info/infoLaborManag/LaborManagOrg" title="공무원 노조와 단체교섭">공무원 노조와 단체교섭</a>
+													
+													
+												</li>
+											
+												<li class="sub5_9_4 ">
+													
+														<a href="/mpm/info/infoLaborManag/nosaboard" title="노사상생 게시판">노사상생 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_10 ">
+									
+										<a href="/mpm/info/hrInfo" class="nm_nav_tit" title="인재정보">인재정보</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_10_1 ">
+													
+														<a href="/mpm/info/hrInfo/hrInfo01" title="인재정보 활용 개요">인재정보 활용 개요</a>
+													
+													
+												</li>
+											
+												<li class="sub5_10_2 ">
+													
+														<a href="/mpm/info/hrInfo/hrInfo02" title="국가인재데이터베이스">국가인재데이터베이스</a>
+													
+													
+												</li>
+											
+												<li class="sub5_10_3 ">
+													
+														<a href="/mpm/info/hrInfo/hrInfo04" title="국가인재DB 국민추천제">국가인재DB 국민추천제</a>
+													
+													
+												</li>
+											
+												<li class="sub5_10_4 ">
+													
+														<a href="/mpm/info/hrInfo/hrInfo03" title="정부헤드헌팅">정부헤드헌팅</a>
+													
+													
+												</li>
+											
+												<li class="sub5_10_5 ">
+													
+														<a href="/mpm/info/hrInfo/hrInfoBoard" title="인재정보 게시판">인재정보 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_11 ">
+									
+										<a href="/mpm/info/fair" class="nm_nav_tit" title="공직박람회">공직박람회</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_11_1 ">
+													
+														<a href="/mpm/info/fair/publicFair" title="연도별 공직박람회">연도별 공직박람회</a>
+													
+													
+												</li>
+											
+												<li class="sub5_11_2 ">
+													
+														<a href="/mpm/info/fair/recruit" title="기관별 채용안내">기관별 채용안내</a>
+													
+													
+												</li>
+											
+												<li class="sub5_11_3 ">
+													
+														<a href="/mpm/info/fair/lifeChar" title="생애/특성별 채용제도">생애/특성별 채용제도</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_12 ">
+									
+										<a href="/mpm/info/infoEsaram" class="nm_nav_tit" title="전자인사관리시스템">전자인사관리시스템</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_12_1 ">
+													
+														<a href="/mpm/info/infoEsaram/infoEsaram1" title="전자인사관리시스템이란">전자인사관리시스템이란</a>
+													
+													
+												</li>
+											
+												<li class="sub5_12_2 ">
+													
+														<a href="/mpm/info/infoEsaram/infoEsaram2" title="주요 서비스">주요 서비스</a>
+													
+													
+												</li>
+											
+												<li class="sub5_12_3 ">
+													
+														<a href="/mpm/info/infoEsaram/infoEsaram3" title="서비스 구성">서비스 구성</a>
+													
+													
+												</li>
+											
+												<li class="sub5_12_4 ">
+													
+														<a href="/mpm/info/infoEsaram/infoEsaram4" title="달라지는 정부인사">달라지는 정부인사</a>
+													
+													
+												</li>
+											
+												<li class="sub5_12_5 ">
+													
+														<a href="/mpm/info/infoEsaram/infoEsaramBoard" title="전자인사관리 게시판">전자인사관리 게시판</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_13 ">
+									
+										<a href="/mpm/info/theActive" class="nm_nav_tit" title="더 적극행정">더 적극행정</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub5_13_1 ">
+													
+														<a href="/mpm/info/theActive/definition" title="제도소개">제도소개</a>
+													
+													
+												</li>
+											
+												<li class="sub5_13_2 ">
+													
+														<a href="/mpm/info/theActive/actionPlan" title="실행계획">실행계획</a>
+													
+													
+												</li>
+											
+												<li class="sub5_13_3 ">
+													
+														<a href="/mpm/info/theActive/referenceBoard" title="자료실">자료실</a>
+													
+													
+												</li>
+											
+												<li class="sub5_13_4 ">
+													
+														<a href="/mpm/info/theActive/publicParticipation" title="국민참여">국민참여</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub5_14 ">
+									
+										<a href="/mpm/info/hrFAQ" class="nm_nav_tit" title="자주하는 질문">자주하는 질문</a>
+									
+									
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>법령·통계정보</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">법령·통계정보</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub6_1 ">
+									
+										<a href="/mpm/lawStat/infoLaw" class="nm_nav_tit" title="법령정보">법령정보</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub6_1_1 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawList" title="법률">법률</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_2 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawPresident" title="대통령령">대통령령</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_3 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawPrimeMinister" title="총리령">총리령</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_4 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawAnwei" title="훈령/예규/고시">훈령/예규/고시</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_5 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawMaking" title="입법/행정 예고">입법/행정 예고</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_6 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawSearch" title="법령종합검색">법령종합검색</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_7 ">
+													
+														<a href="/mpm/lawStat/infoLaw/lawData" title="법령자료실">법령자료실</a>
+													
+													
+												</li>
+											
+												<li class="sub6_1_8 ">
+													
+													
+														<a href="https://www.prism.go.kr/homepage/" title="정책연구 보고서 링크가 새창으로 열립니다." target="_blank">정책연구 보고서</a>
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub6_2 ">
+									
+										<a href="/mpm/lawStat/infoStatistics" class="nm_nav_tit" title="통계정보">통계정보</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub6_2_1 ">
+													
+														<a href="/mpm/lawStat/infoStatistics/hrStatistics" title="인사통계">인사통계</a>
+													
+													
+												</li>
+											
+												<li class="sub6_2_2 ">
+													
+														<a href="/mpm/lawStat/infoStatistics/inqueryOfficial" title="공무원총조사">공무원총조사</a>
+													
+													
+												</li>
+											
+												<li class="sub6_2_3 ">
+													
+														<a href="/mpm/lawStat/infoStatistics/statisticsEnara" title="e-나라지표">e-나라지표</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="">
+      <a href="javascript:void(0)"><span>기관소개</span></a>
+		
+			<div class="nm_nav_depth_wrap">
+				<div class="nm_nav_detail">
+					<div class="nm_nav_left">
+						<h2 class="nm_nav_det_tit">기관소개</h2>
+					</div>
+					<div class="nm_nav_right">
+						<ul>
+							
+							
+								<li class="sub7_1 ">
+									
+										<a href="/mpm/about/abotMpm" class="nm_nav_tit" title="인사혁신처 소개">인사혁신처 소개</a>
+									
+									
+									
+										<ul>
+											
+												<li class="sub7_1_1 ">
+													
+														<a href="/mpm/about/abotMpm/aboutIntro" title="연혁">연혁</a>
+													
+													
+												</li>
+											
+												<li class="sub7_1_2 ">
+													
+														<a href="/mpm/about/abotMpm/aboutBudget" title="예산현황">예산현황</a>
+													
+													
+												</li>
+											
+												<li class="sub7_1_3 ">
+													
+														<a href="/mpm/about/abotMpm/aboutMi" title="기관 상징(MI) 소개">기관 상징(MI) 소개</a>
+													
+													
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li class="sub7_2 ">
+									
+										<a href="/mpm/about/aboutorg" class="nm_nav_tit" title="조직과 기능">조직과 기능</a>
+									
+									
+									
+								</li>
+							
+								<li class="sub7_3 ">
+									
+									
+
+										<a href="http://www.mpm.go.kr/openminister/" class="nm_nav_tit" title="열린처장실 링크가 새창으로 열립니다."  target="_blank">열린처장실</a>
+
+									
+									
+								</li>
+							
+								<li class="sub7_4 ">
+									
+										<a href="/mpm/about/map" class="nm_nav_tit" title="찾아오시는길">찾아오시는길</a>
+									
+									
+									
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+	</li>
+
+			</ul>
+		</nav>
+
+		<div class="nm_header_right">
+
+			<button type="button" class="nm_mob_sch_btn"><span>통합검색</span></button>
+			<div class="nm_header_sch_bg">
+              <div class="nm_header_sch  search-hd">
+                    <form method="get" id="searchform" name="searchform" onsubmit="return checkSearch(this);" action="/search/search.do">
+                        <input type="hidden" name="searchOpt" value="통합검색" />
+                      <label for="search-text" class="blind">검색어 입력</label>
+                        <input type="text" name="kwd" id="search-text"  value="" placeholder="검색어를 입력하세요." />
+                        <button type="submit" class="nm_sch_btn"><span class="nm_blind">검색</span></button>
+                    </form>
+                </div>
+            </div>					
+		</div>
+
+		<!-- 모바일 사이즈에서 나타남 -->
+		<button type="button" class="nm_mob_menu_btn" id="nm_mob_menu"><span class="nm_blind">메뉴열기</span></button>
+	</div>
+
+	<!-- 모바일 사이즈에서 나타남 -->
+	<!-- 모바일은 작업중.. -->
+	<div class="nm_mob_nav">
+		<div class="nm_mob_nav_dim" aria-hidden="true"></div>
+		<div class="nm_mob_nav_header">
+
+			<a class="nm_mob_home" href="/mpm/" title="인사혁신처"><span class="nm_blind">인사혁신처</span></a>
+
+
+            <button type="button" class="nm_mob_nav_close">
+              <span class="nm_blind">메뉴 닫기</span>
+            </button>
+			<ul class="nm_header_links">
+				<li>
+					<a href="http://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" class="nm_link_flag" target="_blank" title="국가상징 페이지 새 창 열림">국가상징</a>
+				</li>
+				<li>
+					<a href="/youth/" target="_blank" title="인사혁신처 어린이&middot;청소년 사이트 새 창 열림">어린이·청소년</a>
+				</li>
+				<li>
+					<a href="/english/" target="_blank" title="인사혁신처 영문 사이트 새 창 열림">ENGLISH</a>
+				</li>
+				<li>
+					<a href="/mpm/useinfo/sitemap/" title="누리집 지도 바로가기">누리집 지도</a>
+				</li>
+			</ul>
+           <!--div class="nm_header_sch">
+				<form method="get" id="searchform-mob" name="searchform-mob" onsubmit="return checkSearch(this);" action="/search/search.do">
+					<input type="hidden" name="searchOpt" value="통합검색" />
+                  <label for="search-text-mob" class="blind">검색어 입력</label>
+					<input type="text" name="kwd" id="search-text-mob" style="ime-mode:active;" value="" placeholder="검색어를 입력하세요." />
+                    <button type="button" id="btnClear" class="btn-clear" aria-label="입력내용 삭제"><span>삭제</span></button>
+					<button type="submit" class="nm_sch_btn"><span class="nm_blind">검색</span></button>
+				</form>
+			</div-->
+		</div>
+		
+		<div class="nm_mob_nav_list">
+			<ul class="mob_nav">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb01 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>정보공개</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/open/openData" title="사전정보공표">사전정보공표</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+							
+								<a href="https://www.open.go.kr/infOthbc/infOthbc/infOthbc.do" title="정보공개안내 링크가 새창으로 열립니다." target="_blank">정보공개안내</a>
+							
+							
+						</li>
+					
+						<li>
+							
+							
+								<a href="https://www.open.go.kr/othicInfo/infoList/infoList.do" title="정보공개목록 및 청구 링크가 새창으로 열립니다." target="_blank">정보공개목록 및 청구</a>
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/open/openSecret" title="비공개 대상정보 세부기준">비공개 대상정보 세부기준</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/open/publicDataOpen" title="공공데이터 개방">공공데이터 개방</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/open/publicDataOpen/openPublicData" title="공공데이터 개방">공공데이터 개방</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/open/openPolicy" title="정책실명제">정책실명제</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/open/openPolicy/openPolicyInfo" title="정책실명제 안내">정책실명제 안내</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/open/openPolicy/openPolicyName" title="국민신청실명제">국민신청실명제</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/open/openPolicy/openPolicyBiz" title="중점관리 대상사업">중점관리 대상사업</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/open/openVerify" title="정부포상공개검증">정부포상공개검증</a>
+							
+							
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb02 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>참여민원</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/minwon/minwonOnline" title="전자민원">전자민원</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonOnline/minwonHandbook" title="민원편람">민원편람</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonOnline/minwonSrch" title="유사 민원 검색">유사 민원 검색</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonOnline/minwonQnA" title="전자민원 FAQ">전자민원 FAQ</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonOnline/minwonApply" title="전자민원신청">전자민원신청</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonOnline/minwonMy" title="나의 민원 보기">나의 민원 보기</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/minwon/minwonPolicy" title="정책참여">정책참여</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonPolicy/policyDiscussion" title="정책토론">정책토론</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonPolicy/policyPublic" title="전자공청회">전자공청회</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonPolicy/policySurvey" title="설문조사">설문조사</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonPolicy/policyIdea" title="국민생각함">국민생각함</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonPolicy/nationParticipation" title="국민참여정책단">국민참여정책단</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/minwon/policyPeople" title="국민제안">국민제안</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/policyPeople/proposal" title="제안제도">제안제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/policyPeople/ppSuggestion" title="국민제안">국민제안</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/policyPeople/ppcontest" title="공모제안">공모제안</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/policyPeople/ppMy" title="나의제안보기">나의제안보기</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/minwon/minwonCenter" title="신고센터">신고센터</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonCenter/piComplain" title="공익신고">공익신고</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonCenter/complain" title="인사신문고">인사신문고</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonCenter/mcBudget" title="예산낭비 신고센터">예산낭비 신고센터</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonCenter/mcFavors" title="청탁금지법 신고">청탁금지법 신고</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/minwonCenter/erReport" title="취업·행위제한 신고센터">취업·행위제한 신고센터</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/minwon/regInovation" title="규제혁신">규제혁신</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/regInovation/mcRegIntro" title="규제신문고">규제신문고</a>
+											
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://www.better.go.kr/zz.main.PortalMain" title="규제정보포털 링크가 새창으로 열립니다." target="_blank">규제정보포털</a>
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/regInovation/regLegis" title="정부입법 규제법안">정부입법 규제법안</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/regInovation/regReport" title="부처별 보도자료">부처별 보도자료</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/regInovation/regLaw" title="규제법령 정보">규제법령 정보</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/minwon/regInovation/regulationPR" title="규제입증요청">규제입증요청</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/minwon/specialperfor" title="특별성과 공무원 추천">특별성과 공무원 추천</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/minwon/specialperfor/specialperfor" title="특별성과 공무원 추천">특별성과 공무원 추천</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb03 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>새소식</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/comm/noti" title="공지사항">공지사항</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/comm/noti/newsNoitice" title="공지사항">공지사항</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/comm/noti/mpmNotice" title="인사혁신처 공고">인사혁신처 공고</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/comm/newsPress" title="언론 보도자료">언론 보도자료</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/comm/newsPress/newsPressRelease" title="보도자료">보도자료</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/comm/newsPress/newsPressExplain" title="설명·정정자료">설명·정정자료</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/comm/policyPR" title="주요정책홍보">주요정책홍보</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/comm/policyPR/newsPhoto" title="사진뉴스">사진뉴스</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/comm/policyPR/newsMovie" title="동영상뉴스">동영상뉴스</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/comm/policyPR/mpmFocus" title="카드뉴스">카드뉴스</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/comm/policyPR/event" title="이벤트">이벤트</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/comm/newsLetter" title="인사 소식지">인사 소식지</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/comm/pblcateList" title="간행물">간행물</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/comm/newsInnoHr" title="인사이동">인사이동</a>
+							
+							
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb04 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>국정과제</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/mpmVision/task" title="인사혁신처 국정과제">인사혁신처 국정과제</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/mpmVision/effectM" title="국정성과">국정성과</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/mpmVision/effectM/repeffect" title="대표성과">대표성과</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/mpmVision/effectM/effect" title="전체성과">전체성과</a>
+											
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://www.evaluation.go.kr/performance.jsp" title="정부 국정성과 링크가 새창으로 열립니다." target="_blank">정부 국정성과</a>
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb05 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>공무원 인사제도</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/info/infoBiz" title="승진·보직관리">승진·보직관리</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr01" title="임용 및 임용권자">임용 및 임용권자</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr02" title="인력관리계획">인력관리계획</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr03" title="승진제도">승진제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr05" title="휴직제도">휴직제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/dispatch" title="파견제도">파견제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr04" title="인사교류">인사교류</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizHr06" title="시간선택제 공무원">시간선택제 공무원</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/hrSystemInfo" title="고위공무원단 제도">고위공무원단 제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/openPoSys" title="개방형 직위 제도">개방형 직위 제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/compAppr" title="역량평가제도">역량평가제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoBiz/bizBoard" title="승진·보직관리 게시판">승진·보직관리 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoJobs" title="채용제도">채용제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoJobs/rightProcedures" title="공무원 인재상">공무원 인재상</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoJobs/jobsProcedures01" title="공무원의 종류">공무원의 종류</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoJobs/HrProcedures" title="공무원의 채용">공무원의 채용</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoJobs/jobsBalance" title="균형인사제도">균형인사제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://www.gojobs.go.kr/apmList.do?menuNo=401&mngrMenuYn=N&selMenuNo=400&upperMenuNo=&wd=1829" title="공공채용정보 링크가 새창으로 열립니다." target="_blank">공공채용정보</a>
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoJobs/jobsBoard" title="채용제도 게시판">채용제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/resultPay" title="성과·보수제도">성과·보수제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizPay01" title="보수체계">보수체계</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizPay02" title="봉급제도">봉급제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizSalary" title="공무원봉급표">공무원봉급표</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizPay03" title="수당제도">수당제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizPay04" title="여비제도">여비제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizPay05" title="성과평가제도">성과평가제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/bizSal03" title="성과보수제도">성과보수제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/resultPay/payBoard" title="성과·보수제도 게시판">성과·보수제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/retireAnnuity" title="연금·복지제도">연금·복지제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/retireAnnuity/infoAnnual" title="연금제도">연금제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/retireAnnuity/welfare" title="후생복지제도">후생복지제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/retireAnnuity/officialArt" title="공무원예술대전">공무원예술대전</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/retireAnnuity/retireSupport" title="퇴직관리">퇴직관리</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/retireAnnuity/annuityBoard" title="연금·복지제도 게시판">연금·복지제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/compens" title="재해보상제도">재해보상제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens01" title="공무원 재해보상제도">공무원 재해보상제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens02" title="공무원 재해보상 업무 절차">공무원 재해보상 업무 절차</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens03" title="공무원 재해보상 급여 종류">공무원 재해보상 급여 종류</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens04" title="공무원재해보상심의회">공무원재해보상심의회</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens05" title="공무원재해보상연금위원회">공무원재해보상연금위원회</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens07" title="공상공무원 전문재활치료">공상공무원 전문재활치료</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compens06" title="공무원 마음건강센터">공무원 마음건강센터</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/compens/compensBoard" title="재해보상제도 게시판">재해보상제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoEdu" title="인재개발제도">인재개발제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEdu/eduPolicy01" title="교육훈련일반">교육훈련일반</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEdu/eduDomestic" title="국내교육훈련">국내교육훈련</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEdu/eduPolicy03" title="국외교육훈련">국외교육훈련</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEdu/digitalEdu" title="인재개발플랫폼">인재개발플랫폼</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEdu/eduBoard" title="인재개발제도 게시판">인재개발제도 게시판</a>
+											
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://www.training.go.kr" title="인재개발정보센터 링크가 새창으로 열립니다." target="_blank">인재개발정보센터</a>
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://e-learning.nhi.go.kr/" title="나라배움터 링크가 새창으로 열립니다." target="_blank">나라배움터</a>
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoService" title="복무제도">복무제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService01" title="공무원 휴가제도">공무원 휴가제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService10" title="유연근무제도">유연근무제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService02" title="공휴일제도">공휴일제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService06" title="영리업무금지 및 겸직허가제도">영리업무금지 및 겸직허가제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService03" title="당직 및 비상근무제도">당직 및 비상근무제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService07" title="국내출장">국내출장</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService08" title="공무국외출장">공무국외출장</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/BizService04" title="징계제도">징계제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/proactDisEx" title="적극행정 징계면제 제도">적극행정 징계면제 제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/civilCharter" title="공무원헌장">공무원헌장</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoService/serviceBoard" title="복무제도 게시판">복무제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoEthics" title="윤리제도">윤리제도</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics01" title="공직자 재산등록·공개·심사제도">공직자 재산등록·공개·심사제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics02" title="고지거부제도">고지거부제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics03" title="주식백지신탁심사제도">주식백지신탁심사제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics06" title="선물신고제도">선물신고제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics04" title="퇴직공직자 취업제한제도">퇴직공직자 취업제한제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics05" title="퇴직공직자 행위제한제도">퇴직공직자 행위제한제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics08" title="부동산 신규취득 제한제도">부동산 신규취득 제한제도</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthics07" title="공직유관단체">공직유관단체</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/erReportBoard" title="취업·행위제한 신고센터 게시판">취업·행위제한 신고센터 게시판</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEthics/BizEthicsBoard" title="윤리제도 게시판">윤리제도 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoLaborManag" title="노사협력">노사협력</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoLaborManag/LaborManagSummary" title="공무원 노사관계 개요">공무원 노사관계 개요</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoLaborManag/LaborManagBusin" title="노사상생 협력사업">노사상생 협력사업</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoLaborManag/LaborManagOrg" title="공무원 노조와 단체교섭">공무원 노조와 단체교섭</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoLaborManag/nosaboard" title="노사상생 게시판">노사상생 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/hrInfo" title="인재정보">인재정보</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/hrInfo/hrInfo01" title="인재정보 활용 개요">인재정보 활용 개요</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/hrInfo/hrInfo02" title="국가인재데이터베이스">국가인재데이터베이스</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/hrInfo/hrInfo04" title="국가인재DB 국민추천제">국가인재DB 국민추천제</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/hrInfo/hrInfo03" title="정부헤드헌팅">정부헤드헌팅</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/hrInfo/hrInfoBoard" title="인재정보 게시판">인재정보 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/fair" title="공직박람회">공직박람회</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/fair/publicFair" title="연도별 공직박람회">연도별 공직박람회</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/fair/recruit" title="기관별 채용안내">기관별 채용안내</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/fair/lifeChar" title="생애/특성별 채용제도">생애/특성별 채용제도</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/infoEsaram" title="전자인사관리시스템">전자인사관리시스템</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEsaram/infoEsaram1" title="전자인사관리시스템이란">전자인사관리시스템이란</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEsaram/infoEsaram2" title="주요 서비스">주요 서비스</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEsaram/infoEsaram3" title="서비스 구성">서비스 구성</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEsaram/infoEsaram4" title="달라지는 정부인사">달라지는 정부인사</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/infoEsaram/infoEsaramBoard" title="전자인사관리 게시판">전자인사관리 게시판</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/theActive" title="더 적극행정">더 적극행정</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/info/theActive/definition" title="제도소개">제도소개</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/theActive/actionPlan" title="실행계획">실행계획</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/theActive/referenceBoard" title="자료실">자료실</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/info/theActive/publicParticipation" title="국민참여">국민참여</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/info/hrFAQ" title="자주하는 질문">자주하는 질문</a>
+							
+							
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb06 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>법령·통계정보</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/lawStat/infoLaw" title="법령정보">법령정보</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawList" title="법률">법률</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawPresident" title="대통령령">대통령령</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawPrimeMinister" title="총리령">총리령</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawAnwei" title="훈령/예규/고시">훈령/예규/고시</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawMaking" title="입법/행정 예고">입법/행정 예고</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawSearch" title="법령종합검색">법령종합검색</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoLaw/lawData" title="법령자료실">법령자료실</a>
+											
+											
+										</li>
+									
+										<li>
+											
+											
+												<a href="https://www.prism.go.kr/homepage/" title="정책연구 보고서 링크가 새창으로 열립니다." target="_blank">정책연구 보고서</a>
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/lawStat/infoStatistics" title="통계정보">통계정보</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoStatistics/hrStatistics" title="인사통계">인사통계</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoStatistics/inqueryOfficial" title="공무원총조사">공무원총조사</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/lawStat/infoStatistics/statisticsEnara" title="e-나라지표">e-나라지표</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+	<li class="Inb07 on">
+      <a href="javascript:void(0)" class="nm_mob_nav_depth1"><span>기관소개</span></a>
+			
+				<ul style="display: none;">
+					
+						<li>
+							
+								<a href="/mpm/about/abotMpm" title="인사혁신처 소개">인사혁신처 소개</a>
+							
+							
+							
+								<ul>
+									
+										<li>
+											
+												<a href="/mpm/about/abotMpm/aboutIntro" title="연혁">연혁</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/about/abotMpm/aboutBudget" title="예산현황">예산현황</a>
+											
+											
+										</li>
+									
+										<li>
+											
+												<a href="/mpm/about/abotMpm/aboutMi" title="기관 상징(MI) 소개">기관 상징(MI) 소개</a>
+											
+											
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/about/aboutorg" title="조직과 기능">조직과 기능</a>
+							
+							
+							
+						</li>
+					
+						<li>
+							
+							
+								<a href="http://www.mpm.go.kr/openminister/" title="열린처장실 링크가 새창으로 열립니다." target="_blank">열린처장실</a>
+							
+							
+						</li>
+					
+						<li>
+							
+								<a href="/mpm/about/map" title="찾아오시는길">찾아오시는길</a>
+							
+							
+							
+						</li>
+					
+				</ul>
+			
+	</li>
+
+			</ul>
+		</div>
+      	<button type="button" class="nm_mob_nav_close">
+              <span class="nm_blind">메뉴 닫기</span>
+            </button>
+	</div>
+</header>
+
+<!-- e : header -->
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="subpage">
+			<!-- sidebar -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<aside id="left">
+		
+            <h2 >공무원 인사제도</h2>
+          	 
+              <ul class="mnav">
+					
+                       	<li id="left01" class="dep  " >
+                       		<a href="/mpm/info/infoBiz" title="승진·보직관리">승진·보직관리</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left02" class="dep  " >
+                       		<a href="/mpm/info/infoJobs" title="채용제도">채용제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left03" class="dep on " >
+                       		<a href="/mpm/info/resultPay" title="성과·보수제도">성과·보수제도</a>
+                       		
+                          
+	                       	
+								<ul class="sub1" id="leftSub03">
+									
+									<li id="leftSubImg030101" class="">
+		                       			<a href="/mpm/info/resultPay/bizPay01" title="보수체계">보수체계</a>
+										
+									</li>
+									
+									<li id="leftSubImg030202" class="">
+		                       			<a href="/mpm/info/resultPay/bizPay02" title="봉급제도">봉급제도</a>
+										
+									</li>
+									
+									<li id="leftSubImg030303" class="">
+		                       			<a href="/mpm/info/resultPay/bizSalary" title="공무원봉급표">공무원봉급표</a>
+										
+									</li>
+									
+									<li id="leftSubImg030404" class="">
+		                       			<a href="/mpm/info/resultPay/bizPay03" title="수당제도">수당제도</a>
+										
+									</li>
+									
+									<li id="leftSubImg030505" class="">
+		                       			<a href="/mpm/info/resultPay/bizPay04" title="여비제도">여비제도</a>
+										
+									</li>
+									
+									<li id="leftSubImg030606" class="">
+		                       			<a href="/mpm/info/resultPay/bizPay05" title="성과평가제도">성과평가제도</a>
+										
+									</li>
+									
+									<li id="leftSubImg030707" class="">
+		                       			<a href="/mpm/info/resultPay/bizSal03" title="성과보수제도">성과보수제도</a>
+										
+									</li>
+									
+									<li id="leftSubImg030808" class="on">
+		                       			<a href="/mpm/info/resultPay/payBoard" title="성과·보수제도 게시판">성과·보수제도 게시판</a>
+										
+									</li>
+									
+								</ul>
+							
+                       	</li>
+					
+                       	<li id="left04" class="dep  " >
+                       		<a href="/mpm/info/retireAnnuity" title="연금·복지제도">연금·복지제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left05" class="dep  " >
+                       		<a href="/mpm/info/compens" title="재해보상제도">재해보상제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left06" class="dep  " >
+                       		<a href="/mpm/info/infoEdu" title="인재개발제도">인재개발제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left07" class="dep  " >
+                       		<a href="/mpm/info/infoService" title="복무제도">복무제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left08" class="dep  " >
+                       		<a href="/mpm/info/infoEthics" title="윤리제도">윤리제도</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left09" class="dep  " >
+                       		<a href="/mpm/info/infoLaborManag" title="노사협력">노사협력</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left10" class="dep  " >
+                       		<a href="/mpm/info/hrInfo" title="인재정보">인재정보</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left11" class="dep  " >
+                       		<a href="/mpm/info/fair" title="공직박람회">공직박람회</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left12" class="dep  " >
+                       		<a href="/mpm/info/infoEsaram" title="전자인사관리시스템">전자인사관리시스템</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left13" class="dep  " >
+                       		<a href="/mpm/info/theActive" title="더 적극행정">더 적극행정</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                       	<li id="left14" class="dep  " >
+                       		<a href="/mpm/info/hrFAQ" title="자주하는 질문">자주하는 질문</a>
+                       		
+                          
+	                       	
+                       	</li>
+					
+                </ul>
+            
+			
+        </aside>
+
+
+
+<script type="text/javascript">
+<!--
+try {
+$(document).ready(function(){
+
+     $(".mnav").find(".sub1").parents("li").addClass("depth");
+
+	$('a.exlink').each(function(k, el){
+		if(el.rel.indexOf('pop') != -1) {
+			var opt = el.rel.replace('pop', '');
+			opt = opt.replace('(', '');
+			opt = opt.replace(')', '');
+			
+			$(el).bind('click', function(e){
+				e.preventDefault();
+				
+				opts = opt.split(':');
+				var msg = window.open(this.href, this.title, "left="+opts[0]+",top="+opts[1]+",width="+opts[2]+",height="+opts[3]);
+			});
+		} 
+	});
+	
+			
+		//var pageNavTitle = Jnit_replaceAll("성과·보수제도 게시판&lt; 성과·보수제도&lt; 공무원 인사제도&lt; 인사혁신처","&#60;","<"); 
+		//document.title = pageNavTitle;
+	
+	
+	
+		$("#activePageLinkNav").empty();
+		$("#activePageLinkNav").append("<span id='pageLinkNav'><a href='/mpm' class='menu-home'><span>Home</span></a> <span class='gt'> &gt; </span> <a href='/mpm/info'><span>공무원 인사제도</span></a> <span class='gt'> &gt; </span> <a href='/mpm/info/resultPay'><span>성과·보수제도</span></a> <span class='gt'> &gt; </span> <span class='menu-active'>성과·보수제도 게시판</span></span>");
+	
+});
+}catch(e) {
+	
+}
+function Jnit_replaceAll(str,character,replaceChar){
+    var word = str;
+
+    while(word.indexOf(character) != -1)
+        word = word.replace(character,replaceChar);
+
+    return word;
+}
+//-->
+</script>
+
+ 
+
+	
+
+			<!-- //sidebar -->
+
+			<!-- content -->
+			<div id="content" class="sub">
+				<div class="header">
+					<h3>성과·보수제도 게시판</h3>
+					<div class="hnav">
+						<span id='pageLinkNav'><a href='/mpm' class='menu-home'><span>Home</span></a> <span class='gt'> &gt; </span> <a href='/mpm/info'><span>공무원 인사제도</span></a> <span class='gt'> &gt; </span> <a href='/mpm/info/resultPay'><span>성과·보수제도</span></a> <span class='gt'> &gt; </span> <span class='menu-active'>성과·보수제도 게시판</span></span>
+					</div>
+                  	<h3 class="m-pagetitle">성과·보수제도 게시판</h3>
+					<div class="utility">
+                    	<h3>유틸메뉴</h3>
+                        <ul class="util">
+                            <li><a href="#" class="btn-font-plus"><span>화면 확대</span></a></li>
+                            <li><a href="#" class="btn-font-minus"><span>화면 축소</span></a></li>
+                            <li><a href="#" class="btn_share" title="페이지공유 레이어팝업 닫힘" id="snsShare"><span>페이지 공유</span></a>
+                            <div class="sns" id="snsLayer" style="display:none;">
+                                <dl>
+                                    <dt>SNS 공유</dt>
+                                    <dd><a class="fb" href="//www.facebook.com" onclick="window.open(this.href,'공유','width=600, height=400');return false;" target="_blank" title="새창 열림"><span>페이스북</span></a>                                   
+                                        <a class="tw" href="//twitter.com" onclick="window.open(this.href,'공유','width=600, height=400');return false;" target="_blank" title="새창 열림"><span>트위터</span></a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><label for="urlText">URL 복사</label></dt>
+                                    <dd>
+                                        <input type="text" id="urlText" name="urlText" />
+                                        <a href="#" class="btn-url-copy" data-clipboard-target="#urlText">복사</a>
+                                    </dd>
+                                </dl>
+                                <a href="#snsShare" class="btnClose">레이어 닫기</a>
+                            </div>
+                          </li>
+                            <li><a href="#wrap" class="btn_print" onclick="javascript:window.print(); return false;" title="현재 페이지 인쇄 새 창 열림"><span>프린트</span></a></li>
+                        </ul>
+					</div>
+				</div>
+				<!-- content-body -->
+				<div class="content-body">
+
+					
+<!-- 
+	게시판 code
+	board_id : 게시판 아이디
+	useSkeleton : true로 입력하면 게시판의 html 뼈대 없이 가져옵니다.
+	customSkin : 게시판 설정을 무시하고 스킨 설정
+	customCss : 빈칸이 아닌 css경로를 입려갈경우 게시판 기본 css 대신에 입력된 css파일을 불러옵니다. 
+--> 
+
+  
+
+	<div class="part-tab-menu">
+		  <ul class="part-tab six">
+		  <li class=" active"><a href="./?mode=list&amp;boardId=bbs_0000000000000035" title="전체 (현재선택된 페이지) 바로가기" ><span>전체</span></a></li>
+		  <li class=" "><a href="./?mode=list&amp;boardId=bbs_0000000000000035&amp;category=%EC%84%B1%EA%B3%BC" title="성과  바로가기"><span>성과</span></a></li>
+		  <li class=" "><a href="./?mode=list&amp;boardId=bbs_0000000000000035&amp;category=%EB%B3%B4%EC%88%98" title="보수  바로가기" ><span>보수</span></a></li>
+		  <li class=" "><a href="./?mode=list&amp;boardId=bbs_0000000000000035&amp;category=%EC%88%98%EB%8B%B9" title="수당  바로가기"><span>수당</span></a></li>
+		  <li class=" "><a href="./?mode=list&amp;boardId=bbs_0000000000000035&amp;category=%EC%97%AC%EB%B9%84" title="여비  바로가기"><span>여비</span></a></li>
+		  <li class=" "><a href="./?mode=list&amp;boardId=bbs_0000000000000035&amp;category=%EA%B8%B0%ED%83%80" title="기타  바로가기"><span>기타</span></a></li>
+		
+		</ul>
+	  </div>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+	<div class="row-fluid boardWrap normal(mpm) bbs_0000000000000035">
+		
+			
+				<script type="text/javaScript">
+				<!--
+				$(document).ready(function(){					
+					var pageTitle = document.title;
+					var boardTitle = "";
+					var splitTitle = pageTitle.split("<");
+					splitTitle[0] = splitTitle[0] + " 목록";
+					for(var i=0; i<splitTitle.length-1; i++){
+						boardTitle = boardTitle + splitTitle[i] + " <";
+					}
+				    boardTitle = boardTitle + splitTitle[splitTitle.length-1];
+					$(document).attr("title",boardTitle);
+				});
+				// -->
+				</script>
+				
+					<script type="text/javaScript">
+					<!--
+					var fileref=document.createElement("link");
+					  fileref.setAttribute("rel", "stylesheet");
+					  fileref.setAttribute("type", "text/css");
+					  fileref.setAttribute("href", "https://www.mpm.go.kr/board/_editor/css/editor.css");
+					  
+					 $('head')[0].appendChild(fileref);
+					// -->
+					</script>
+				
+			
+			<input type="hidden" id="boardLang" name="boardLang" value="korea"/>
+			
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<form id="bbsForm" name="bbsForm" action="/mpm/info/resultPay/payBoard/?boardId=bbs_0000000000000035&amp;mode=list" method="get">
+<input type="hidden" name="mode" value="list" />
+<input type="hidden" name="boardId" value="bbs_0000000000000035" />
+<input type="hidden" name="pageIdx" value="1" />
+<input type="hidden" name="rowCntList" value="10" />
+ 
+<!-- <div class="categoryGroup">
+<select name="category" class="category" title="카테고리 선택">
+	<option value="">전체</option>
+
+	<option value="성과" >성과</option>
+
+	<option value="보수" >보수</option>
+
+	<option value="수당" >수당</option>
+
+	<option value="여비" >여비</option>
+
+	<option value="기타" >기타</option>
+
+</select>
+<input type="image" id="btnSubmit" src="http://www.mpm.go.kr/board/_common/img/btnMove.gif" alt="이동"/>
+</div> -->
+
+
+<!--
+<div class="row-fluid board-search">
+	<div class="span12 form-search">		
+		<select name="searchCondition" class="input-small" title="검색 분류 선택">
+			<option value="all">제목+내용</option>
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					<option value="title" >제목</option>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					<option value="writer" >작성자</option>
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+			
+		</select>
+		<label for="searchKeyword" class="hide">검색어</label>
+		<input id="searchKeyword" name="searchKeyword" type="text" class="input-medium search-query" title="검색어 입력" style="-ms-ime-mode: active;" value="" />
+		<button type="submit" class="btn">검색</button>
+	</div>
+</div>
+-->
+<!-- de bak 20251020
+<div class="form-group">
+    <select id="pageUnits" name="pageUnits" title="목록갯수설정">
+        <option value="10" selected="selected">10건</option>
+        <option value="20" >20건</option>
+        <option value="30" >30건</option>
+        <option value="40" >40건</option>
+
+        
+        <option value="50" >50건</option>
+        
+
+    </select>
+<input type="button" onClick="ChangePageUnits(1)" value="보기" class="btnGray"   title="설정으로 보기">
+</div> -->
+
+<!-- S - 목록갯수설정 영역 -->
+<div class="form-group">
+    <select id="pageUnits" name="pageUnits"  title="목록갯수설정">
+        <option value="10" selected="selected">10건</option>
+        <option value="20" >20건</option>
+        <option value="30" >30건</option>
+        <option value="40" >40건</option>
+
+        
+        <option value="50" >50건</option>
+        
+
+    </select>
+    <input type="button" onClick="ChangePageUnits(1)" value="보기" class="btnGray"   title="설정으로 보기">
+
+</div>
+<!-- e - 목록갯수설정 영역 -->
+
+<!-- S - 검색 영역 -->
+	<div class="sch_area">
+		<h1>통합검색</h1>
+		<label class="select_box">
+			<i>검색종류 선택</i>
+			<select name="searchCondition" class="input-small" title="검색 분류 선택">
+			<option value="all">제목+내용</option>
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					<option value="title" >제목</option>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					<option value="writer" >작성자</option>
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+			
+		</select>
+		</label>
+		<label class="input_box" for="searchKeyword">
+			<i>검색어 입력</i>
+			<input id="searchKeyword" name="searchKeyword" type="text"  value=" ">		
+		</label>
+		<input type="submit" id="searchBoxBtn" value="검색" />
+	</div>
+	<!-- E - 검색 영역 -->
+
+<table class="bbsList table table-bordered table-hover">
+	<caption>
+        <strong>성과보수 게시판의 게시글 목록 </strong>
+        <p>번호,제목,작성자,작성일,조회수,파일첨부 로 구성된 표</p>
+         </caption>
+	<thead>
+		<tr>
+			
+			<th scope="col" class="no hidden-phone start">번호</th>
+			
+			<th scope="col" class="title">제목</th>
+			
+			<th scope="col" class="writer hidden-phone">작성자</th>
+			
+			<th scope="col" class="created hidden-phone">작성일</th>
+			
+			<th scope="col" class="hit hidden-phone">조회수</th>
+			
+			<th scope="col" class="file hidden-phone end">파일첨부</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						245
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=695&amp;category=보수&amp;pageIdx=" >
+										2026 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								급여정책과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2026-10-01
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						4706
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제226호).hwpx 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제226호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						244
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=694&amp;category=보수&amp;pageIdx=" >
+										2026 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								급여정책과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2026-07-31
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						12793
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제220호).hwpx 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제220호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						243
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=693&amp;category=보수&amp;pageIdx=" >
+										2026 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								급여정책과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2026-07-01
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						11165
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제216호).hwpx 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제216호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						242
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=692&amp;category=보수&amp;pageIdx=" >
+										2026 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								급여정책과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2026-01-22
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						67300
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">공무원보수 등의 업무지침(인사혁신처예규 제204호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						241
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=691&amp;category=보수&amp;pageIdx=" >
+										2025  공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2025-01-23
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						116377
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2025 공무원보수 등의 업무지침(인사혁신처 예규 제192호).hwp 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2025 공무원보수 등의 업무지침(인사혁신처 예규 제192호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						240
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=690&amp;category=보수&amp;pageIdx=" >
+										2024 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2024-09-11
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						27927
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2024 공무원보수 등의 업무지침(인사혁신처_예규 제185호).hwp 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2024 공무원보수 등의 업무지침(인사혁신처_예규 제185호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						239
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=687&amp;category=보수&amp;pageIdx=" >
+										2024 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2024-01-19
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						67487
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2024 공무원보수 등의 업무지침(인사혁신처_예규 제176호).hwp 파일 다운로드</span>
+								</span>
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2024 공무원보수 등의 업무지침(인사혁신처_예규 제176호).pdf 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						238
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=686&amp;category=보수&amp;pageIdx=" >
+										2023 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2023-10-26
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						13889
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2023 공무원보수 등의 업무지침(인사혁신처예규 제167호).hwpx 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						237
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=684&amp;category=보수&amp;pageIdx=" >
+										2023 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2023-05-17
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						24037
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2023 공무원보수 등의 업무지침.hwpx 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+		
+			<tr>
+				
+					<td class="no hidden-phone start">
+					
+					
+					
+						236
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="title">
+					
+					
+					
+					
+					
+						
+						
+						
+												
+													
+							
+							
+								
+								<!-- 회원글 -->
+									
+									
+									
+									
+									<a href="?boardId=bbs_0000000000000035&amp;mode=view&amp;cntId=683&amp;category=보수&amp;pageIdx=" >
+										2023 공무원보수 등의 업무지침
+									</a>
+									
+									
+								
+							
+						
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="writer hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+						
+							
+							
+							
+							
+								성과급여과 
+							
+							
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+					<td class="created hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+						
+						2023-01-25
+						
+					
+					
+					
+					
+					</td>
+				
+					<td class="hit hidden-phone">
+					
+					
+					
+					
+					
+					
+						
+											
+                             
+					
+					
+					
+						46888
+					
+					
+					</td>
+				
+					<td class="file hidden-phone end">
+					
+					
+					
+					
+					
+					
+												
+												
+							
+								<span class="list_file" style="display: none;">
+									<i class="fa fa-floppy-o fa-lg"></i>
+									<span class="blind">2023 공무원보수등의 업무지침 전문(최종).hwp 파일 다운로드</span>
+								</span>
+							
+						
+						
+						
+						
+					
+						
+											
+                             
+					
+					
+					
+					
+					</td>
+				
+			</tr>
+				
+		
+	</tbody>
+</table>
+<div class="row-fluid board-rss">
+	<div class="span12 form-fed ">
+			<a id="rss_board" class="btn rssBtn" target="_blank" title="새창으로 열립니다" href="/board/rss.do?boardId=bbs_0000000000000035&amp;mode=fed&amp;proc=rss"><i class="icon-rss"></i>RSS</a>
+			<a id="atom_board" class="btn atomBtn" target="_blank" title="새창으로 열립니다" href="/board/rss.do?boardId=bbs_0000000000000035&amp;mode=fed&amp;proc=atom">atom</a>
+	</div>
+</div>
+<div class="row-fluid board-nav">
+	<p class="total">
+	
+		
+		
+		
+		
+			전체
+		
+	
+	<strong>245</strong> 건
+<span>(현재 1페이지 / 총 25 페이지)</span>
+</p>
+
+
+<div class="span6 offset3"> 
+	<div class="pagination pagination-small"><ul><li class="first_page"><a href="?pageIdx=1" onclick="jnitBoardPage(1); return false;" title="처음페이지로 이동">처음페이지</a></li><li class="prev_page"><a href="?pageIdx=1" onclick="jnitBoardPage(1); return false;" title="이전페이지로 이동">이전페이지</a></li><li class="active"><a href="?pageIdx=1" onclick="return false;" title="선택된 1페이지">1</a></li><li><a href="?pageIdx=2" onclick="jnitBoardPage(2); return false;" title="2페이지">2</a></li><li><a href="?pageIdx=3" onclick="jnitBoardPage(3); return false;" title="3페이지">3</a></li><li><a href="?pageIdx=4" onclick="jnitBoardPage(4); return false;" title="4페이지">4</a></li><li><a href="?pageIdx=5" onclick="jnitBoardPage(5); return false;" title="5페이지">5</a></li><li><a href="?pageIdx=6" onclick="jnitBoardPage(6); return false;" title="6페이지">6</a></li><li><a href="?pageIdx=7" onclick="jnitBoardPage(7); return false;" title="7페이지">7</a></li><li><a href="?pageIdx=8" onclick="jnitBoardPage(8); return false;" title="8페이지">8</a></li><li><a href="?pageIdx=9" onclick="jnitBoardPage(9); return false;" title="9페이지">9</a></li><li><a href="?pageIdx=10" onclick="jnitBoardPage(10); return false;" title="10페이지">10</a></li><li class="next_page"><a href="?pageIdx=11" onclick="jnitBoardPage(11); return false;" title="다음페이지로 이동">다음페이지</a></li><li class="last_page"><a href="?pageIdx=25" onclick="jnitBoardPage(25); return false;" title="마지막페이지로 이동">마지막페이지</a></li></ul></div>
+
+	 <input type="hidden" name="pageIdx" id="pageIdx"  value="" />
+	 <input type="hidden" name="category" id="category"  value="" />
+	</div>
+	<div class="span3 listbtn">
+		
+	</div>
+</div>
+
+
+</form>
+					
+<script>
+$(function(){
+	$('.bbsList tr').each(function(index) {
+		$(this).children('td.file').children('.list_file').eq(0).show();
+	});
+});
+
+function ChangePageUnits(idx){
+    $('input[name=rowCntList]').attr('value',$("#pageUnits option:selected").val());
+    $("#bbsForm").submit();
+}
+</script>
+
+		
+		
+		<input type="hidden" id="boardUseFilter" value="0"/>
+	</div>
+</div>
+
+
+
+
+<script type="text/javaScript">var ctxRoot = '';</script>
+<script type="text/javascript">
+<!--
+	window.jQuery || document.write('<script src="https://www.mpm.go.kr/resources/js/jquery.min.js"><\/script>');
+// -->
+</script>
+
+<script type="text/javascript">
+<!--
+	$.ui || document.write('<script src="https://www.mpm.go.kr/resources/js/jquery.plugins/jquery.ui.latest.custom.min.js"><\/script><script src="https://www.mpm.go.kr/resources/js/jquery.plugins/jquery.ui.datepicker-ko.js"><\/script>');
+// -->	
+</script>
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+function Jnit_edit_img_upload(){	
+	window.open("/eite/img/upload/popup.do",'imgFileEdit','width=350, height=330, toolbar=no, scrollbars=yes, status=yes, resizable=yes');
+}
+//-->
+</script>
+<script type="text/javascript" src="/resources/js/ap/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+<!--
+tinymce.init({
+	language:"ko_KR", //언어설정
+    selector: "#editTinymce", //id
+    plugins: [ //플러그인 주석부분은 오류로인하여 주석처리함
+          "advlist anchor autolink autoresize", // autosave
+          //"bbcode"
+          "charmap code contextmenu",
+          "directionality",
+          "emoticons example example_dependency",
+          //"fullpage fullscreen", <!DOCTYPE html>기본html 생성
+          "hr",
+          "image  insertdatetime",//importcss
+          "layer link lists", //legacyoutput
+          //"media"
+          "nonbreaking noneditable",
+          "pagebreak paste preview print",
+          "save searchreplace spellchecker",
+          "tabfocus table template textcolor",
+          "visualblocks visualchars",
+          //"wordcount"
+      ],
+      target_list: [ //link target 지정
+		{title: '_blank', value: '_blank'},
+		{title: '_self', value: '_self'}     
+      ],
+      image_advtab : true, // 사용자 지정 스타일
+      autoresize_min_height: 300, //편집기 최소높이
+      //forced_root_block: false,//IE에서 한글입력 문제 해결을 위해서 //한칸띠고 다음문장적을시 지워지는 문제 발생
+      relative_urls : false,//이미지 상대경로 치환부분 막기
+      //폰트지정
+      //theme_advanced_fonts: "굴림=굴림;굴림체=굴림체;궁서=궁서;궁서체=궁서체;돋움=돋움;돋움체=돋움체;바탕=바탕;바탕체=바탕체;Arial=Arial; Comic Sans MS='Comic Sans MS';Courier New='Courier New';Tahoma=Tahoma;Times New Roman='Times New Roman';Verdana=Verdana",
+      //toolbar = | 그룹 구분자
+      /* 2014-10-31 by.나성재 수정 툴바 수정
+   	  toolbar1: "newdocument | fullpage | bold | italic | underline | strikethrough | alignleft | aligncenter | alignright | alignjustify",
+      toolbar2: "bullist | numlist | outdent | indent | blockquote | undo | redo | cut | copy | paste | searchreplace",
+      toolbar3: "table | hr | removeformat | subscript | superscript | charmap | emoticons | print | fullscreen | link | unlink | anchory", //| spellchecker | template | pagebreak
+      toolbar4: "ltr | rtl | visualchars | visualblocks | nonbreaking | image | code | inserttime | preview | forecolor | backcolor",
+      toolbar5: "fontselect | fontsizeselect" //fontsizeselect 와 기본 format headings 오류있음
+      */
+      toolbar1: "code | undo | redo | cut | copy | paste | searchreplace | charmap | emoticons | image | table | visualblocks | template",
+      toolbar2: "fontselect | fontsizeselect | forecolor | backcolor | bold | italic | underline | strikethrough | alignleft | aligncenter | alignright | alignjustify | bullist | numlist | outdent | indent | hr | removeformat | subscript | superscript | link | unlink | anchory",
+	  templates : [
+		{title : '분기별 발주계획',description:'contQuart',url:'/mpm/open/openData/contract/contQuart.html'},
+		{title : '월별계약현황',description:'contMon',url:'/mpm/open/openData/contract/contMon.html'},
+		{title : '소프트웨어 계약정보공개현황',description:'contSw',url:'/mpm/open/openData/contract/contSw.html'}
+		]
+	  
+		
+	
+
+ });
+//-->
+</script>
+
+<script type="text/javaScript" src="https://www.mpm.go.kr/board/_common/js/board.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				<!-- content-body -->
+				<div class="content-foot">
+					<!-- 콘텐츠 관리자1 -->
+					<div class="contentAdmin">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--egov frame work-->
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		<div class="adminArea">
+					
+			<dl class="left">
+				<dt class="content_master">콘텐츠 담당부서 :</dt>
+				<dd class="content_master_dd"> 급여정책과,성과평가과</dd> 
+				<dt class="content_master_tel">전화 :</dt>
+				<dd class="content_master_tel_dd">044-201-8392</dd>
+								
+
+				
+				
+			</dl>						
+		</div>
+
+
+		
+		
+
+					</div>
+					<!-- 만족도 조사 -->
+					<div class="content-research">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+/**
+ *@version 3.2.0.1
+ **/ 
+-->
+
+
+
+
+<script type="text/javascript">
+function fn_jnit_rsc_save() {
+	
+	const $memoInput = $('#memo');
+	const $errorMsg = $('#rsc-error-msg');
+
+	$errorMsg.text('').hide();
+	$memoInput.attr('aria-invalid', 'false');
+
+	if($('input[name=hit]:checked').length < 1) {
+		$errorMsg.text('평가점수를 선택하세요.').show();
+		$memoInput.attr('aria-invalid','true');
+
+/*
+	if($('input[name=hit]:checked').size() < 1) {
+		alert('평가점수를 선택하세요.');
+*/
+		setTimeout(function(){
+			document.getElementById('researchPoint05').focus();
+		},100);	
+
+		return false;
+	}
+
+	if($memoInput.val() === ''){
+		$errorMsg.text('평가메시지를 작성하세요.').show();
+		$memoInput.attr('aria-invalid','true');
+		$memoInput.focus();
+
+/*
+	if($('#memo').val() == '') {
+		alert('평가메시지를 작성하세요.');
+		$('#memo').focus();
+*/
+		return false;
+	}
+	$("#pageUrl").val($(document.location).attr('pathname'));
+	$.ajax({
+		url:"/user/rsc/addpage.do",
+		type:"post",
+		data:{
+			pageUrl:$('#pageUrl').val(),
+			menuId:$('#menuId').val(),
+			siteId:$('#siteId').val(),
+			memo:$('#memo').val(),
+			hit:$('input[name=hit]:checked').val()
+		},
+		success:function(data){
+			if($.trim(data) == 'OK') {
+				if(confirm('평가했습니다. 반영된 내용은 새로고침 하시면 적용됩니다. \n 새로고침 하시겠습니까?')){
+					location.reload();
+				}
+			}else if($.trim(data) == 'FAIL1') {
+				//alert('이미 평가한 페이지입니다.');
+				$errorMsg.text('이미 평가한 페이지입니다..').show();
+				$memoInput.attr('aria-invalid','true');
+			}
+		}
+	});
+
+	return false;
+}
+</script>
+<div id="contentment">
+		      
+        		    	
+    	
+        		    	
+    	
+        		    	
+    	
+        		    	
+    	
+    
+	
+		<div class="researchCount">
+			<p class="research_title">현재페이지에서 제공되는 <strong>서비스에 대하여 만족하십니까?</strong></p>
+			<form onsubmit="return fn_jnit_rsc_save(); return false();" action="/cms/import/rscPage.jsp">
+			<input type="hidden" id="siteId" name="siteId" value="SITE_00009" />
+			<input type="hidden" id="menuId" name="menuId" value="MENU_01050" />
+			<input type="hidden" id="pageUrl" name="pageUrl" />
+				<ol class="content-research-ol">
+					<li><input type="radio" name="hit" id="researchPoint05" value="5" title="매우만족"  /><label for="researchPoint05">매우만족</label></li>
+					<li><input type="radio" name="hit" id="researchPoint04" value="4" title="만족" /><label for="researchPoint04">만족</label></li>
+					<li><input type="radio" name="hit" id="researchPoint03" value="3" title="보통" /><label for="researchPoint03">보통</label></li>
+					<li><input type="radio" name="hit" id="researchPoint02" value="2" title="불만족" /><label for="researchPoint02">불만족</label></li>
+					<li><input type="radio" name="hit" id="researchPoint01" value="1" title="매우불만족" /><label for="researchPoint01">매우불만족</label></li>
+				</ol>
+              <ul class="content-research-ul">
+					<li><input type="text" name="memo" id="memo" title="네티즌 여러분의 소중한 의견 부탁 드리겠습니다." class="researchTxt" aria-invalid="false" aria-describedby="rsc-error-msg" /></li>
+					<li><input type="submit" value="등록" class="btn researchBtn"></li>
+			</ul>
+				
+			<div style="clear:both; margin-top:5px;">
+				<span id="rsc-error-msg" role="alert" style="color:red; font-size:12px; display:none;"></span>
+			</div>
+			</form>
+			
+		</div>
+	
+</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<!-- footer -->
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="">
+    <div class="nm_rel_links">
+
+        <div class="nm_rel_links_wrap">
+            <div class="nm_rel_link_inner">
+                <div class="nm_rel_link_item">
+                    <button type="button" title="항목 열기">관련 누리집</button>
+                    <ul>
+                        <!--li>
+                            <a href="https://www.gosi.kr/" target="_blank" title=" 새창열림">사이버 국가고시센터</a>
+                        </li -->
+                        <li>
+                            <a href="https://gongmuwon.gosi.kr/" target="_blank" title=" 새창열림">국가공무원 채용시스템</a>
+                        </li>
+                        <li>
+                            <a href="https://www.learning.go.kr/" target="_blank" title="새창열림">인재개발플랫폼</a>
+                        </li>
+                        <li>
+                            <a href="http://www.mpm.go.kr/historyofexam/" target="_blank" title="새창열림">공무원 채용역사관</a>
+                        </li>
+                        <li>
+                            <a href="http://www.hrdb.go.kr/" target="_blank" title="새창열림">국가인재데이터베이스</a>
+                        </li>
+                        <li>
+                            <a href="http://www.peti.go.kr/" target="_blank" title="새창열림">공직윤리시스템</a>
+                        </li>
+                        <li>
+                            <a href="https://www.gojobs.go.kr/" target="_blank" title="새창열림">나라일터</a>
+                        </li>
+                        <li>
+                            <a href="https://www.training.go.kr/" target="_blank" title="새창열림">인재개발정보센터</a>
+                        </li>
+                        <li>
+                            <a href="http://peti.go.kr/emJdgSlfDgn.do" target="_blank" title="새창열림">취업심사 자가진단</a>
+                        </li>
+                        <li>
+                            <a href="http://www.mpm.go.kr/best_officer" target="_blank" title="새창열림">자랑스러운 공무원이야기</a>
+                        </li>
+                        <li>
+                            <a href="http://www.mpm.go.kr/simsa" target="_blank" title="새창열림">공무원 재해보상연금위원회</a>
+                        </li>
+                        <li>
+                            <a href="https://btis.mpm.go.kr/cmm/main/mainPage.do" target="_blank" title="새창열림">국외출장연수정보시스템</a>
+                        </li>
+                        <li>
+                            <a href="http://www.peti.go.kr/grtg.do" target="_blank" title="새창열림">정부공직자윤리위원회</a>
+                        </li>
+                        <li>
+                            <a href="https://www.mpm.go.kr/knowhow" target="_blank" title="새창열림">노하우플러스 시스템</a>
+                        </li>
+                        <li>
+                            <a href="https://www.mpm.go.kr/cyberSecurity/" target="_blank" title="새창열림">부처합동 사이버안전센터</a>
+                        </li>
+                        <li>
+                            <a href="https://e-learning.nhi.go.kr" target="_blank" title="새창열림">나라배움터</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nhi.go.kr/" target="_blank" title="새창열림">국가공무원인재개발원</a>
+                        </li>
+                        <li>
+                            <a href="https://sochung.mpm.go.kr/" target="_blank" title="새창열림">소청심사위원회</a>
+                        </li>
+                        <li>
+                            <a href="https://www.geps.or.kr/" target="_blank" title="새창열림">공무원연금공단</a>
+                        </li>                                  
+                    </ul>
+                </div>
+            </div>
+            <div class="nm_rel_link_inner">
+                <div class="nm_rel_link_item">
+                    <button type="button" title="항목 열기">정부 누리집</button>
+                    <ul>
+                        <li>
+                            <a href="https://www.korea.kr/briefing/actuallyList.do?pWise=deptink" target="_blank" title="정부정책 사실은 이렇습니다 새창열림">정부정책 사실은 이렇습니다</a>
+                        </li>
+                        <li>
+                            <a href="https://www.opm.go.kr/opm/index.do" target="_blank" title="새창열림">국무조정실</a>
+                        </li>
+                        <li>
+                            <a href="https://www.sinmungo.go.kr/sz2.prpsl.main" target="_blank" title="새창열림">규제신문고</a>
+                        </li>
+                        <li>
+                            <a href="https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=1760000" target="_blank" title="새창열림">청렴포털 부패공익신고</a>
+                        </li>
+                        <li>
+                            <a href="https://www.gov.kr/" target="_blank" title="정부24 새창열림">정부24</a>
+                        </li>
+                        <li>
+                            <a href="https://www.clean.go.kr/menu.es?mid=a10203000000" target="_blank" title="공공기관 채용비리신고 새창열림">공공기관 채용비리신고</a>
+                        </li>
+                        <li>
+                            <a href="https://www.mybudget.go.kr/" target="_blank" title="국민참여예산 새창열림">국민참여예산</a>
+                        </li>
+                        <li>
+                            <a href="https://www.innovation.go.kr/ucms/main/main.do" target="_blank" title="혁신24 새창열림">혁신24</a>
+                        </li>
+                        <li>
+                            <a href="https://sotong.go.kr/front/main/index.do" target="_blank" title="소통24 새창열림">소통24</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nm_footer_conts">
+        <div class="nm_footer_conts_left">
+            
+            <ul class="nm_footer_links">
+                <li>
+                    <a href="/mpm/useinfo/privacy/" class="nm_str_link" title="개인정보 처리방침 바로가기">개인정보 처리방침</a>
+                </li>
+                <li>
+                    <a href="/mpm/useinfo/copyrightPolicy/" title="저작권보호 및 이용정책 바로가기">저작권보호 및 이용정책</a>
+                </li>
+                <li>
+                    <a href="/mpm/useinfo/viewer/" title="문서보기 프로그램 바로가기">문서보기 프로그램</a>
+                </li>
+                <li>
+                    <a href="/mpm/about/map/" title="찾아오시는 길 바로가기">찾아오시는 길</a>
+                </li>
+                <li>
+                    <a href="/mpm/useinfo/help/" title="이용안내 바로가기">이용안내</a>
+                </li>
+                <li>
+                    <a href="/mpm/useinfo/sitemap/" title="누리집 지도 바로가기">누리집 지도</a>
+                </li>
+            </ul>
+
+            <div class="nm_footer_txt">
+                <p>30128 세종특별자치시 정부2청사로 13 인사혁신처</p>
+                <p>인사혁신처 민원안내 : 110(정부민원안내콜센터, 월~금 9:00~21:00, 토 9:00~13:00)</p>
+                <p>Copyright© Ministry of Personnel Management. All Rights reserved</p>
+            </div>
+        </div>
+
+        <div class="nm_footer_conts_right">
+            <ul class="nm_footer_sns">
+                <li>
+                    <a href="https://www.facebook.com/miraesaram/" class="nm_ico_sns nm_ico_fb" title="새창열림" target="_blank"><span class="nm_blind">페이스북</span></a>
+                </li>
+                <li>
+                    <a href="http://blog.naver.com/mirae_saram" class="nm_ico_sns nm_ico_nb" title="새창열림" target="_blank"><span class="nm_blind">네이버 블로그</span></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCTlXbNVlKyqLmDTqmlrdEFA" class="nm_ico_sns nm_ico_yb" title="새창열림" target="_blank"><span class="nm_blind">유튜브</span></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/mpm_kr/" class="nm_ico_sns nm_ico_is" title="새창열림" target="_blank"><span class="nm_blind">인스타그램</span></a>
+                </li>
+            </ul>
+            <ul class="nm_footer_icon">
+                <li>
+                    <a href="http://www.kogl.or.kr" class="nm_ico_open" title="새창열림" target="_blank"><span class="nm_blind">공공누리</span></a>
+                </li>
+                <li>
+                    <a href="http://www.kdaa.or.kr/CertificationSite/WA/2275/Detail?page=1" class="nm_ico_wa" title="한국시각장애인연합회 웹접근성인증마크 새창열림" target="_blank"><span class="nm_blind">한국시각장애인연합회 웹접근성인증마크</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92429228-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+	<!-- //footer -->
+</div>
+
+<!-- wrap -->
+<!-- script -->
+
+
+
+<script type="text/javascript" src="/mpm/common/js/jquery.scolllTo.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/jquery.matchheight.min.js?v=20261020025830"></script>
+
+
+<script type="text/javascript" src="/mpm/common/js/slick.min.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/TweenMax.min.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/jquery.bxslider.min.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/common.js?v=20261020025830"></script>
+
+
+
+
+
+<script type="text/javascript" src="/mpm/common/js/default.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/clipboard.min.js?v=20261020025830"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/mpm/common/js/newsub.js?v=20261020025830"></script>
+<script type="text/javascript" src="/mpm/common/js/voice.js?v=20261020025830"></script>
+
+
+</body>
+
+</html>

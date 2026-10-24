@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "settlement-01",
+    "category": "출장",
+    "question": "국가공무원 출장 다녀온 뒤 정산 신청은 언제까지 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-02",
+    "category": "출장",
+    "question": "출장 영수증은 언제까지 제출해야 해?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-03",
+    "category": "출장",
+    "question": "출장 후 교통비와 호텔비 증빙을 내는 마감이 언제야?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-04",
+    "category": "출장",
+    "question": "출장 마친 다음날부터 세어 2주 안에 정산하는 게 맞나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-05",
+    "category": "출장",
+    "question": "국외 출장에서 운임과 숙박비 정산 증빙은 무엇을 내나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-06",
+    "category": "출장",
+    "question": "출장 경비 정산에 신용카드를 반드시 써야 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [],
+    "facts": [
+      "증거서류"
+    ],
+    "answer_facts": [
+      "신용카드",
+      "특별한 사유"
+    ]
+  },
+  {
+    "id": "settlement-07",
+    "category": "출장",
+    "question": "출장지에서 카드 결제가 안 돼 현금으로 숙박비를 냈어요. 예외 근거가 있나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "settlement-08",
+    "category": "출장",
+    "question": "출장 정산을 얼마나 빨리 신청해야 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제8조의2"
+    ],
+    "require_articles": [
+      "제8조의2"
+    ],
+    "allow_rules": [
+      "settlement"
+    ],
+    "facts": [
+      "증거서류"
+    ]
+  },
+  {
+    "id": "local-trip-01",
+    "category": "출장",
+    "question": "근무지 내 출장 3시간이면 여비를 얼마 지급하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "local-trip-02",
+    "category": "출장",
+    "question": "관내출장 4시간 이상과 미만의 여비 차이를 알려줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "local-trip-03",
+    "category": "출장",
+    "question": "관내로 3시간 출장 갔는데 관용차를 타면 여비는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "local-trip-04",
+    "category": "출장",
+    "question": "근무지 내 출장에서 전용 차량을 배정받았을 때도 지급하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "local-trip-05",
+    "category": "출장",
+    "question": "공무원 여비 규정에서 근무지 내 출장의 범위와 거리는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "local-trip-06",
+    "category": "출장",
+    "question": "같은 시군 안의 출장과 12킬로미터 미만 출장은 관내출장인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "local-trip"
+    ]
+  },
+  {
+    "id": "daily-car-01",
+    "category": "출장",
+    "question": "국가공무원 관외 출장 일비는 관용차를 쓰면 감액하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [
+      "daily-car"
+    ]
+  },
+  {
+    "id": "daily-car-02",
+    "category": "출장",
+    "question": "출장 일비를 공용차량 때문에 절반만 받는 근거는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [
+      "daily-car"
+    ]
+  },
+  {
+    "id": "daily-car-03",
+    "category": "출장",
+    "question": "공무용 차량 이용시 출장 일비의 2분의 1 지급이 맞나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [
+      "daily-car"
+    ]
+  },
+  {
+    "id": "extra-expenses-01",
+    "category": "출장",
+    "question": "국내 출장에서 부득이하게 숙박비 상한을 초과했다면 추가 정산 신청기한은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [
+      "additional-settlement"
+    ],
+    "forbid_rules": [
+      "settlement"
+    ]
+  },
+  {
+    "id": "extra-expenses-02",
+    "category": "출장",
+    "question": "국외 출장 숙박비 초과지출 추가 지급 정산은 언제까지 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [
+      "additional-settlement"
+    ],
+    "forbid_rules": [
+      "settlement"
+    ]
+  },
+  {
+    "id": "extra-expenses-03",
+    "category": "출장",
+    "question": "국내 출장에서 식비를 초과 지출해도 추가로 청구할 수 있나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제16조"
+    ],
+    "require_articles": [
+      "제16조"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "settlement"
+    ],
+    "answer_facts": [
+      "식비(국내 여행의 경우 식비는 제외한다)",
+      "국내 여행의 경우에는 숙박비 상한액의 10분의 3"
+    ]
+  },
+  {
+    "id": "travel-no-basis-01",
+    "category": "출장",
+    "question": "국가공무원 서울 출장 숙박비 한도는 얼마야?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-02",
+    "category": "출장",
+    "question": "해외 미국 출장 호텔비 상한 금액은 얼마인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-03",
+    "category": "출장",
+    "question": "국가공무원 출장 하루 식대가 얼마야?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-04",
+    "category": "출장",
+    "question": "출장 일비는 하루에 몇 원인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-05",
+    "category": "출장",
+    "question": "지방공무원 근무지 내 출장비 금액을 확정해줘",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-06",
+    "category": "출장",
+    "question": "출장에 내 차를 쓰면 기름값을 얼마나 청구할 수 있나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-07",
+    "category": "출장",
+    "question": "출장 택시비는 무조건 인정되나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-08",
+    "category": "출장",
+    "question": "국외 출장 항공권 비즈니스석을 타도 되나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-09",
+    "category": "출장",
+    "question": "출장으로 쌓은 항공 마일리지를 개인 여행에 써도 되나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-10",
+    "category": "출장",
+    "question": "교육 대상자로 선발된 교육출장 숙박비 지급의 세부 기준은?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-11",
+    "category": "출장",
+    "question": "2024년 공무원 출장비 정산 기준을 알려줘",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "travel-no-basis-12",
+    "category": "출장",
+    "question": "군인의 출장 여비 기준은 어떻게 되나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "annual-six-01",
+    "category": "휴가",
+    "question": "지방공무원 재직기간 6년 이상 연가는 며칠이야?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "annual-six-02",
+    "category": "휴가",
+    "question": "지방직 경력 8년인데 기본 연가일수가 21일인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "annual-other-01",
+    "category": "휴가",
+    "question": "지방공무원 재직기간 2년인 사람 연가는 며칠인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "annual-other-02",
+    "category": "휴가",
+    "question": "지방공무원 입사 두 달인데 기본 연차 일수는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "annual-other-03",
+    "category": "휴가",
+    "question": "지방공무원 연가보상비 대상일수 최대 20일이라는 근거는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "annual-other-04",
+    "category": "휴가",
+    "question": "지방공무원 연가 재직기간에 일반 휴직기간을 넣나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조("
+    ],
+    "require_articles": [
+      "제7조("
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "sick-01",
+    "category": "휴가",
+    "question": "지방공무원 병가 진단서는 몇 일부터 내나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의5"
+    ],
+    "require_articles": [
+      "제7조의5"
+    ],
+    "allow_rules": [
+      "sick-leave"
+    ]
+  },
+  {
+    "id": "sick-02",
+    "category": "휴가",
+    "question": "지방직 병가 7일째인데 의사 진단서가 필요한가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의5"
+    ],
+    "require_articles": [
+      "제7조의5"
+    ],
+    "allow_rules": [
+      "sick-leave"
+    ]
+  },
+  {
+    "id": "sick-03",
+    "category": "휴가",
+    "question": "지방공무원 일반 병가와 공무상 병가의 연간 일수 차이는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의5"
+    ],
+    "require_articles": [
+      "제7조의5"
+    ],
+    "allow_rules": [
+      "sick-leave"
+    ]
+  },
+  {
+    "id": "sick-04",
+    "category": "휴가",
+    "question": "지방공무원 병가를 시간 단위로 썼을 때 하루로 환산하는 기준은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의5"
+    ],
+    "require_articles": [
+      "제7조의5"
+    ],
+    "allow_rules": [
+      "sick-leave"
+    ]
+  },
+  {
+    "id": "public-health-01",
+    "category": "휴가",
+    "question": "지방공무원 국가건강검진은 공가로 처리할 수 있어?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의6"
+    ],
+    "require_articles": [
+      "제7조의6"
+    ],
+    "allow_rules": [
+      "health-leave",
+      "blood-leave"
+    ]
+  },
+  {
+    "id": "public-health-02",
+    "category": "휴가",
+    "question": "지방공무원 국민건강보험법상 건강검진에 필요한 공가 시간은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의6"
+    ],
+    "require_articles": [
+      "제7조의6"
+    ],
+    "allow_rules": [
+      "health-leave",
+      "blood-leave"
+    ]
+  },
+  {
+    "id": "public-health-03",
+    "category": "휴가",
+    "question": "지방공무원 헌혈하러 가는데 연가 대신 공가를 쓸 수 있나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의6"
+    ],
+    "require_articles": [
+      "제7조의6"
+    ],
+    "allow_rules": [
+      "health-leave",
+      "blood-leave"
+    ]
+  },
+  {
+    "id": "family-01",
+    "category": "휴가",
+    "question": "지방공무원 가족돌봄휴가 열흘은 전부 유급인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [
+      "family-care",
+      "childcare-time"
+    ]
+  },
+  {
+    "id": "family-02",
+    "category": "휴가",
+    "question": "지방공무원 아이의 병원 진료에 동행할 때 가족돌봄휴가 사유가 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [
+      "family-care",
+      "childcare-time"
+    ]
+  },
+  {
+    "id": "family-03",
+    "category": "휴가",
+    "question": "지방공무원 부모님이 아파서 돌봐야 해요. 가족돌봄휴가 근거는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [
+      "family-care",
+      "childcare-time"
+    ]
+  },
+  {
+    "id": "family-04",
+    "category": "휴가",
+    "question": "지방공무원 초등학교 2학년 자녀를 위한 육아시간 하루 사용 시간과 기간은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [
+      "family-care",
+      "childcare-time"
+    ]
+  },
+  {
+    "id": "special-other-01",
+    "category": "휴가",
+    "question": "지방공무원 본인 출산휴가 기간은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "family-care",
+      "childcare-time",
+      "health-leave",
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "special-other-02",
+    "category": "휴가",
+    "question": "지방공무원 임신 검진휴가는 며칠까지 가능한가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "family-care",
+      "childcare-time",
+      "health-leave",
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "special-other-03",
+    "category": "휴가",
+    "question": "지방공무원 임신 중 모성보호시간은 하루 몇 시간인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "family-care",
+      "childcare-time",
+      "health-leave",
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "special-other-04",
+    "category": "휴가",
+    "question": "지방공무원 여성보건휴가는 유급인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "family-care",
+      "childcare-time",
+      "health-leave",
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "special-other-05",
+    "category": "휴가",
+    "question": "지방공무원 본인 유산휴가의 임신 주수별 일수는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제7조의7"
+    ],
+    "require_articles": [
+      "제7조의7"
+    ],
+    "allow_rules": [],
+    "forbid_rules": [
+      "family-care",
+      "childcare-time",
+      "health-leave",
+      "annual-leave"
+    ]
+  },
+  {
+    "id": "leave-no-basis-01",
+    "category": "휴가",
+    "question": "국가공무원 연가 일수는 얼마인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-02",
+    "category": "휴가",
+    "question": "교육공무원 교사 병가 규정을 알려줘",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-03",
+    "category": "휴가",
+    "question": "공무직 근로자도 병가 60일 쓸 수 있나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-04",
+    "category": "휴가",
+    "question": "지방공무원 아내 출산하면 배우자 출산휴가는 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-05",
+    "category": "휴가",
+    "question": "지방공무원 본인 결혼 경조사휴가는 며칠인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-06",
+    "category": "휴가",
+    "question": "지방공무원 배우자 부모님 사망 경조사휴가 일수는?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-07",
+    "category": "휴가",
+    "question": "지방공무원 연가 반일 사용 승인 절차는?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-08",
+    "category": "휴가",
+    "question": "지방공무원 대체휴무는 언제까지 사용해야 하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "leave-no-basis-09",
+    "category": "휴가",
+    "question": "2024년 지방공무원 육아시간 기준을 알려줘",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "inspection-01",
+    "category": "물품",
+    "question": "지방자치단체 물품 납품 뒤 검수와 검사조서 작성 근거는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조"
+    ],
+    "require_articles": [
+      "제17조"
+    ],
+    "allow_rules": [
+      "goods-inspection"
+    ]
+  },
+  {
+    "id": "inspection-02",
+    "category": "물품",
+    "question": "물품 검사조서를 생략할 수 있는 경우가 있나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조"
+    ],
+    "require_articles": [
+      "제17조"
+    ],
+    "allow_rules": [
+      "goods-inspection"
+    ]
+  },
+  {
+    "id": "inspection-03",
+    "category": "물품",
+    "question": "지방자치단체 물품 검수 중 시험검사로 발생한 파손 비용은 누가 부담하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조"
+    ],
+    "require_articles": [
+      "제17조"
+    ],
+    "allow_rules": [],
+    "answer_facts": [
+      "비용은 계약상대자가 부담한다."
+    ]
+  },
+  {
+    "id": "inspection-04",
+    "category": "물품",
+    "question": "품질인증 물품의 납품 검사를 생략할 수 있는 법적 근거는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조"
+    ],
+    "require_articles": [
+      "제17조"
+    ],
+    "allow_rules": [
+      "goods-inspection"
+    ]
+  },
+  {
+    "id": "payment-01",
+    "category": "물품",
+    "question": "지방자치단체 물품 대금을 검사 전에 지급할 수 있어요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "goods-payment"
+    ]
+  },
+  {
+    "id": "payment-02",
+    "category": "물품",
+    "question": "지방자치단체 선금 지급이 검사 후 지급 원칙의 예외인가요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "goods-payment"
+    ]
+  },
+  {
+    "id": "payment-03",
+    "category": "물품",
+    "question": "지방자치단체 납품업체에 돈부터 줘도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제18조"
+    ],
+    "require_articles": [
+      "제18조"
+    ],
+    "allow_rules": [
+      "goods-payment"
+    ]
+  },
+  {
+    "id": "inspection-payment-01",
+    "category": "물품",
+    "question": "지방자치단체 물품 검사와 대금 지급 순서의 근거를 같이 알려줘",
+    "outcome": "answer",
+    "allow_articles": [
+      "제17조",
+      "제18조"
+    ],
+    "require_articles": [
+      "제17조",
+      "제18조"
+    ],
+    "allow_rules": [
+      "goods-inspection",
+      "goods-payment"
+    ]
+  },
+  {
+    "id": "goods-no-basis-01",
+    "category": "물품",
+    "question": "물품 검사조서를 얼마 미만 계약이면 생략하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-02",
+    "category": "물품",
+    "question": "지방자치단체 물품 대금 청구하면 며칠 이내에 줘야 하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-03",
+    "category": "물품",
+    "question": "물품 수의계약 한도는 얼마인가요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-04",
+    "category": "물품",
+    "question": "물품 구매 견적서는 몇 장 받아야 하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-05",
+    "category": "물품",
+    "question": "쓸 수 없는 물품의 불용 결정과 폐기는 어떻게 하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-06",
+    "category": "물품",
+    "question": "물품이 불량인데 반품·교환할 권리의 근거는?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-07",
+    "category": "물품",
+    "question": "국가기관 납품 검수와 검사조서 작성은 어떻게 하나요?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "goods-no-basis-08",
+    "category": "물품",
+    "question": "공기업의 물품 납품 검사 기준은?",
+    "outcome": "unavailable"
+  },
+  {
+    "id": "budget-01",
+    "category": "물품·회계",
+    "question": "물품구매하려고 하는데 사무용품은 무슨목으로 사야할까?",
+    "outcome": "answer",
+    "allow_articles": [
+      "01.사무관리비",
+      "01.자산및물품취득비"
+    ],
+    "allow_rules": [
+      "budget-office-supplies",
+      "budget-assets"
+    ]
+  },
+  {
+    "id": "budget-02",
+    "category": "물품·회계",
+    "question": "일반운영비에 사무용품을 사도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "01.사무관리비",
+      "01.자산및물품취득비"
+    ],
+    "allow_rules": [
+      "budget-office-supplies",
+      "budget-assets"
+    ]
+  },
+  {
+    "id": "budget-03",
+    "category": "물품·회계",
+    "question": "프린터 토너는 무슨 목으로 사나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "01.사무관리비",
+      "01.자산및물품취득비"
+    ],
+    "allow_rules": [
+      "budget-office-supplies",
+      "budget-assets"
+    ]
+  },
+  {
+    "id": "budget-04",
+    "category": "물품·회계",
+    "question": "지방자치단체 컴퓨터 구매 예산과목은?",
+    "outcome": "answer",
+    "allow_articles": [
+      "01.사무관리비",
+      "01.자산및물품취득비"
+    ],
+    "allow_rules": [
+      "budget-office-supplies",
+      "budget-assets"
+    ]
+  },
+  {
+    "id": "points-01",
+    "category": "물품·회계",
+    "question": "지방자치단체 법인카드 포인트를 개인적으로 써도 되나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제120조"
+    ],
+    "require_articles": [
+      "제120조"
+    ],
+    "allow_rules": [
+      "card-points"
+    ]
+  },
+  {
+    "id": "points-02",
+    "category": "물품·회계",
+    "question": "지방자치단체 물품 구매 적립금과 마일리지는 어떻게 처리하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제120조"
+    ],
+    "require_articles": [
+      "제120조"
+    ],
+    "allow_rules": [
+      "card-points"
+    ]
+  },
+  {
+    "id": "points-03",
+    "category": "물품·회계",
+    "question": "지방자치단체 문구점 구매 인센티브를 세입 처리할 수 없으면 어떻게 하나요?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제120조"
+    ],
+    "require_articles": [
+      "제120조"
+    ],
+    "allow_rules": [
+      "card-points"
+    ]
+  },
+  {
+    "id": "disclosure-01",
+    "category": "물품·회계",
+    "question": "지방자치단체 초빙강사료 집행 공개 대상과 시기는?",
+    "outcome": "answer",
+    "allow_articles": [
+      "제121조"
+    ],
+    "require_articles": [
+      "제121조"
+    ],
+    "allow_rules": [
+      "instructor-disclosure"
+    ]
+  },
+  {
+    "id": "disclosure-02",
+    "category": "물품·회계",
+    "question": "지방자치단체 업무추진비 집행현황을 언제 공개하나요?",
+    "outcome": "unavailable",
+    "allow_rules": []
+  },
+  {
+    "id": "ambiguous-01",
+    "category": "확인 질문",
+    "question": "출장 업무 어떻게 해?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-02",
+    "category": "확인 질문",
+    "question": "휴가 며칠 쓸 수 있어?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-03",
+    "category": "확인 질문",
+    "question": "나 남은 연가가 며칠이지?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-04",
+    "category": "확인 질문",
+    "question": "병원에 가야 하는데 공가인가요?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-05",
+    "category": "확인 질문",
+    "question": "검사 기준을 알려줘",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-06",
+    "category": "확인 질문",
+    "question": "물품 구매는 어떻게 처리해?",
+    "outcome": "clarify"
+  },
+  {
+    "id": "ambiguous-07",
+    "category": "확인 질문",
+    "question": "그럼 그거는 며칠이야?",
+    "outcome": "clarify"
+  }
+]

@@ -1,0 +1,1 @@
+실제 검증 결과는 verification/서무비서_다른PC_검증보고서_v69.txt 및 verification/최종검증요약_v69.json에서 확인하세요. 검증 결과는 archive --evidence 옵션으로 제출 아카이브에 동봉됩니다.

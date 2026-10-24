@@ -1,0 +1,98 @@
+[
+  {
+    "key": "travel",
+    "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=57051",
+    "file": "travel.html",
+    "raw_sha256": "53ca5e0ddb3fa144330c61520070391f54c1b90e9d3b28a9d410464a40b79840",
+    "bytes": 157235,
+    "retrieved_at": "2026-10-20T10:08:58.555646+00:00"
+  },
+  {
+    "key": "leave",
+    "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033630241",
+    "file": "leave.html",
+    "raw_sha256": "1a9c7493112605aa6231f422e21f8335f7d4f44637767ddd4c08f10b12c46790",
+    "bytes": 12415,
+    "retrieved_at": "2026-10-20T10:08:58.706145+00:00"
+  },
+  {
+    "key": "accounting",
+    "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000285992",
+    "file": "accounting.html",
+    "raw_sha256": "210749ca18562b8463674209ffe5b1b95265e0d1cd11d844efc94cc19fe8e4ae",
+    "bytes": 77963,
+    "retrieved_at": "2026-10-20T10:08:59.425543+00:00"
+  },
+  {
+    "key": "leave_guideline",
+    "url": "https://www.law.go.kr/admRulInfoP.do?admRulSeq=2100000282706",
+    "file": "leave_guideline.html",
+    "raw_sha256": "eef900f349b0efe414a1d3f63d08dcc0d0902ee4102ba55487c160d360d458af",
+    "bytes": 77651,
+    "retrieved_at": "2026-10-20T10:08:59.615674+00:00"
+  },
+  {
+    "key": "accounting_current",
+    "url": "https://www.law.go.kr/admRulLsInfoR.do?admRulSeq=2100000281370&chrClsCd=010202",
+    "file": "accounting_current.html",
+    "raw_sha256": "5110218e19abc56b87bf06036dcca78a3025c9235043cbfb3561b4a4380b778b",
+    "bytes": 387894,
+    "retrieved_at": "2026-10-20T10:09:00.055837+00:00"
+  },
+  {
+    "key": "guideline_body",
+    "url": "https://www.law.go.kr/admRulLsInfoR.do?admRulSeq=2100000282706&chrClsCd=010202",
+    "file": "guideline_body.html",
+    "raw_sha256": "bfd90a1c5a11bc5250dc7d351b317d5bbe883adc2a56baf4b44d7508b0c65168",
+    "bytes": 3313,
+    "retrieved_at": "2026-10-20T10:09:00.185649+00:00"
+  },
+  {
+    "key": "leave_article",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0007&joBrNo=05&lsiSeq=290493&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "leave_article.html",
+    "raw_sha256": "9c7cfaa76f9e85780e3fab53351fdbc26bd5f30b80beed7f6b378dcf7345ecb7",
+    "bytes": 72606,
+    "retrieved_at": "2026-10-20T10:09:00.375502+00:00"
+  },
+  {
+    "key": "leave_annual",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0007&joBrNo=00&lsiSeq=290493&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "leave_annual.html",
+    "raw_sha256": "323c65e2861c976a1d755cc097e0121b8a6b9c4f46997d1442897ac0c6983020",
+    "bytes": 77266,
+    "retrieved_at": "2026-10-20T10:44:41.892956+00:00"
+  },
+  {
+    "key": "leave_official",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0007&joBrNo=06&lsiSeq=290493&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "leave_official.html",
+    "raw_sha256": "52e4d8a2e9679b7cd84ff83b9c5788712873a75626b32957fd40e6e03a0fc868",
+    "bytes": 79593,
+    "retrieved_at": "2026-10-20T10:44:42.386333+00:00"
+  },
+  {
+    "key": "leave_special",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0007&joBrNo=07&lsiSeq=290493&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "leave_special.html",
+    "raw_sha256": "1613bffa3d3622843eab7c73b057dfa00a213c5c7a835ae7a72e09966d7830c8",
+    "bytes": 85514,
+    "retrieved_at": "2026-10-20T10:44:41.914473+00:00"
+  },
+  {
+    "key": "goods_inspection",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0017&joBrNo=00&lsiSeq=291241&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_inspection.html",
+    "raw_sha256": "4dfc247e512f78e34dcae126998656c1c7d50ae0f93c58c86507e3abd9172dca",
+    "bytes": 73843,
+    "retrieved_at": "2026-10-20T10:44:42.608884+00:00"
+  },
+  {
+    "key": "goods_payment",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?joNo=0018&joBrNo=00&lsiSeq=291241&urlMode=lsScJoRltInfoR&docCls=jo",
+    "file": "goods_payment.html",
+    "raw_sha256": "72133cf4e786aa913cf01670103684e3789de24ed08ab7e35c467e8427a85008",
+    "bytes": 73019,
+    "retrieved_at": "2026-10-20T10:44:42.686299+00:00"
+  }
+]

@@ -1,0 +1,2093 @@
+{
+  "schema": "local-ai-proof/1",
+  "created_at": "2026-10-19T06:53:05.173968+00:00",
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10",
+    "ollama_version": "0.40.6",
+    "installed_models": [
+      {
+        "name": "llama3.2:3b",
+        "model": "llama3.2:3b",
+        "modified_at": "2026-10-19T13:18:30.2524663+09:00",
+        "size": 2019393189,
+        "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 3072,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "gemma3:4b",
+        "model": "gemma3:4b",
+        "modified_at": "2026-10-19T13:09:33.068844+09:00",
+        "size": 3350272403,
+        "digest": "68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+        "details": {
+          "parent_model": "dhiltgen/gemma3:4b-it-q4_K_M-llamacpp",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3",
+            "clip"
+          ],
+          "parameter_size": "3.9B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 2560,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision"
+        ]
+      }
+    ]
+  },
+  "scope": "합성 규정·절차 카드 기반 서무 안내. 두 로컬 모델의 실제 선택과 앱의 절차·서식·근거 표시 검증. 여비 계산 엔진은 LLM과 별개.",
+  "source_sha256": {
+    "app/assistant.py": "8472e5aca4b98adf5d4c7602b72f0db9558037a637420116d7cb7dfb53aa2a5a",
+    "app/llm.py": "354a134903529f077ea77442dd3cc075a6e572297a1c419aa49f709f81babe7d",
+    "app/local_ai.py": "338531de70cd4168887ac35644a232398f77ea17b736d8c201ef4bbb8d9fbe51"
+  },
+  "runs": [
+    {
+      "id": "9e80d8beb908429cb3d88777426279b6",
+      "created_at": "2026-10-19T06:53:17.097930+00:00",
+      "scenario_id": "travel",
+      "scenario": {
+        "title": "출장 정산 절차·서식·근거",
+        "query": "2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.",
+        "expected_card": "card-travel"
+      },
+      "profile": "local_gemma",
+      "requested_model": "gemma3:4b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "gemma3:4b",
+      "elapsed_seconds": 11.769,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.",
+        "mode": "llm",
+        "model": "gemma3:4b",
+        "profile": "local_gemma",
+        "notice": "모델이 존재하지 않는 근거 2건을 인용해 제외했습니다.",
+        "summary": "'국내 출장 여비 정산' 절차로 안내합니다. 모두 4단계입니다. 지금 할 일은 2단계 '증빙서류 모으기'입니다 (2026. 10. 19.(월)까지, 오늘까지). 필요 서식: 국내출장 여비 정산서.",
+        "answer": "'국내 출장 여비 정산' 절차는 모두 4단계입니다: 1단계 출장 결과 보고(복명), 2단계 증빙서류 모으기, 3단계 여비 정산서 작성·제출, 4단계 정산 결과 확인. 필요 서식은 국내출장 여비 정산서입니다. 근거 조문은 가람시 공무원 여비 규정(가상) 제13조(출장 결과 보고), 가람시 공무원 여비 규정(가상) 제7조(운임), 가람시 공무원 여비 규정(가상) 제8조(숙박비), 가람시소방서 행정업무 처리 기준(가상) 제3조(출장 여비 정산 기한), 가람시 공무원 여비 규정(가상) 제12조(여비의 정산)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "category": "여비",
+            "layer": "기관",
+            "summary": "출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.",
+            "status": "확정",
+            "notes": "",
+            "base_dates": [
+              "출장 시작일",
+              "출장 종료일"
+            ]
+          },
+          "base_values": {
+            "출장 종료일": "2026-10-18"
+          },
+          "missing_bases": [],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "출장 결과 보고(복명)",
+              "detail": "복귀한 날 부서장에게 출장 결과를 보고합니다. 단순 서류 전달 같은 경미한 출장은 생략할 수 있습니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "출장 종료일 당일",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 0,
+                "unit": "일"
+              },
+              "due": "2026-10-18",
+              "due_text": "2026. 10. 18.(일)",
+              "dday": {
+                "label": "1일 지남",
+                "state": "overdue",
+                "days": -1
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-9",
+                  "doc_id": "rule-travel",
+                  "label": "제13조(출장 결과 보고)",
+                  "loc": "14번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제13조(출장 결과 보고) 출장을 마친 공무원은 복귀한 날 출장 결과를 소속 부서장에게 보고하여야 한다. 다만, 단순 서류 전달 등 경미한 출장은 보고를 생략할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 2,
+              "title": "증빙서류 모으기",
+              "detail": "승차권·숙박 영수증을 모읍니다. 자가용을 썼다면 이동 거리를 적어 둡니다.",
+              "tip": "영수증을 잃어버렸으면 카드 사용 내역으로 대신할 수 있습니다(여비 규정 제12조③).",
+              "variant": null,
+              "rule": "출장 종료일 1업무일 후",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 1,
+                "unit": "업무일"
+              },
+              "due": "2026-10-19",
+              "due_text": "2026. 10. 19.(월)",
+              "dday": {
+                "label": "오늘까지",
+                "state": "today",
+                "days": 0
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-5",
+                  "doc_id": "rule-travel",
+                  "label": "제7조(운임)",
+                  "loc": "7번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제7조(운임) ① 철도·버스·항공 운임은 실제 든 비용으로 지급하며, 승차권 또는 영수증을 증빙으로 첨부한다.\n② 자가용 차량을 이용한 경우에는 출발지와 도착지 사이 거리에 1킬로미터당 200원(가상 기준)을 곱한 금액을 지급한다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "rule-travel-6",
+                  "doc_id": "rule-travel",
+                  "label": "제8조(숙박비)",
+                  "loc": "9번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제8조(숙박비) 숙박비는 1박당 7만원(가상 기준) 한도에서 실제 든 비용을 지급하며, 숙박 영수증을 첨부한다. 공용 시설에 숙박한 경우에는 지급하지 않는다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 3,
+              "title": "여비 정산서 작성·제출",
+              "detail": "국내출장 여비 정산서에 증빙을 붙여 행정팀에 냅니다. 출장 신청 결재 문서 번호를 함께 적습니다.",
+              "tip": "공통 규정은 7일 이내지만 우리 기관 기준은 다음 업무일부터 3업무일 이내입니다. 12월 출장은 12월 26일까지입니다.",
+              "variant": null,
+              "rule": "출장 종료일 3업무일 후",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 3,
+                "unit": "업무일"
+              },
+              "due": "2026-10-21",
+              "due_text": "2026. 10. 21.(수)",
+              "dday": {
+                "label": "D-2",
+                "state": "soon",
+                "days": 2
+              },
+              "forms": [
+                {
+                  "id": "form-travel",
+                  "name": "국내출장 여비 정산서"
+                }
+              ],
+              "basis": [
+                {
+                  "chunk_id": "rule-agency-3",
+                  "doc_id": "rule-agency",
+                  "label": "제3조(출장 여비 정산 기한)",
+                  "loc": "4번째 문단",
+                  "title": "가람시소방서 행정업무 처리 기준(가상)",
+                  "layer": "기관",
+                  "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "rule-travel-8",
+                  "doc_id": "rule-travel",
+                  "label": "제12조(여비의 정산)",
+                  "loc": "11번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 4,
+              "title": "정산 결과 확인",
+              "detail": "행정팀이 정산서를 받은 날부터 10일 이내에 차액을 지급하거나 반납을 통지합니다. 통지가 오면 반납·수령을 확인합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-8",
+                  "doc_id": "rule-travel",
+                  "label": "제12조(여비의 정산)",
+                  "loc": "11번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 1,
+          "warnings": []
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-purchase",
+            "title": "소액 물품 구매와 검수",
+            "layer": "기관"
+          }
+        ],
+        "cited": [],
+        "related": [
+          {
+            "id": "guide-purchase-3",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제3조(구매 요구)",
+            "loc": "1쪽",
+            "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-travel-8",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제12조(여비의 정산)",
+            "loc": "11번째 문단",
+            "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-agency-3",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제3조(출장 여비 정산 기한)",
+            "loc": "4번째 문단",
+            "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+            "layer": "기관"
+          },
+          {
+            "id": "rule-travel-2",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제1조(목적)",
+            "loc": "3번째 문단",
+            "text": "제1조(목적) 이 규정은 가람시 소속 공무원이 공무로 여행하는 경우 지급하는 여비에 관하여 필요한 사항을 정한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "table-deadline-2",
+            "doc_id": "table-deadline",
+            "title": "업무별 처리기한 총괄표(가상)",
+            "label": "시트 '처리기한' 3행 업무: 여비 정산서 제출",
+            "loc": "시트 '처리기한' 3행",
+            "text": "업무: 여비 정산서 제출 / 처리 기한: 출장 종료 다음 업무일부터 3업무일 이내 / 근거: 행정업무 처리 기준(가상) 제3조 / 제출처: 행정팀",
+            "layer": "기관"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "gemma3:4b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-purchase | 소액 물품 구매와 검수 | 분류 계약·물품 | 2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.\n  1. 물품 구매 요구서 제출\n  2. 견적서 2곳 이상 받기\n  3. 납품 검수·검사조서 제출 — 서식: 물품 검사조서\n  4. 대금 지급 확인\n\n[규정 조문 후보]\n- id=guide-purchase-3 | 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구) | 제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.\n- id=rule-travel-8 | 가람시 공무원 여비 규정(가상) 제12조(여비의 정산) | 제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다. ② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다. ③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.\n- id=rule-agency-3 | 가람시소방서 행정업무 처리 기준(가상) 제3조(출장 여비 정산 기한) | 제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다. ② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다. ③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.\n- id=rule-travel-2 | 가람시 공무원 여비 규정(가상) 제1조(목적) | 제1조(목적) 이 규정은 가람시 소속 공무원이 공무로 여행하는 경우 지급하는 여비에 관하여 필요한 사항을 정한다.\n- id=table-deadline-2 | 업무별 처리기한 총괄표(가상) 시트 '처리기한' 3행 업무: 여비 정산서 제출 | 업무: 여비 정산서 제출 / 처리 기한: 출장 종료 다음 업무일부터 3업무일 이내 / 근거: 행정업무 처리 기준(가상) 제3조 / 제출처: 행정팀\n- id=rule-agency-2 | 가람시소방서 행정업무 처리 기준(가상) 제1조(목적) | 제1조(목적) 이 기준은 가람시소방서 직원의 출장 정산, 물품 검수, 행사 준비 등 서무 업무의 처리 기한과 절차를 정한다.\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 11.748,
+          "response": {
+            "id": "chatcmpl-46",
+            "object": "chat.completion",
+            "created": 1792392797,
+            "model": "gemma3:4b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-travel\", \"answer\": \"2026년 10월 18일 서울 출장 여비 정산 절차를 안내해 드립니다. 먼저, 출장 결과 보고(복명)를 통해 출장 사실을 확인하고, 이후 7일 이내에 국내출장 여비 정산서에 출장 관련 증빙서류를 첨부하여 행정팀에 제출해주시기 바랍니다. 정산서에는 출장 신청 결재 문서 번호를 함께 기재해주시면 됩니다.\", \"cited\": [\"id=rule-travel-8\", \"id=table-deadline-2\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1251,
+              "prompt_tokens_details": {
+                "cached_tokens": 1250
+              },
+              "completion_tokens": 138,
+              "total_tokens": 1389
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 필수 서식 확인",
+      "evidence_sha256": "a52aba1ed34ba9ea8340c04706b6b4466835c3902e9da35761c9bb84f599477c"
+    },
+    {
+      "id": "5634f947217543968c7747ad1fe6a71d",
+      "created_at": "2026-10-19T06:53:51.851571+00:00",
+      "scenario_id": "leave",
+      "scenario": {
+        "title": "교대근무 연가 신청",
+        "query": "교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.",
+        "expected_card": "card-leave"
+      },
+      "profile": "local_gemma",
+      "requested_model": "gemma3:4b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "gemma3:4b",
+      "elapsed_seconds": 34.743,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.",
+        "mode": "llm",
+        "model": "gemma3:4b",
+        "profile": "local_gemma",
+        "notice": "모델이 존재하지 않는 근거 2건을 인용해 제외했습니다.",
+        "summary": "'연가 신청' 절차로 안내합니다. 모두 1단계입니다. 지금 할 일은 1단계 '복무관리시스템에 연가 신청'입니다 (2026. 10. 23.(금)까지, D-4).",
+        "answer": "'연가 신청' 절차는 모두 1단계입니다: 1단계 복무관리시스템에 연가 신청. 근거 조문은 연가·복무 처리 안내(가상) 제1조(연가 신청), 연가·복무 처리 안내(가상) 제3조(교대근무자)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-leave",
+            "title": "연가 신청",
+            "category": "복무",
+            "layer": "공통",
+            "summary": "연가를 쓰기 전 복무관리시스템 신청과 승인 절차입니다.",
+            "status": "초안",
+            "notes": "",
+            "base_dates": [
+              "연가 시작일"
+            ]
+          },
+          "base_values": {
+            "연가 시작일": "2026-10-26"
+          },
+          "missing_bases": [],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "복무관리시스템에 연가 신청",
+              "detail": "사용하려는 날의 전 업무일까지 신청하고 부서장 승인을 받습니다.",
+              "tip": "교대근무자는 근무표 조정을 위해 7일 전까지 신청합니다(제3조).",
+              "variant": null,
+              "rule": "연가 시작일 1업무일 전",
+              "deadline": {
+                "base": "연가 시작일",
+                "offset": -1,
+                "unit": "업무일"
+              },
+              "due": "2026-10-23",
+              "due_text": "2026. 10. 23.(금)",
+              "dday": {
+                "label": "D-4",
+                "state": "ok",
+                "days": 4
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-leave-2",
+                  "doc_id": "guide-leave",
+                  "label": "제1조(연가 신청)",
+                  "loc": "3번째 문단",
+                  "title": "연가·복무 처리 안내(가상)",
+                  "layer": "공통",
+                  "text": "제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "guide-leave-4",
+                  "doc_id": "guide-leave",
+                  "label": "제3조(교대근무자)",
+                  "loc": "5번째 문단",
+                  "title": "연가·복무 처리 안내(가상)",
+                  "layer": "공통",
+                  "text": "제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 0,
+          "warnings": [
+            "이 절차 카드는 아직 '초안'입니다. 담당자 확인 후 확정하세요."
+          ]
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "layer": "기관"
+          }
+        ],
+        "cited": [],
+        "related": [
+          {
+            "id": "guide-leave-4",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "제3조(교대근무자)",
+            "loc": "5번째 문단",
+            "text": "제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-leave-2",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "제1조(연가 신청)",
+            "loc": "3번째 문단",
+            "text": "제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-leave-1",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "연가·복무 처리 안내(가상)",
+            "loc": "1번째 문단",
+            "text": "연가·복무 처리 안내(가상)\n※ 공모전 시연용 가상 안내문입니다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-travel-8",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제12조(여비의 정산)",
+            "loc": "11번째 문단",
+            "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-purchase-3",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제3조(구매 요구)",
+            "loc": "1쪽",
+            "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+            "layer": "공통"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "gemma3:4b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-leave | 연가 신청 | 분류 복무 | 연가를 쓰기 전 복무관리시스템 신청과 승인 절차입니다.\n  1. 복무관리시스템에 연가 신청\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n\n[규정 조문 후보]\n- id=guide-leave-4 | 연가·복무 처리 안내(가상) 제3조(교대근무자) | 제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.\n- id=guide-leave-2 | 연가·복무 처리 안내(가상) 제1조(연가 신청) | 제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.\n- id=guide-leave-1 | 연가·복무 처리 안내(가상) 연가·복무 처리 안내(가상) | 연가·복무 처리 안내(가상) ※ 공모전 시연용 가상 안내문입니다.\n- id=rule-travel-8 | 가람시 공무원 여비 규정(가상) 제12조(여비의 정산) | 제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다. ② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다. ③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.\n- id=guide-purchase-3 | 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구) | 제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.\n- id=table-deadline-6 | 업무별 처리기한 총괄표(가상) 시트 '처리기한' 7행 업무: 연가 신청 | 업무: 연가 신청 / 처리 기한: 사용 전 업무일까지 / 근거: 연가·복무 처리 안내(가상) 제1조 / 제출처: 복무관리시스템\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 34.73,
+          "response": {
+            "id": "chatcmpl-497",
+            "object": "chat.completion",
+            "created": 1792392831,
+            "model": "gemma3:4b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-leave\", \"answer\": \"교대근무자분의 2026년 10월 26일 연가 신청과 관련하여, 먼저 복무관리시스템에 연가 신청을 해주시기 바랍니다. 사용하려는 날의 전 업무일까지 신청해야 하며, 부서장의 승인을 받아야 연가 신청이 완료됩니다. 연가 신청 시에는 국내출장 여비 정산서와 같이 관련 증빙 서류를 준비해주시기 바랍니다.\", \"cited\": [\"id=guide-leave-2\", \"id=table-deadline-6\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1058,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens": 129,
+              "total_tokens": 1187
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 서식이 없는 연가 사례는 서식 검사를 해당 없음으로 처리",
+      "evidence_sha256": "3827a5ffe631da570f61ac2cb0342c0ca3ef15ac06f9310ddf8a38ffcf7c7ab0"
+    },
+    {
+      "id": "3ff9e64627714c5d84db5ecad085db1e",
+      "created_at": "2026-10-19T06:54:45.969278+00:00",
+      "scenario_id": "purchase",
+      "scenario": {
+        "title": "물품 납품 검수",
+        "query": "소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.",
+        "expected_card": "card-purchase"
+      },
+      "profile": "local_gemma",
+      "requested_model": "gemma3:4b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "gemma3:4b",
+      "elapsed_seconds": 54.105,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.",
+        "mode": "llm",
+        "model": "gemma3:4b",
+        "profile": "local_gemma",
+        "notice": "모델이 존재하지 않는 근거 5건을 인용해 제외했습니다.",
+        "summary": "'소액 물품 구매와 검수' 절차로 안내합니다. 모두 4단계입니다. 기한을 계산하려면 물품 사용 예정일을(를) 입력해 주세요. 지금 할 일은 3단계 '납품 검수·검사조서 제출'입니다 (2026. 10. 26.(월)까지, D-7). 필요 서식: 물품 검사조서.",
+        "answer": "'소액 물품 구매와 검수' 절차는 모두 4단계입니다: 1단계 물품 구매 요구서 제출, 2단계 견적서 2곳 이상 받기, 3단계 납품 검수·검사조서 제출, 4단계 대금 지급 확인. 필요 서식은 물품 검사조서입니다. 근거 조문은 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구), 물품 구매 및 계약 사무 처리 지침(가상) 제4조(견적), 가람시소방서 행정업무 처리 기준(가상) 제4조(물품 검수), 물품 구매 및 계약 사무 처리 지침(가상) 제6조(검사), 물품 구매 및 계약 사무 처리 지침(가상) 제7조(대금 지급)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-purchase",
+            "title": "소액 물품 구매와 검수",
+            "category": "계약·물품",
+            "layer": "기관",
+            "summary": "2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.",
+            "status": "확정",
+            "notes": "",
+            "base_dates": [
+              "물품 사용 예정일",
+              "납품일"
+            ]
+          },
+          "base_values": {
+            "납품일": "2026-10-19"
+          },
+          "missing_bases": [
+            "물품 사용 예정일"
+          ],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "물품 구매 요구서 제출",
+              "detail": "사용 예정일 14일 전까지 계약 담당자에게 구매 요구서를 냅니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "물품 사용 예정일 14일 전",
+              "deadline": {
+                "base": "물품 사용 예정일",
+                "offset": -14,
+                "unit": "일"
+              },
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-3",
+                  "doc_id": "guide-purchase",
+                  "label": "제3조(구매 요구)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 2,
+              "title": "견적서 2곳 이상 받기",
+              "detail": "2인 이상에게 견적서를 받아 가장 낮은 금액을 낸 업체와 계약합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-4",
+                  "doc_id": "guide-purchase",
+                  "label": "제4조(견적)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제4조(견적) 추정가격 2천만원(가상 기준) 이하의 물품은 2인 이상에게 견적서를 받아 가장 낮은 금액을 제시한 자와 계약할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 3,
+              "title": "납품 검수·검사조서 제출",
+              "detail": "납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 냅니다.",
+              "tip": "공통 지침은 14일이지만 기관 기준은 5업무일입니다.",
+              "variant": null,
+              "rule": "납품일 5업무일 후",
+              "deadline": {
+                "base": "납품일",
+                "offset": 5,
+                "unit": "업무일"
+              },
+              "due": "2026-10-26",
+              "due_text": "2026. 10. 26.(월)",
+              "dday": {
+                "label": "D-7",
+                "state": "ok",
+                "days": 7
+              },
+              "forms": [
+                {
+                  "id": "form-inspect",
+                  "name": "물품 검사조서"
+                }
+              ],
+              "basis": [
+                {
+                  "chunk_id": "rule-agency-4",
+                  "doc_id": "rule-agency",
+                  "label": "제4조(물품 검수)",
+                  "loc": "7번째 문단",
+                  "title": "가람시소방서 행정업무 처리 기준(가상)",
+                  "layer": "기관",
+                  "text": "제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "guide-purchase-5",
+                  "doc_id": "guide-purchase",
+                  "label": "제6조(검사)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 4,
+              "title": "대금 지급 확인",
+              "detail": "검사 후 업체가 대금을 청구하면 청구일부터 5일 이내에 지급되는지 확인합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-6",
+                  "doc_id": "guide-purchase",
+                  "label": "제7조(대금 지급)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제7조(대금 지급) 검사를 마친 뒤 대금 청구를 받으면 청구를 받은 날부터 5일 이내에 대금을 지급한다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 2,
+          "warnings": []
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "layer": "기관"
+          }
+        ],
+        "cited": [],
+        "related": [
+          {
+            "id": "rule-agency-6",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제6조(서식)",
+            "loc": "12번째 문단",
+            "text": "제6조(서식) 이 기준에 따른 서류는 행정팀 공유 폴더의 기관 서식을 사용한다.",
+            "layer": "기관"
+          },
+          {
+            "id": "guide-purchase-5",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제6조(검사)",
+            "loc": "1쪽",
+            "text": "제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-agency-4",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제4조(물품 검수)",
+            "loc": "7번째 문단",
+            "text": "제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.",
+            "layer": "기관"
+          },
+          {
+            "id": "guide-purchase-2",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제1조(목적)",
+            "loc": "1쪽",
+            "text": "제1조(목적) 이 지침은 가람시 소속 기관의 소액 물품 구매 절차를 정한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-purchase-1",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "loc": "1쪽",
+            "text": "물품 구매 및 계약 사무 처리 지침(가상)\n※ 공모전 시연용 가상 지침입니다. 금액 기준과 기한은 실제 계약 법령과 다릅니다.",
+            "layer": "공통"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "gemma3:4b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-purchase | 소액 물품 구매와 검수 | 분류 계약·물품 | 2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.\n  1. 물품 구매 요구서 제출\n  2. 견적서 2곳 이상 받기\n  3. 납품 검수·검사조서 제출 — 서식: 물품 검사조서\n  4. 대금 지급 확인\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n\n[규정 조문 후보]\n- id=rule-agency-6 | 가람시소방서 행정업무 처리 기준(가상) 제6조(서식) | 제6조(서식) 이 기준에 따른 서류는 행정팀 공유 폴더의 기관 서식을 사용한다.\n- id=guide-purchase-5 | 물품 구매 및 계약 사무 처리 지침(가상) 제6조(검사) | 제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.\n- id=rule-agency-4 | 가람시소방서 행정업무 처리 기준(가상) 제4조(물품 검수) | 제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.\n- id=guide-purchase-2 | 물품 구매 및 계약 사무 처리 지침(가상) 제1조(목적) | 제1조(목적) 이 지침은 가람시 소속 기관의 소액 물품 구매 절차를 정한다.\n- id=guide-purchase-1 | 물품 구매 및 계약 사무 처리 지침(가상) 물품 구매 및 계약 사무 처리 지침(가상) | 물품 구매 및 계약 사무 처리 지침(가상) ※ 공모전 시연용 가상 지침입니다. 금액 기준과 기한은 실제 계약 법령과 다릅니다.\n- id=guide-purchase-6 | 물품 구매 및 계약 사무 처리 지침(가상) 제7조(대금 지급) | 제7조(대금 지급) 검사를 마친 뒤 대금 청구를 받으면 청구를 받은 날부터 5일 이내에 대금을 지급한다.\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 54.015,
+          "response": {
+            "id": "chatcmpl-48",
+            "object": "chat.completion",
+            "created": 1792392885,
+            "model": "gemma3:4b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-purchase\", \"answer\": \"담당자님, 소화기 물품 구매 검수 절차를 안내해 드립니다. 먼저, 납품받은 날로부터 14일 이내에 물품 검사조서(서식: 물품 검사조서)를 작성하여 검사자가 서명해야 합니다. 검사 후에는 행정팀에 제출하고, 대금 지급은 검사 완료 후 5일 이내에 이루어집니다. 검사조서 작성 시에는 납품된 소화기의 모델명, 수량, 상태 등을 정확히 기재하시고, 관련 증빙 서류를 첨부해주시기 바랍니다.\", \"cited\": [\"id=rule-agency-6\", \"id=guide-purchase-5\", \"id=rule-agency-4\", \"id=guide-purchase-2\", \"id=guide-purchase-6\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1059,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens": 196,
+              "total_tokens": 1255
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 필수 서식 확인",
+      "evidence_sha256": "a13c4497cb20baea84a8d00235cbfd9de81fb79745f5fad2373b5c38d049a487"
+    },
+    {
+      "id": "300d912e20ac41f292c22416f460fa46",
+      "created_at": "2026-10-19T06:55:41.069234+00:00",
+      "scenario_id": "travel",
+      "scenario": {
+        "title": "출장 정산 절차·서식·근거",
+        "query": "2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.",
+        "expected_card": "card-travel"
+      },
+      "profile": "local_llama",
+      "requested_model": "llama3.2:3b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "llama3.2:3b",
+      "elapsed_seconds": 55.027,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.",
+        "mode": "llm",
+        "model": "llama3.2:3b",
+        "profile": "local_llama",
+        "notice": "모델이 존재하지 않는 근거 3건을 인용해 제외했습니다.",
+        "summary": "'국내 출장 여비 정산' 절차로 안내합니다. 모두 4단계입니다. 지금 할 일은 2단계 '증빙서류 모으기'입니다 (2026. 10. 19.(월)까지, 오늘까지). 필요 서식: 국내출장 여비 정산서.",
+        "answer": "'국내 출장 여비 정산' 절차는 모두 4단계입니다: 1단계 출장 결과 보고(복명), 2단계 증빙서류 모으기, 3단계 여비 정산서 작성·제출, 4단계 정산 결과 확인. 필요 서식은 국내출장 여비 정산서입니다. 근거 조문은 가람시 공무원 여비 규정(가상) 제13조(출장 결과 보고), 가람시 공무원 여비 규정(가상) 제7조(운임), 가람시 공무원 여비 규정(가상) 제8조(숙박비), 가람시소방서 행정업무 처리 기준(가상) 제3조(출장 여비 정산 기한), 가람시 공무원 여비 규정(가상) 제12조(여비의 정산)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "category": "여비",
+            "layer": "기관",
+            "summary": "출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.",
+            "status": "확정",
+            "notes": "",
+            "base_dates": [
+              "출장 시작일",
+              "출장 종료일"
+            ]
+          },
+          "base_values": {
+            "출장 종료일": "2026-10-18"
+          },
+          "missing_bases": [],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "출장 결과 보고(복명)",
+              "detail": "복귀한 날 부서장에게 출장 결과를 보고합니다. 단순 서류 전달 같은 경미한 출장은 생략할 수 있습니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "출장 종료일 당일",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 0,
+                "unit": "일"
+              },
+              "due": "2026-10-18",
+              "due_text": "2026. 10. 18.(일)",
+              "dday": {
+                "label": "1일 지남",
+                "state": "overdue",
+                "days": -1
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-9",
+                  "doc_id": "rule-travel",
+                  "label": "제13조(출장 결과 보고)",
+                  "loc": "14번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제13조(출장 결과 보고) 출장을 마친 공무원은 복귀한 날 출장 결과를 소속 부서장에게 보고하여야 한다. 다만, 단순 서류 전달 등 경미한 출장은 보고를 생략할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 2,
+              "title": "증빙서류 모으기",
+              "detail": "승차권·숙박 영수증을 모읍니다. 자가용을 썼다면 이동 거리를 적어 둡니다.",
+              "tip": "영수증을 잃어버렸으면 카드 사용 내역으로 대신할 수 있습니다(여비 규정 제12조③).",
+              "variant": null,
+              "rule": "출장 종료일 1업무일 후",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 1,
+                "unit": "업무일"
+              },
+              "due": "2026-10-19",
+              "due_text": "2026. 10. 19.(월)",
+              "dday": {
+                "label": "오늘까지",
+                "state": "today",
+                "days": 0
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-5",
+                  "doc_id": "rule-travel",
+                  "label": "제7조(운임)",
+                  "loc": "7번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제7조(운임) ① 철도·버스·항공 운임은 실제 든 비용으로 지급하며, 승차권 또는 영수증을 증빙으로 첨부한다.\n② 자가용 차량을 이용한 경우에는 출발지와 도착지 사이 거리에 1킬로미터당 200원(가상 기준)을 곱한 금액을 지급한다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "rule-travel-6",
+                  "doc_id": "rule-travel",
+                  "label": "제8조(숙박비)",
+                  "loc": "9번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제8조(숙박비) 숙박비는 1박당 7만원(가상 기준) 한도에서 실제 든 비용을 지급하며, 숙박 영수증을 첨부한다. 공용 시설에 숙박한 경우에는 지급하지 않는다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 3,
+              "title": "여비 정산서 작성·제출",
+              "detail": "국내출장 여비 정산서에 증빙을 붙여 행정팀에 냅니다. 출장 신청 결재 문서 번호를 함께 적습니다.",
+              "tip": "공통 규정은 7일 이내지만 우리 기관 기준은 다음 업무일부터 3업무일 이내입니다. 12월 출장은 12월 26일까지입니다.",
+              "variant": null,
+              "rule": "출장 종료일 3업무일 후",
+              "deadline": {
+                "base": "출장 종료일",
+                "offset": 3,
+                "unit": "업무일"
+              },
+              "due": "2026-10-21",
+              "due_text": "2026. 10. 21.(수)",
+              "dday": {
+                "label": "D-2",
+                "state": "soon",
+                "days": 2
+              },
+              "forms": [
+                {
+                  "id": "form-travel",
+                  "name": "국내출장 여비 정산서"
+                }
+              ],
+              "basis": [
+                {
+                  "chunk_id": "rule-agency-3",
+                  "doc_id": "rule-agency",
+                  "label": "제3조(출장 여비 정산 기한)",
+                  "loc": "4번째 문단",
+                  "title": "가람시소방서 행정업무 처리 기준(가상)",
+                  "layer": "기관",
+                  "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "rule-travel-8",
+                  "doc_id": "rule-travel",
+                  "label": "제12조(여비의 정산)",
+                  "loc": "11번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 4,
+              "title": "정산 결과 확인",
+              "detail": "행정팀이 정산서를 받은 날부터 10일 이내에 차액을 지급하거나 반납을 통지합니다. 통지가 오면 반납·수령을 확인합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "rule-travel-8",
+                  "doc_id": "rule-travel",
+                  "label": "제12조(여비의 정산)",
+                  "loc": "11번째 문단",
+                  "title": "가람시 공무원 여비 규정(가상)",
+                  "layer": "공통",
+                  "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 1,
+          "warnings": []
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-purchase",
+            "title": "소액 물품 구매와 검수",
+            "layer": "기관"
+          }
+        ],
+        "cited": [],
+        "related": [
+          {
+            "id": "guide-purchase-3",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제3조(구매 요구)",
+            "loc": "1쪽",
+            "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-travel-8",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제12조(여비의 정산)",
+            "loc": "11번째 문단",
+            "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-agency-3",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제3조(출장 여비 정산 기한)",
+            "loc": "4번째 문단",
+            "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+            "layer": "기관"
+          },
+          {
+            "id": "rule-travel-2",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제1조(목적)",
+            "loc": "3번째 문단",
+            "text": "제1조(목적) 이 규정은 가람시 소속 공무원이 공무로 여행하는 경우 지급하는 여비에 관하여 필요한 사항을 정한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "table-deadline-2",
+            "doc_id": "table-deadline",
+            "title": "업무별 처리기한 총괄표(가상)",
+            "label": "시트 '처리기한' 3행 업무: 여비 정산서 제출",
+            "loc": "시트 '처리기한' 3행",
+            "text": "업무: 여비 정산서 제출 / 처리 기한: 출장 종료 다음 업무일부터 3업무일 이내 / 근거: 행정업무 처리 기준(가상) 제3조 / 제출처: 행정팀",
+            "layer": "기관"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "llama3.2:3b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-purchase | 소액 물품 구매와 검수 | 분류 계약·물품 | 2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.\n  1. 물품 구매 요구서 제출\n  2. 견적서 2곳 이상 받기\n  3. 납품 검수·검사조서 제출 — 서식: 물품 검사조서\n  4. 대금 지급 확인\n\n[규정 조문 후보]\n- id=guide-purchase-3 | 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구) | 제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.\n- id=rule-travel-8 | 가람시 공무원 여비 규정(가상) 제12조(여비의 정산) | 제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다. ② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다. ③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.\n- id=rule-agency-3 | 가람시소방서 행정업무 처리 기준(가상) 제3조(출장 여비 정산 기한) | 제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다. ② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다. ③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.\n- id=rule-travel-2 | 가람시 공무원 여비 규정(가상) 제1조(목적) | 제1조(목적) 이 규정은 가람시 소속 공무원이 공무로 여행하는 경우 지급하는 여비에 관하여 필요한 사항을 정한다.\n- id=table-deadline-2 | 업무별 처리기한 총괄표(가상) 시트 '처리기한' 3행 업무: 여비 정산서 제출 | 업무: 여비 정산서 제출 / 처리 기한: 출장 종료 다음 업무일부터 3업무일 이내 / 근거: 행정업무 처리 기준(가상) 제3조 / 제출처: 행정팀\n- id=rule-agency-2 | 가람시소방서 행정업무 처리 기준(가상) 제1조(목적) | 제1조(목적) 이 기준은 가람시소방서 직원의 출장 정산, 물품 검수, 행사 준비 등 서무 업무의 처리 기한과 절차를 정한다.\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 54.996,
+          "response": {
+            "id": "chatcmpl-849",
+            "object": "chat.completion",
+            "created": 1792392940,
+            "model": "llama3.2:3b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-travel\", \"answer\": \"여비 정산 절차는 2026년 10월 18일 출장 마친 뒤 3업무일 이내에 여비 정산서를 행정팀에 제출해야 합니다. 여비 정산서에는 출장 신청 결재 문서 번호를 함께 적어야 합니다. 여비 정산서에 증빙서류를 첨부하여 제출해야 하며, 여비 담당자는 정산 결과에 따라 차액을 지급하거나 반납을 통지해야 합니다. 여비 정산서의 서식은 \\u2015 국내출장 여비 정산서 \\u2015 이며, 증빙서류는 \\u2015 증빙서류 \\u2015을 첨부해야 합니다. \\u2015 \\u2015\", \"cited\": [\"id=rule-travel-8\", \"id=rule-agency-3\", \"id=table-deadline-2\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1317,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens": 210,
+              "total_tokens": 1527
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 필수 서식 확인",
+      "evidence_sha256": "2d601228da1bc73a080a410f6c931e74bef9f2f6eb67d9528dedba4ba5e07866"
+    },
+    {
+      "id": "9f796e0477c345ce967103bf458d3fe5",
+      "created_at": "2026-10-19T06:56:08.538727+00:00",
+      "scenario_id": "leave",
+      "scenario": {
+        "title": "교대근무 연가 신청",
+        "query": "교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.",
+        "expected_card": "card-leave"
+      },
+      "profile": "local_llama",
+      "requested_model": "llama3.2:3b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "llama3.2:3b",
+      "elapsed_seconds": 27.246,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.",
+        "mode": "llm",
+        "model": "llama3.2:3b",
+        "profile": "local_llama",
+        "notice": null,
+        "summary": "'연가 신청' 절차로 안내합니다. 모두 1단계입니다. 지금 할 일은 1단계 '복무관리시스템에 연가 신청'입니다 (2026. 10. 23.(금)까지, D-4).",
+        "answer": "'연가 신청' 절차는 모두 1단계입니다: 1단계 복무관리시스템에 연가 신청. 근거 조문은 연가·복무 처리 안내(가상) 제1조(연가 신청), 연가·복무 처리 안내(가상) 제3조(교대근무자)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-leave",
+            "title": "연가 신청",
+            "category": "복무",
+            "layer": "공통",
+            "summary": "연가를 쓰기 전 복무관리시스템 신청과 승인 절차입니다.",
+            "status": "초안",
+            "notes": "",
+            "base_dates": [
+              "연가 시작일"
+            ]
+          },
+          "base_values": {
+            "연가 시작일": "2026-10-26"
+          },
+          "missing_bases": [],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "복무관리시스템에 연가 신청",
+              "detail": "사용하려는 날의 전 업무일까지 신청하고 부서장 승인을 받습니다.",
+              "tip": "교대근무자는 근무표 조정을 위해 7일 전까지 신청합니다(제3조).",
+              "variant": null,
+              "rule": "연가 시작일 1업무일 전",
+              "deadline": {
+                "base": "연가 시작일",
+                "offset": -1,
+                "unit": "업무일"
+              },
+              "due": "2026-10-23",
+              "due_text": "2026. 10. 23.(금)",
+              "dday": {
+                "label": "D-4",
+                "state": "ok",
+                "days": 4
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-leave-2",
+                  "doc_id": "guide-leave",
+                  "label": "제1조(연가 신청)",
+                  "loc": "3번째 문단",
+                  "title": "연가·복무 처리 안내(가상)",
+                  "layer": "공통",
+                  "text": "제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "guide-leave-4",
+                  "doc_id": "guide-leave",
+                  "label": "제3조(교대근무자)",
+                  "loc": "5번째 문단",
+                  "title": "연가·복무 처리 안내(가상)",
+                  "layer": "공통",
+                  "text": "제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 0,
+          "warnings": [
+            "이 절차 카드는 아직 '초안'입니다. 담당자 확인 후 확정하세요."
+          ]
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "layer": "기관"
+          }
+        ],
+        "cited": [
+          {
+            "id": "guide-leave-2",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "제1조(연가 신청)",
+            "loc": "3번째 문단",
+            "text": "제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-leave-1",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "연가·복무 처리 안내(가상)",
+            "loc": "1번째 문단",
+            "text": "연가·복무 처리 안내(가상)\n※ 공모전 시연용 가상 안내문입니다.",
+            "layer": "공통"
+          }
+        ],
+        "related": [
+          {
+            "id": "guide-leave-4",
+            "doc_id": "guide-leave",
+            "title": "연가·복무 처리 안내(가상)",
+            "label": "제3조(교대근무자)",
+            "loc": "5번째 문단",
+            "text": "제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "rule-travel-8",
+            "doc_id": "rule-travel",
+            "title": "가람시 공무원 여비 규정(가상)",
+            "label": "제12조(여비의 정산)",
+            "loc": "11번째 문단",
+            "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-purchase-3",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제3조(구매 요구)",
+            "loc": "1쪽",
+            "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "table-deadline-6",
+            "doc_id": "table-deadline",
+            "title": "업무별 처리기한 총괄표(가상)",
+            "label": "시트 '처리기한' 7행 업무: 연가 신청",
+            "loc": "시트 '처리기한' 7행",
+            "text": "업무: 연가 신청 / 처리 기한: 사용 전 업무일까지 / 근거: 연가·복무 처리 안내(가상) 제1조 / 제출처: 복무관리시스템",
+            "layer": "기관"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "llama3.2:3b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 교대근무자인데 2026년 10월 26일 연가를 쓰려고 합니다. 복무 신청 절차와 필요한 서류를 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-leave | 연가 신청 | 분류 복무 | 연가를 쓰기 전 복무관리시스템 신청과 승인 절차입니다.\n  1. 복무관리시스템에 연가 신청\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n\n[규정 조문 후보]\n- id=guide-leave-4 | 연가·복무 처리 안내(가상) 제3조(교대근무자) | 제3조(교대근무자) 교대근무 직원은 근무표 조정을 위해 사용하려는 날 7일 전까지 신청한다.\n- id=guide-leave-2 | 연가·복무 처리 안내(가상) 제1조(연가 신청) | 제1조(연가 신청) 연가를 쓰려는 직원은 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받는다.\n- id=guide-leave-1 | 연가·복무 처리 안내(가상) 연가·복무 처리 안내(가상) | 연가·복무 처리 안내(가상) ※ 공모전 시연용 가상 안내문입니다.\n- id=rule-travel-8 | 가람시 공무원 여비 규정(가상) 제12조(여비의 정산) | 제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다. ② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다. ③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.\n- id=guide-purchase-3 | 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구) | 제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.\n- id=table-deadline-6 | 업무별 처리기한 총괄표(가상) 시트 '처리기한' 7행 업무: 연가 신청 | 업무: 연가 신청 / 처리 기한: 사용 전 업무일까지 / 근거: 연가·복무 처리 안내(가상) 제1조 / 제출처: 복무관리시스템\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 27.225,
+          "response": {
+            "id": "chatcmpl-859",
+            "object": "chat.completion",
+            "created": 1792392968,
+            "model": "llama3.2:3b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-leave\", \"answer\": \"연가 신청을 하실 때는 사용하려는 날의 전 업무일까지 복무관리시스템에 신청하고 부서장의 승인을 받으세요. 또한, 2026년 10월 26일은 공공기관의 주休일이므로 연가를 신청할 수 없습니다. 연가 신청을 하실 경우, 복무관리시스템에 신청하고 부서장의 승인을 받으세요.\", \"cited\": [\"guide-leave-2\", \"guide-leave-1\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1126,
+              "prompt_tokens_details": {
+                "cached_tokens": 169
+              },
+              "completion_tokens": 124,
+              "total_tokens": 1250
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 서식이 없는 연가 사례는 서식 검사를 해당 없음으로 처리",
+      "evidence_sha256": "b56b0cf1dbf6c88e45e7949e6f64e61b8b588002d412b5606dcec4c3f9a25699"
+    },
+    {
+      "id": "4357010c203b41e4b645ac7b86381d5d",
+      "created_at": "2026-10-19T06:56:34.841519+00:00",
+      "scenario_id": "purchase",
+      "scenario": {
+        "title": "물품 납품 검수",
+        "query": "소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.",
+        "expected_card": "card-purchase"
+      },
+      "profile": "local_llama",
+      "requested_model": "llama3.2:3b",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "response_model": "llama3.2:3b",
+      "elapsed_seconds": 26.289,
+      "checks": {
+        "actual_model_response": true,
+        "model_selected_expected_card": true,
+        "app_selected_expected_card": true,
+        "procedure_present": true,
+        "basis_present": true,
+        "required_forms_present": true,
+        "next_action_present": true
+      },
+      "passed": true,
+      "result": {
+        "query": "소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.",
+        "mode": "llm",
+        "model": "llama3.2:3b",
+        "profile": "local_llama",
+        "notice": null,
+        "summary": "'소액 물품 구매와 검수' 절차로 안내합니다. 모두 4단계입니다. 기한을 계산하려면 물품 사용 예정일을(를) 입력해 주세요. 지금 할 일은 3단계 '납품 검수·검사조서 제출'입니다 (2026. 10. 26.(월)까지, D-7). 필요 서식: 물품 검사조서.",
+        "answer": "'소액 물품 구매와 검수' 절차는 모두 4단계입니다: 1단계 물품 구매 요구서 제출, 2단계 견적서 2곳 이상 받기, 3단계 납품 검수·검사조서 제출, 4단계 대금 지급 확인. 필요 서식은 물품 검사조서입니다. 근거 조문은 물품 구매 및 계약 사무 처리 지침(가상) 제3조(구매 요구), 물품 구매 및 계약 사무 처리 지침(가상) 제4조(견적), 가람시소방서 행정업무 처리 기준(가상) 제4조(물품 검수), 물품 구매 및 계약 사무 처리 지침(가상) 제6조(검사), 물품 구매 및 계약 사무 처리 지침(가상) 제7조(대금 지급)입니다. 단계별 할 일은 아래 계산 결과 카드를 확인하세요.",
+        "ai_note": null,
+        "ai_note_dropped": 0,
+        "plan": {
+          "card": {
+            "id": "card-purchase",
+            "title": "소액 물품 구매와 검수",
+            "category": "계약·물품",
+            "layer": "기관",
+            "summary": "2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.",
+            "status": "확정",
+            "notes": "",
+            "base_dates": [
+              "물품 사용 예정일",
+              "납품일"
+            ]
+          },
+          "base_values": {
+            "납품일": "2026-10-19"
+          },
+          "missing_bases": [
+            "물품 사용 예정일"
+          ],
+          "today": "2026-10-19",
+          "conditions": [],
+          "steps": [
+            {
+              "no": 1,
+              "title": "물품 구매 요구서 제출",
+              "detail": "사용 예정일 14일 전까지 계약 담당자에게 구매 요구서를 냅니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "물품 사용 예정일 14일 전",
+              "deadline": {
+                "base": "물품 사용 예정일",
+                "offset": -14,
+                "unit": "일"
+              },
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-3",
+                  "doc_id": "guide-purchase",
+                  "label": "제3조(구매 요구)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 2,
+              "title": "견적서 2곳 이상 받기",
+              "detail": "2인 이상에게 견적서를 받아 가장 낮은 금액을 낸 업체와 계약합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-4",
+                  "doc_id": "guide-purchase",
+                  "label": "제4조(견적)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제4조(견적) 추정가격 2천만원(가상 기준) 이하의 물품은 2인 이상에게 견적서를 받아 가장 낮은 금액을 제시한 자와 계약할 수 있다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 3,
+              "title": "납품 검수·검사조서 제출",
+              "detail": "납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 냅니다.",
+              "tip": "공통 지침은 14일이지만 기관 기준은 5업무일입니다.",
+              "variant": null,
+              "rule": "납품일 5업무일 후",
+              "deadline": {
+                "base": "납품일",
+                "offset": 5,
+                "unit": "업무일"
+              },
+              "due": "2026-10-26",
+              "due_text": "2026. 10. 26.(월)",
+              "dday": {
+                "label": "D-7",
+                "state": "ok",
+                "days": 7
+              },
+              "forms": [
+                {
+                  "id": "form-inspect",
+                  "name": "물품 검사조서"
+                }
+              ],
+              "basis": [
+                {
+                  "chunk_id": "rule-agency-4",
+                  "doc_id": "rule-agency",
+                  "label": "제4조(물품 검수)",
+                  "loc": "7번째 문단",
+                  "title": "가람시소방서 행정업무 처리 기준(가상)",
+                  "layer": "기관",
+                  "text": "제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.",
+                  "changed": false
+                },
+                {
+                  "chunk_id": "guide-purchase-5",
+                  "doc_id": "guide-purchase",
+                  "label": "제6조(검사)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.",
+                  "changed": false
+                }
+              ]
+            },
+            {
+              "no": 4,
+              "title": "대금 지급 확인",
+              "detail": "검사 후 업체가 대금을 청구하면 청구일부터 5일 이내에 지급되는지 확인합니다.",
+              "tip": "",
+              "variant": null,
+              "rule": "",
+              "deadline": null,
+              "due": null,
+              "due_text": "",
+              "dday": {
+                "label": "기한 없음",
+                "state": "none",
+                "days": null
+              },
+              "forms": [],
+              "basis": [
+                {
+                  "chunk_id": "guide-purchase-6",
+                  "doc_id": "guide-purchase",
+                  "label": "제7조(대금 지급)",
+                  "loc": "1쪽",
+                  "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+                  "layer": "공통",
+                  "text": "제7조(대금 지급) 검사를 마친 뒤 대금 청구를 받으면 청구를 받은 날부터 5일 이내에 대금을 지급한다.",
+                  "changed": false
+                }
+              ]
+            }
+          ],
+          "next_index": 2,
+          "warnings": []
+        },
+        "alternatives": [
+          {
+            "id": "card-event",
+            "title": "대외 행사 준비와 결과 보고",
+            "layer": "기관"
+          },
+          {
+            "id": "card-travel",
+            "title": "국내 출장 여비 정산",
+            "layer": "기관"
+          }
+        ],
+        "cited": [
+          {
+            "id": "guide-purchase-5",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제6조(검사)",
+            "loc": "1쪽",
+            "text": "제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-purchase-6",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제7조(대금 지급)",
+            "loc": "1쪽",
+            "text": "제7조(대금 지급) 검사를 마친 뒤 대금 청구를 받으면 청구를 받은 날부터 5일 이내에 대금을 지급한다.",
+            "layer": "공통"
+          }
+        ],
+        "related": [
+          {
+            "id": "rule-agency-6",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제6조(서식)",
+            "loc": "12번째 문단",
+            "text": "제6조(서식) 이 기준에 따른 서류는 행정팀 공유 폴더의 기관 서식을 사용한다.",
+            "layer": "기관"
+          },
+          {
+            "id": "rule-agency-4",
+            "doc_id": "rule-agency",
+            "title": "가람시소방서 행정업무 처리 기준(가상)",
+            "label": "제4조(물품 검수)",
+            "loc": "7번째 문단",
+            "text": "제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.",
+            "layer": "기관"
+          },
+          {
+            "id": "guide-purchase-2",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "제1조(목적)",
+            "loc": "1쪽",
+            "text": "제1조(목적) 이 지침은 가람시 소속 기관의 소액 물품 구매 절차를 정한다.",
+            "layer": "공통"
+          },
+          {
+            "id": "guide-purchase-1",
+            "doc_id": "guide-purchase",
+            "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "label": "물품 구매 및 계약 사무 처리 지침(가상)",
+            "loc": "1쪽",
+            "text": "물품 구매 및 계약 사무 처리 지침(가상)\n※ 공모전 시연용 가상 지침입니다. 금액 기준과 기한은 실제 계약 법령과 다릅니다.",
+            "layer": "공통"
+          }
+        ],
+        "personal_notes": []
+      },
+      "model_calls": [
+        {
+          "url": "http://127.0.0.1:11434/v1/chat/completions",
+          "request": {
+            "model": "llama3.2:3b",
+            "messages": [
+              {
+                "role": "system",
+                "content": "당신은 공공기관 서무 업무를 돕는 비서입니다. 반드시 제공된 절차 카드와 규정 조문만 근거로 답합니다. 근거에 없는 내용은 지어내지 말고 '등록된 규정에서 확인되지 않음'이라고 말합니다. 단계별 기한은 시스템이 계산해 화면에 따로 표시하므로 답변에 기한·날짜·요일·일수와 '오늘'·'내일' 같은 시점 표현을 쓰지 말고, 필요 서식·증빙·결재 경로·주의점을 설명합니다. 출력은 JSON 하나만 냅니다."
+              },
+              {
+                "role": "user",
+                "content": "담당자 질문: 소화기가 2026년 10월 19일 납품되었습니다. 물품 구매 검수 절차와 검사 서식을 알려주세요.\n\n[절차 카드 후보와 단계]\n- id=card-purchase | 소액 물품 구매와 검수 | 분류 계약·물품 | 2천만원(가상 기준) 이하 물품을 사서 납품·검수·대금 지급까지 처리하는 절차입니다.\n  1. 물품 구매 요구서 제출\n  2. 견적서 2곳 이상 받기\n  3. 납품 검수·검사조서 제출 — 서식: 물품 검사조서\n  4. 대금 지급 확인\n- id=card-event | 대외 행사 준비와 결과 보고 | 분류 행사 | 행사일을 기준으로 계획 결재, 물품 구매 요구, 안내문 발송, 결과 보고 기한을 안내합니다.\n  1. 행사 계획 결재\n  2. 행사 물품 구매 요구\n  3. 참석 안내문 발송\n  4. 행사 결과 보고\n- id=card-travel | 국내 출장 여비 정산 | 분류 여비 | 출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.\n  1. 출장 결과 보고(복명)\n  2. 증빙서류 모으기\n  3. 여비 정산서 작성·제출 — 서식: 국내출장 여비 정산서\n  4. 정산 결과 확인\n\n[규정 조문 후보]\n- id=rule-agency-6 | 가람시소방서 행정업무 처리 기준(가상) 제6조(서식) | 제6조(서식) 이 기준에 따른 서류는 행정팀 공유 폴더의 기관 서식을 사용한다.\n- id=guide-purchase-5 | 물품 구매 및 계약 사무 처리 지침(가상) 제6조(검사) | 제6조(검사) ① 계약 담당자는 납품을 받은 날부터 14일 이내에 검사를 마쳐야 한다. ② 검사를 마치면 물품 검사조서를 작성하고 검사자가 서명한다.\n- id=rule-agency-4 | 가람시소방서 행정업무 처리 기준(가상) 제4조(물품 검수) | 제4조(물품 검수) 물품을 납품받은 부서는 납품일부터 5업무일 이내에 검수를 마치고 물품 검사조서를 행정팀에 제출한다.\n- id=guide-purchase-2 | 물품 구매 및 계약 사무 처리 지침(가상) 제1조(목적) | 제1조(목적) 이 지침은 가람시 소속 기관의 소액 물품 구매 절차를 정한다.\n- id=guide-purchase-1 | 물품 구매 및 계약 사무 처리 지침(가상) 물품 구매 및 계약 사무 처리 지침(가상) | 물품 구매 및 계약 사무 처리 지침(가상) ※ 공모전 시연용 가상 지침입니다. 금액 기준과 기한은 실제 계약 법령과 다릅니다.\n- id=guide-purchase-6 | 물품 구매 및 계약 사무 처리 지침(가상) 제7조(대금 지급) | 제7조(대금 지급) 검사를 마친 뒤 대금 청구를 받으면 청구를 받은 날부터 5일 이내에 대금을 지급한다.\n\n다음 JSON 형식으로만 답하세요:\n{\"card_id\": \"가장 알맞은 카드 id, 맞는 카드가 없으면 null\", \"answer\": \"담당자에게 할 안내 2~3문장(존댓말). 서식 작성법·첨부할 증빙·결재와 제출 경로·주의점만 쓰고, 기한·날짜·요일·일수·오늘/내일 같은 시점 표현은 쓰지 말 것(시스템이 따로 표시함)\", \"cited\": [\"답에 실제로 쓴 조문 id\"]}"
+              }
+            ],
+            "max_tokens": 500,
+            "temperature": 0,
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status_code": 200,
+          "elapsed_seconds": 26.267,
+          "response": {
+            "id": "chatcmpl-552",
+            "object": "chat.completion",
+            "created": 1792392994,
+            "model": "llama3.2:3b",
+            "system_fingerprint": "fp_ollama",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"card_id\": \"card-purchase\", \"answer\": \"물품 구매 요구서 제출 후, 2개 이상의 견적서를 받은 후에 납품 검수·검사조서를 제출합니다. 검사조서는 물품 검사조서 서식을 사용합니다. 검사조서에 서명한 후 대금 지급 확인을 하며, 대금 지급 후 5일 이내에 대금을 지급합니다.\", \"cited\": [\"guide-purchase-5\", \"guide-purchase-6\"]}"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1122,
+              "prompt_tokens_details": {
+                "cached_tokens": 169
+              },
+              "completion_tokens": 119,
+              "total_tokens": 1241
+            }
+          }
+        }
+      ],
+      "data_notice": "합성 검증 사례 · 실제 법령·기관 승인·지급용 아님",
+      "role_notice": "LLM은 절차 카드·근거 후보 선택을 보조합니다. 기한·절차 본문은 등록자료로 프로그램이 구성하며 모델 원문을 그대로 채택하지 않습니다.",
+      "form_check_scope": "등록된 필수 서식 확인",
+      "evidence_sha256": "e97ff912efcfe5ec888cd24c7ade2e272e1effaf3d3655c8d75405bed8e5f311"
+    }
+  ],
+  "failure_check": {
+    "created_at": "2026-10-19T06:56:37.310317+00:00",
+    "test": "닫힌 로컬 포트에 실제 연결 시도",
+    "endpoint": "http://127.0.0.1:1/v1",
+    "passed": true,
+    "elapsed_seconds": 2.445,
+    "result": {
+      "query": "2026년 10월 18일 서울 출장 다녀왔어요. 출장 여비 정산 절차와 필요한 서식 및 근거를 알려주세요.",
+      "mode": "fallback",
+      "model": null,
+      "profile": "local_unavailable_test",
+      "notice": "모델 서버 응답 오류로 규칙 기반 안내로 전환했습니다(오류 종류: 모델 서버 연결 실패).",
+      "summary": "'국내 출장 여비 정산' 절차로 안내합니다. 모두 4단계입니다. 지금 할 일은 2단계 '증빙서류 모으기'입니다 (2026. 10. 19.(월)까지, 오늘까지). 필요 서식: 국내출장 여비 정산서.",
+      "answer": "",
+      "ai_note": null,
+      "ai_note_dropped": 0,
+      "plan": {
+        "card": {
+          "id": "card-travel",
+          "title": "국내 출장 여비 정산",
+          "category": "여비",
+          "layer": "기관",
+          "summary": "출장을 마친 뒤 결과 보고, 증빙 정리, 여비 정산서 제출까지의 절차입니다. 기관 기준(3업무일)이 공통 규정(7일)보다 먼저 적용됩니다.",
+          "status": "확정",
+          "notes": "",
+          "base_dates": [
+            "출장 시작일",
+            "출장 종료일"
+          ]
+        },
+        "base_values": {
+          "출장 종료일": "2026-10-18"
+        },
+        "missing_bases": [],
+        "today": "2026-10-19",
+        "conditions": [],
+        "steps": [
+          {
+            "no": 1,
+            "title": "출장 결과 보고(복명)",
+            "detail": "복귀한 날 부서장에게 출장 결과를 보고합니다. 단순 서류 전달 같은 경미한 출장은 생략할 수 있습니다.",
+            "tip": "",
+            "variant": null,
+            "rule": "출장 종료일 당일",
+            "deadline": {
+              "base": "출장 종료일",
+              "offset": 0,
+              "unit": "일"
+            },
+            "due": "2026-10-18",
+            "due_text": "2026. 10. 18.(일)",
+            "dday": {
+              "label": "1일 지남",
+              "state": "overdue",
+              "days": -1
+            },
+            "forms": [],
+            "basis": [
+              {
+                "chunk_id": "rule-travel-9",
+                "doc_id": "rule-travel",
+                "label": "제13조(출장 결과 보고)",
+                "loc": "14번째 문단",
+                "title": "가람시 공무원 여비 규정(가상)",
+                "layer": "공통",
+                "text": "제13조(출장 결과 보고) 출장을 마친 공무원은 복귀한 날 출장 결과를 소속 부서장에게 보고하여야 한다. 다만, 단순 서류 전달 등 경미한 출장은 보고를 생략할 수 있다.",
+                "changed": false
+              }
+            ]
+          },
+          {
+            "no": 2,
+            "title": "증빙서류 모으기",
+            "detail": "승차권·숙박 영수증을 모읍니다. 자가용을 썼다면 이동 거리를 적어 둡니다.",
+            "tip": "영수증을 잃어버렸으면 카드 사용 내역으로 대신할 수 있습니다(여비 규정 제12조③).",
+            "variant": null,
+            "rule": "출장 종료일 1업무일 후",
+            "deadline": {
+              "base": "출장 종료일",
+              "offset": 1,
+              "unit": "업무일"
+            },
+            "due": "2026-10-19",
+            "due_text": "2026. 10. 19.(월)",
+            "dday": {
+              "label": "오늘까지",
+              "state": "today",
+              "days": 0
+            },
+            "forms": [],
+            "basis": [
+              {
+                "chunk_id": "rule-travel-5",
+                "doc_id": "rule-travel",
+                "label": "제7조(운임)",
+                "loc": "7번째 문단",
+                "title": "가람시 공무원 여비 규정(가상)",
+                "layer": "공통",
+                "text": "제7조(운임) ① 철도·버스·항공 운임은 실제 든 비용으로 지급하며, 승차권 또는 영수증을 증빙으로 첨부한다.\n② 자가용 차량을 이용한 경우에는 출발지와 도착지 사이 거리에 1킬로미터당 200원(가상 기준)을 곱한 금액을 지급한다.",
+                "changed": false
+              },
+              {
+                "chunk_id": "rule-travel-6",
+                "doc_id": "rule-travel",
+                "label": "제8조(숙박비)",
+                "loc": "9번째 문단",
+                "title": "가람시 공무원 여비 규정(가상)",
+                "layer": "공통",
+                "text": "제8조(숙박비) 숙박비는 1박당 7만원(가상 기준) 한도에서 실제 든 비용을 지급하며, 숙박 영수증을 첨부한다. 공용 시설에 숙박한 경우에는 지급하지 않는다.",
+                "changed": false
+              }
+            ]
+          },
+          {
+            "no": 3,
+            "title": "여비 정산서 작성·제출",
+            "detail": "국내출장 여비 정산서에 증빙을 붙여 행정팀에 냅니다. 출장 신청 결재 문서 번호를 함께 적습니다.",
+            "tip": "공통 규정은 7일 이내지만 우리 기관 기준은 다음 업무일부터 3업무일 이내입니다. 12월 출장은 12월 26일까지입니다.",
+            "variant": null,
+            "rule": "출장 종료일 3업무일 후",
+            "deadline": {
+              "base": "출장 종료일",
+              "offset": 3,
+              "unit": "업무일"
+            },
+            "due": "2026-10-21",
+            "due_text": "2026. 10. 21.(수)",
+            "dday": {
+              "label": "D-2",
+              "state": "soon",
+              "days": 2
+            },
+            "forms": [
+              {
+                "id": "form-travel",
+                "name": "국내출장 여비 정산서"
+              }
+            ],
+            "basis": [
+              {
+                "chunk_id": "rule-agency-3",
+                "doc_id": "rule-agency",
+                "label": "제3조(출장 여비 정산 기한)",
+                "loc": "4번째 문단",
+                "title": "가람시소방서 행정업무 처리 기준(가상)",
+                "layer": "기관",
+                "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+                "changed": false
+              },
+              {
+                "chunk_id": "rule-travel-8",
+                "doc_id": "rule-travel",
+                "label": "제12조(여비의 정산)",
+                "loc": "11번째 문단",
+                "title": "가람시 공무원 여비 규정(가상)",
+                "layer": "공통",
+                "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                "changed": false
+              }
+            ]
+          },
+          {
+            "no": 4,
+            "title": "정산 결과 확인",
+            "detail": "행정팀이 정산서를 받은 날부터 10일 이내에 차액을 지급하거나 반납을 통지합니다. 통지가 오면 반납·수령을 확인합니다.",
+            "tip": "",
+            "variant": null,
+            "rule": "",
+            "deadline": null,
+            "due": null,
+            "due_text": "",
+            "dday": {
+              "label": "기한 없음",
+              "state": "none",
+              "days": null
+            },
+            "forms": [],
+            "basis": [
+              {
+                "chunk_id": "rule-travel-8",
+                "doc_id": "rule-travel",
+                "label": "제12조(여비의 정산)",
+                "loc": "11번째 문단",
+                "title": "가람시 공무원 여비 규정(가상)",
+                "layer": "공통",
+                "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+                "changed": false
+              }
+            ]
+          }
+        ],
+        "next_index": 1,
+        "warnings": []
+      },
+      "alternatives": [
+        {
+          "id": "card-event",
+          "title": "대외 행사 준비와 결과 보고",
+          "layer": "기관"
+        },
+        {
+          "id": "card-purchase",
+          "title": "소액 물품 구매와 검수",
+          "layer": "기관"
+        }
+      ],
+      "cited": [],
+      "related": [
+        {
+          "id": "guide-purchase-3",
+          "doc_id": "guide-purchase",
+          "title": "물품 구매 및 계약 사무 처리 지침(가상)",
+          "label": "제3조(구매 요구)",
+          "loc": "1쪽",
+          "text": "제3조(구매 요구) 물품이 필요한 부서는 사용 예정일 14일 전까지 물품 구매 요구서를 작성하여 계약 담당자에게 제출한다.",
+          "layer": "공통"
+        },
+        {
+          "id": "rule-travel-8",
+          "doc_id": "rule-travel",
+          "title": "가람시 공무원 여비 규정(가상)",
+          "label": "제12조(여비의 정산)",
+          "loc": "11번째 문단",
+          "text": "제12조(여비의 정산) ① 출장을 마친 공무원은 출장이 끝난 날부터 7일 이내에 여비 정산서에 증빙서류를 첨부하여 여비 담당자에게 제출하여야 한다.\n② 여비 담당자는 정산서를 받은 날부터 10일 이내에 정산 결과에 따라 차액을 지급하거나 반납을 통지한다.\n③ 증빙서류를 잃어버린 경우에는 카드 사용 내역 등 사용 사실을 확인할 수 있는 자료로 대신할 수 있다.",
+          "layer": "공통"
+        },
+        {
+          "id": "rule-agency-3",
+          "doc_id": "rule-agency",
+          "title": "가람시소방서 행정업무 처리 기준(가상)",
+          "label": "제3조(출장 여비 정산 기한)",
+          "loc": "4번째 문단",
+          "text": "제3조(출장 여비 정산 기한) ① 직원은 「가람시 공무원 여비 규정(가상)」 제12조에도 불구하고 출장이 끝난 날의 다음 업무일부터 3업무일 이내에 여비 정산서를 행정팀에 제출한다.\n② 12월에 끝난 출장의 정산서는 회계연도 마감을 위해 12월 26일까지 제출한다.\n③ 정산서에는 출장 신청 결재 문서 번호를 함께 적는다.",
+          "layer": "기관"
+        },
+        {
+          "id": "rule-travel-2",
+          "doc_id": "rule-travel",
+          "title": "가람시 공무원 여비 규정(가상)",
+          "label": "제1조(목적)",
+          "loc": "3번째 문단",
+          "text": "제1조(목적) 이 규정은 가람시 소속 공무원이 공무로 여행하는 경우 지급하는 여비에 관하여 필요한 사항을 정한다.",
+          "layer": "공통"
+        },
+        {
+          "id": "table-deadline-2",
+          "doc_id": "table-deadline",
+          "title": "업무별 처리기한 총괄표(가상)",
+          "label": "시트 '처리기한' 3행 업무: 여비 정산서 제출",
+          "loc": "시트 '처리기한' 3행",
+          "text": "업무: 여비 정산서 제출 / 처리 기한: 출장 종료 다음 업무일부터 3업무일 이내 / 근거: 행정업무 처리 기준(가상) 제3조 / 제출처: 행정팀",
+          "layer": "기관"
+        }
+      ],
+      "personal_notes": []
+    },
+    "notice": "모델 서버 장애 시 규칙 기반 안내를 검증한 결과이며 모델 2종 실제 응답 성공 건수에는 포함하지 않습니다."
+  },
+  "comparisons": [
+    {
+      "scenario": "travel",
+      "same_procedure_forms_basis_deadlines": true
+    },
+    {
+      "scenario": "leave",
+      "same_procedure_forms_basis_deadlines": true
+    },
+    {
+      "scenario": "purchase",
+      "same_procedure_forms_basis_deadlines": true
+    }
+  ],
+  "passed": true
+}
