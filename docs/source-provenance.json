@@ -33,7 +33,7 @@
       "index.html": "beee39b66466c70ed48e8231d5b9ba6813566d75ffecb7bf58e16c7cb911bc72",
       "notepad.js": "c98b591b0c1f4fe1550df309ef2cf3e9dc64513d9eed76094a1b393562d9dd5f",
       "server.py": "9db9c5bf59134237ac1bb54c40fb85be7b8cf740909003e16740bde88b3b7dc7",
-      "service-bridge.css": "95e4fb25f8aba23cf120ff2eff426a579c9fa55a227b971bf9b8bc3d81b889af",
+      "service-bridge.css": "d38f8dccebc532a0d6567f7f4ba10df8d18e8657fdb18f089c53d86c57ee0c06",
       "service-bridge.js": "fe0b6251f5b1100c2054947ca2f7ba978c9b15a014846f59c847ec8b02aa3f18",
       "tests/test_agency_directory.py": "5a8f0a6403748d5baa318227130c06716e724415220096d9b33efcdf575b3f9b",
       "tools/export_agencies.py": "429cd19178948b025630a81c79623bd6a61b23368be3dd8b497c914cf54e1069"
@@ -78,6 +78,6 @@
     "status": "deployed",
     "mode": "Workers static desktop + private VPC service to isolated Windows demo runtime",
     "requires_origin_pc": true,
-    "worker_version": "cad1fde7-7b95-4483-a001-6491a237e560"
+    "worker_version": "3788a7a8-239c-47da-9574-136f9195ba6b"
   }
 }

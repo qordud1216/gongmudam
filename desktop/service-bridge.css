@@ -13,3 +13,4 @@
 .recent-work-item:after{content:'›';position:absolute;right:0;top:40%;color:#506b59;font-size:20px}
 #calendar-open{display:grid;place-items:center;padding:4px 8px;border-radius:7px;background:transparent;color:inherit}
 #calendar-open:hover{background:#eef3ee}
+@media(min-width:701px){body.approved-design[data-variant=B] .work-shelf{box-sizing:border-box;max-height:min(40%,calc(100% - 320px));overflow-y:auto}}

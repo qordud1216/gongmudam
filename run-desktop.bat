@@ -1,7 +1,7 @@
 @echo off
 setlocal
-cd /d "%~dp0desktop"
+cd /d "%~dp0"
 if errorlevel 1 exit /b 1
-py -3.12 server.py %*
+call run-gongmudam.bat %*
 set "result=%errorlevel%"
 endlocal & exit /b %result%
