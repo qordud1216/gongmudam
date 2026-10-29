@@ -128,10 +128,10 @@ def _source_units(query,docs,today,plan):
     return units,excluded
 
 def _rank_units(query,units):
-    """Rank source units using the existing expanded-query BM25 settings."""
+    """Keep all above-threshold units for direct-source coverage checks."""
     hits=[]
     if units:
-        bm=BM25([u['title']+' '+u['text'] for u in units]);hits=[units[i]|{'score':round(s,2)} for i,s in bm.top(relevance.expanded_query(query),k=48,min_score=1.0)]
+        bm=BM25([u['title']+' '+u['text'] for u in units]);hits=[units[i]|{'score':round(s,2)} for i,s in bm.top(relevance.expanded_query(query),k=len(units),min_score=1.0)]
     return hits
 
 def _experience_hits(query,library_id):
