@@ -30,6 +30,7 @@
 !desktop/data/agencies-v1.json
 !tools/
 !tools/cloud_release.py
+!tools/cloud_identity.py
 !tools/cloud_backup.py
 !tools/build_cloud_release.py
 !tools/cloud_smoke.py

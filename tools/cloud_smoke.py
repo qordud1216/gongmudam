@@ -14,6 +14,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     os.environ['GONGMUDAM_TEST_IMAGE'] = args.image
     os.environ['GONGMUDAM_TEST_ALLOW_DIRTY_IMAGE'] = '1' if args.allow_dirty else '0'
+    sys.path.insert(0, str(ROOT))
     sys.path.insert(0, str(ROOT / 'tests'))
     from test_cloud_runtime import CloudRuntimeTests
     result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(CloudRuntimeTests))

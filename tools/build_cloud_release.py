@@ -12,7 +12,7 @@ PREFIXES = ('service/app/', 'service/static/', 'service/sample_data/', 'service/
             'service/submission-data/', 'integration/', 'deploy/', 'tests/')
 EXACT = {'service/config.example.json', 'service/submission-manifest.json',
          'service/requirements-cloud.lock.txt', 'service/tools/restore_submission.py',
-         'tools/cloud_release.py', 'tools/build_cloud_release.py', 'tools/cloud_backup.py',
+         'tools/cloud_release.py', 'tools/cloud_identity.py', 'tools/build_cloud_release.py', 'tools/cloud_backup.py',
          'tools/cloud_smoke.py', 'tools/render_cloudflare_config.py',
          'tools/verify_cloud_preview.py', 'tools/promote_cloud_release.py',
          'cloudflare/cloud-worker.js', 'README.md', 'docs/CLOUD-RELEASE.md', 'package.json', 'package-lock.json',

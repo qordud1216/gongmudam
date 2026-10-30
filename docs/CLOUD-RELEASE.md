@@ -44,7 +44,8 @@ gzip -dk gongmudam-image.tar.gz
 docker load --input gongmudam-image.tar
 # 아래 셸 변수는 검증한 산출물/승인된 환경에 맞춰 운영자가 설정한다.
 docker run --rm --mount type=volume,src="$GONGMUDAM_VOLUME_NAME",dst=/var/lib/gongmudam \
-  "$GONGMUDAM_IMAGE" python tools/cloud_release.py initialize --data-root /var/lib/gongmudam
+  "$GONGMUDAM_IMAGE" python tools/cloud_release.py initialize --data-root /var/lib/gongmudam \
+  --environment preview --volume "$GONGMUDAM_VOLUME_NAME"
 python tools/promote_cloud_release.py --release-directory ./cloud-release --environment preview \
   --image-id "$GONGMUDAM_IMAGE" --volume "$GONGMUDAM_VOLUME_NAME" \
   --runtime-env-file "$GONGMUDAM_RUNTIME_ENV_FILE"
@@ -79,18 +80,26 @@ python tools/verify_cloud_preview.py --url "$GONGMUDAM_PREVIEW_ORIGIN" \
 
 ## 백업·복원·운영 승격·롤백
 
-앱/Tunnel을 정지한 뒤 볼륨을 백업한다. 실행 중인 앱이 잠금을 소유하면 백업은 거부된다. SQLite backup/integrity_check와 첨부·원문 해시를 함께 보관한다. 백업은 개인정보를 포함할 수 있으므로 공개 CI 산출물/Git에 업로드하지 않는다. 승인된 비공개 백업 저장소의 암호화·보존기간은 호스트 선정 시 정한다.
+앱/Tunnel을 정지한 뒤 볼륨을 백업한다. 실행 중인 앱이 잠금을 소유하면 백업·식별 검사는 거부된다. SQLite backup/integrity_check와 첨부·원문 해시를 함께 보관한다. 백업은 개인정보를 포함할 수 있으므로 공개 CI 산출물/Git에 업로드하지 않는다. 승인된 비공개 백업 저장소의 암호화·보존기간은 호스트 선정 시 정한다.
+
+초기화는 설치본 UUID·생성시점·환경·볼륨 이름을 기록한다. 기존 `842095fd` 실행본의 소유 표식에 식별 정보가 없다면 앱을 정지하고 `cloud_release.py bind-volume --data-root ... --environment production --volume gongmudam-production-...`을 명시적으로 실행한다. DB와 첨부는 바꾸지 않으며 동일 바인딩 재실행은 같은 UUID를 보존한다. 기존 바인딩을 다른 환경/볼륨으로 덮어쓰지 않는다. 이 식별자는 인증 키가 아니다.
 
 ```sh
 python tools/cloud_backup.py backup --data-root /path/to/stopped-volume --staging-root /private-backup/work \
   --output /private-backup/gongmudam-backup.tar.gz > /private-backup/receipt.json
+python tools/cloud_release.py inspect --data-root /path/to/stopped-volume > /private-backup/target-installation.json
 python tools/cloud_backup.py restore --archive /private-backup/gongmudam-backup.tar.gz \
-  --sha256 "$RECORDED_BACKUP_SHA256" --data-root /path/to/new-empty-volume --staging-root /private-backup/work
+  --sha256 "$RECORDED_BACKUP_SHA256" --data-root /path/to/new-empty-volume --staging-root /private-backup/work \
+  --environment production --volume gongmudam-production-replacement
 ```
 
 컨테이너 볼륨은 정지한 뒤 동일 불변 이미지의 일회 실행에 데이터 볼륨과 별도 백업 디렉터리를 마운트해서 이 명령을 실행한다. 전체 복사본을 `/tmp`의 128MiB tmpfs에 넣지 않는다. staging 기본값도 백업 아카이브가 있는 디스크이며 충분한 비공개 디스크 공간을 확보한다. 실행 중인 SQLite 파일을 임의 복사하지 않는다. 복원은 새 빈 볼륨에만 수행하며 경로·중복·링크·해시·DB 무결성을 검증하고 저장 경로를 명시적으로 재배치한다. 기존 볼륨은 덮어쓰지 않는다.
 
-`promote_cloud_release.py --environment production`에 `--preview-receipt`, `--ui-verification-note`, `--backup-receipt`, `--backup-archive`를 추가해 먼저 계획을 검사한 뒤 `--apply`한다. 운영 볼륨 이름은 `gongmudam-production-*`이어야 한다. Worker와 백엔드는 같은 release ID를 사용한다. 전환 중 ID가 다르면 503을 반환한다.
+백업 format 2는 설치본/환경/볼륨/바인딩 판본과 백업 UUID·취득 시작/완료 시점을 아카이브 및 영수증에 함께 기록한다. 운영 승격은 최근 60분 이내의 정지 백업과 그 이후 검사한 대상 설치본을 대조한다. preview·다른 설치본·다른 볼륨의 백업, 영수증만 재표기한 백업, 오래되거나 미래로 부적합한 시점을 거부한다. `--apply` 직전에도 선택한 실제 Docker 볼륨을 읽기 전용으로 다시 검사하며, 잘못된 볼륨 이름으로 빈 볼륨을 자동 생성하지 않는다.
+
+동일 환경의 새 볼륨으로 복원하면 논리 설치 UUID를 유지하고 새 볼륨 이름/바인딩 판본/백업 해시·복원 이력을 기록한다. 신선한 원래 백업은 이 정확한 복원 이력과 일치할 때 교체 볼륨의 승격에도 사용할 수 있다. 복원 후 새 백업을 취하는 정상 경로도 지원한다. 원본 볼륨과 백업은 덮어쓰지 않는다. 구형 format 1 백업은 계속 복원할 수 있으나 배포 승인용으로 쓰지 않는다. 구형 복원은 바인딩 없이 자료와 이력을 복구한 후 명시적으로 채택/바인딩하고 새 백업·검사를 진행한다.
+
+`promote_cloud_release.py --environment production`에 `--preview-receipt`, `--ui-verification-note`, `--backup-receipt`, `--backup-archive`, `--target-installation-receipt /private-backup/target-installation.json`을 추가해 먼저 계획을 검사한 뒤 `--apply`한다. 컨테이너 볼륨의 검사 영수증은 앱 정지 후 해당 볼륨을 `/var/lib/gongmudam`에 읽기 전용으로 마운트한 일회 컨테이너에서 위 `inspect` 명령으로 생성한다. 운영 볼륨 이름은 `gongmudam-production-*`이어야 한다. Worker와 백엔드는 같은 release ID를 사용한다. 전환 중 ID가 다르면 503을 반환한다. 롤백 시에도 교정된 승격 도구를 사용하며 검사 코드는 이전 앱 이미지의 CLI 버전에 의존하지 않는다.
 
 롤백은 이전 검증 이미지 ID와 그 manifest/Worker 버전을 함께 되돌린다. 코드 롤백이 DB·첨부를 되돌리지는 않는다. 데이터 포맷이 호환되지 않는 migration은 별도 계획·백업·복원 시험 없이는 적용하지 않는다. 데이터 복원은 코드 롤백과 별도로 운영자가 선택하며 복원 이후 입력 유실 범위를 확인한다.
 

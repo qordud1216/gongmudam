@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+from contextlib import contextmanager
+import fcntl
 import hashlib
 import importlib.util
 import json
@@ -12,12 +14,15 @@ import re
 import shutil
 import sqlite3
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SERVICE = ROOT / 'service'
 MARKER = 'cloud-installation.json'
 STORES = {'folders.db': 'libraries', 'seomu.db': 'documents', 'travel.db': 'travel_cases',
           'adhoc.db': 'jobs', 'calendar.db': 'calendar_events', 'regulation-monitor.db': 'settings'}
+sys.path.insert(0, str(ROOT))
+from tools.cloud_identity import new_identity, installation, checked_binding, inspect_descriptor
 
 
 def digest(path):
@@ -49,7 +54,16 @@ def verify_release(root):
 
 
 def write_json(path, value):
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    fd, name = tempfile.mkstemp(dir=path.parent, prefix=path.name + '.', suffix='.tmp')
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as stream:
+            stream.write(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(name, path)
+    finally:
+        if os.path.exists(name):
+            os.unlink(name)
 
 
 def owned_state(path):
@@ -76,13 +90,54 @@ def owned_state(path):
     return value
 
 
-def initialize(path):
+@contextmanager
+def stopped_volume(root, *, read_only=False):
+    owned_state(root)
+    with (root / 'cloud-runtime.lock').open('rb' if read_only else 'a+b') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as error:
+            raise ValueError('Stop the app/tunnel before backing up, inspecting or binding this volume.') from error
+        try:
+            yield owned_state(root)
+        finally:
+            fcntl.flock(lock, fcntl.LOCK_UN)
+
+
+def bind_volume(path, environment, volume):
+    checked_binding(environment, volume)
+    if environment == 'development':
+        raise ValueError('Select preview or production when explicitly binding an existing installation.')
+    with stopped_volume(path) as marker:
+        if not marker.get('installation_id'):
+            identity = new_identity()
+            identity['restore_history'] = marker.get('restore_history', [])
+            marker.update(identity)  # Explicit adoption of a legacy owned installation; DBs are untouched.
+        before = installation(marker)
+        if before['volume_name'] is not None:
+            if (before['environment'], before['volume_name']) != (environment, volume):
+                raise ValueError('An existing binding is immutable; use an explicit same-environment restore into a new volume.')
+        else:
+            marker.update(environment=environment, volume_name=volume, binding_revision=before['binding_revision'] + 1)
+            write_json(path / MARKER, marker)
+        return {'status': 'bound', 'data_initialized': False, **installation(marker)}
+
+
+def inspect_state(path):
+    with stopped_volume(path, read_only=True) as marker:
+        return inspect_descriptor(marker)
+
+
+def initialize(path, environment=None, volume=None):
+    if environment is not None or volume is not None:
+        checked_binding(environment, volume)
     if not path.is_absolute() or path.resolve().is_relative_to(ROOT):
         raise ValueError('Choose an absolute data volume outside the source/release directory.')
     path = path.resolve()
     if (path / MARKER).exists():
         owned_state(path)
-        return {'status': 'preserved', 'data_initialized': False}
+        bound = bind_volume(path, environment, volume) if environment else {}
+        return bound | {'status': 'preserved', 'data_initialized': False}
     if path.exists() and any(path.iterdir()):
         raise ValueError('Existing unowned data found; initialize only an empty volume.')
     path.mkdir(parents=True, exist_ok=True)
@@ -113,9 +168,11 @@ def initialize(path):
     if store._conn is not None:
         store._conn.close()
         store._conn = None
-    write_json(path / MARKER, {'format': 1, 'mode': 'operator-private-no-llm',
+    identity = new_identity(environment or 'development', volume)
+    write_json(path / MARKER, {'format': 1, 'mode': 'operator-private-no-llm', **identity,
                               'initial_bundle_sha256': result['bundle_sha256'],
                               'original_seal_sha256': digest(SERVICE / 'submission-manifest.json')})
+    (path / 'cloud-runtime.lock').touch()
     return {'status': 'initialized', 'data_initialized': True,
             'archived_sources': result['sources'], 'automatic_source_updates': False}
 
@@ -125,9 +182,22 @@ def main():
     commands = parser.add_subparsers(dest='command', required=True)
     init = commands.add_parser('initialize')
     init.add_argument('--data-root', type=Path, required=True)
+    init.add_argument('--environment', choices=('preview', 'production'))
+    init.add_argument('--volume')
+    bind = commands.add_parser('bind-volume')
+    bind.add_argument('--data-root', type=Path, required=True)
+    bind.add_argument('--environment', choices=('preview', 'production'), required=True)
+    bind.add_argument('--volume', required=True)
+    inspect = commands.add_parser('inspect')
+    inspect.add_argument('--data-root', type=Path, required=True)
     args = parser.parse_args()
     try:
-        result = initialize(args.data_root)
+        if args.command == 'initialize':
+            result = initialize(args.data_root, args.environment, args.volume)
+        elif args.command == 'bind-volume':
+            result = bind_volume(args.data_root.resolve(), args.environment, args.volume)
+        else:
+            result = inspect_state(args.data_root.resolve())
     except (ValueError, RuntimeError, OSError, sqlite3.Error) as error:
         parser.exit(1, str(error) + '\n')
     print(json.dumps(result, ensure_ascii=False))

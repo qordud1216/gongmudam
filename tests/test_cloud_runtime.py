@@ -23,11 +23,12 @@ class CloudRuntimeTests(unittest.TestCase):
             root = Path(tmp)
             state = root / 'state'
             image = os.environ.get('GONGMUDAM_TEST_IMAGE')
-            volume = 'gongmudam-test-' + uuid.uuid4().hex if image else None
+            volume = 'gongmudam-preview-test-' + uuid.uuid4().hex if image else None
             volumes = [volume] if image else []
             name = 'gongmudam-test-' + uuid.uuid4().hex if image else None
             setup_command = (["docker", "run", "--rm", "--mount", f'type=volume,src={volume},dst=/var/lib/gongmudam',
-                              image, 'python', 'tools/cloud_release.py', 'initialize', '--data-root', '/var/lib/gongmudam'] if image
+                              image, 'python', 'tools/cloud_release.py', 'initialize', '--data-root', '/var/lib/gongmudam',
+                              '--environment', 'preview', '--volume', volume] if image
                              else [sys.executable, 'tools/cloud_release.py', 'initialize', '--data-root', str(state)])
             setup = subprocess.run(setup_command,
                                    cwd=ROOT, capture_output=True, text=True)
@@ -178,14 +179,23 @@ class CloudRuntimeTests(unittest.TestCase):
                         '--output', '/backup/synthetic.tar.gz', '--staging-root', '/backup/work'], capture_output=True, text=True)
                     self.assertEqual(saved.returncode, 0, saved.stderr)
                     backup_hash = json.loads(saved.stdout)['sha256']
-                    recovered_volume = 'gongmudam-test-' + uuid.uuid4().hex
+                    recovered_volume = 'gongmudam-preview-test-' + uuid.uuid4().hex
                     volumes.append(recovered_volume)
                     recovered = subprocess.run(['docker', 'run', '--rm', '--read-only', '--tmpfs', '/tmp:size=128m',
                         '--mount', f'type=volume,src={recovered_volume},dst=/var/lib/gongmudam',
                         '--mount', f'type=bind,src={backups},dst=/backup', image, 'python', 'tools/cloud_backup.py',
                         'restore', '--archive', '/backup/synthetic.tar.gz', '--sha256', backup_hash,
-                        '--data-root', '/var/lib/gongmudam', '--staging-root', '/backup/work'], capture_output=True, text=True)
+                        '--data-root', '/var/lib/gongmudam', '--staging-root', '/backup/work',
+                        '--environment', 'preview', '--volume', recovered_volume], capture_output=True, text=True)
                     self.assertEqual(recovered.returncode, 0, recovered.stderr)
+                    old_identity = json.loads(saved.stdout)['backup']['installation']
+                    restored_identity = json.loads(recovered.stdout)['installation']
+                    self.assertEqual(restored_identity['installation_id'], old_identity['installation_id'])
+                    self.assertEqual(restored_identity['volume_name'], recovered_volume)
+                    from tools.promote_cloud_release import inspect_selected_volume
+                    observed = inspect_selected_volume(image, recovered_volume)
+                    self.assertEqual(observed['installation_id'], old_identity['installation_id'])
+                    self.assertEqual(observed['volume_name'], recovered_volume)
                     volume = recovered_volume
                     start()
                     self.assertEqual(client.get(f'/api/documents/{document_id}/download').content, content)
