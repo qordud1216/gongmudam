@@ -61,6 +61,8 @@ class TravelApiTest(unittest.TestCase):
         from app import regulation_registry
         self.monitor_override=patch.object(regulation_registry,'DB_PATH',Path(self.tmp.name)/'monitor.db')
         self.monitor_override.start()
+        # Readers must not observe a partially initialized monitor fixture.
+        regulation_registry.initialize()
         self.override = patch.object(travel_api, "DB_PATH", Path(self.tmp.name) / "travel.db")
         self.override.start()
         travel_api.initialize()
