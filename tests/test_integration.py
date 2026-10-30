@@ -69,6 +69,23 @@ class RuntimePreservationTests(unittest.TestCase):
 
 
 class ModelBudgetTests(unittest.TestCase):
+    def test_explicit_no_ai_questions_do_not_consume_model_budget(self):
+        from starlette.requests import Request
+        received = []
+        async def app(scope, receive, send):
+            received.append(await Request(scope, receive).json())
+            await send({'type': 'http.response.start', 'status': 200, 'headers': []})
+            await send({'type': 'http.response.body', 'body': b'OK'})
+        client = TestClient(PublicModelBudget(app, limit=1))
+        try:
+            for _ in range(3):
+                self.assertEqual(client.post('/api/ask', json={'query': '원문', 'use_ai': False}).status_code, 200)
+            self.assertEqual(client.post('/api/ask', json={'query': 'AI', 'use_ai': True}).status_code, 200)
+            self.assertEqual(client.post('/api/ask', json={'query': 'AI', 'use_ai': True}).status_code, 429)
+        finally:
+            client.close()
+        self.assertEqual(received[0], {'query': '원문', 'use_ai': False})
+
     def test_new_model_check_routes_share_the_same_budget(self):
         async def app(scope, receive, send):
             await send({'type': 'http.response.start', 'status': 200, 'headers': []})

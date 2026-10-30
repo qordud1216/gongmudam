@@ -35,7 +35,9 @@ from .travel_models import StageNote, StageNoteTask
 from . import travel_demo
 
 ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = ROOT / "data" / "travel.db"
+from .runtime_paths import state_root
+
+DB_PATH = state_root() / "data" / "travel.db"
 router = APIRouter(prefix="/api/travel", tags=["출장정산 Demo 1"])
 
 PACKS = [("COMMON", "정부 공통", "공통"), ("NATIONAL", "국가공무원", "신분"),

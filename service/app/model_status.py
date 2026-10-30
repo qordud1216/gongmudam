@@ -43,6 +43,8 @@ def _selection():
 
 
 def _target(profile, model):
+    if llm.disabled():
+        return "offline", None
     if profile.get('provider', 'offline') == 'offline':
         return 'offline', None
     if profile.get('provider') != 'openai_compatible':

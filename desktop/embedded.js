@@ -22,7 +22,7 @@
       banner = document.createElement('p'); banner.id = 'gongmudam-context';
       banner.setAttribute('role', 'status'); document.body.prepend(banner);
     }
-    banner.textContent = profile ? `${labels[profile.personnel_framework]} · ${profile.region} · ${profile.organization} — 질문에 함께 전달합니다. 출장 계산의 적용 기관·규정팩은 정산 화면에서 확인하세요.` : '공개 시연 · 누구나 같은 업무를 볼 수 있어요. 실제 개인정보와 업무자료를 입력하지 마세요.';
+    banner.textContent = profile ? `${labels[profile.personnel_framework]} · ${profile.region} · ${profile.organization} — 질문에 함께 전달합니다. 출장 계산의 적용 기관·규정팩은 정산 화면에서 확인하세요.` : document.documentElement.dataset.gongmudamCloud === '1' ? '운영자 전용 클라우드 · 내 소속을 선택하면 질문에 함께 전달합니다.' : '공개 시연 · 누구나 같은 업무를 볼 수 있어요. 실제 개인정보와 업무자료를 입력하지 마세요.';
   }
   window.fetch = async (input, init) => {
     let url;

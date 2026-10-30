@@ -25,7 +25,9 @@ from docx.shared import Pt
 from . import assistant, config, deadlines, llm, store
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "output"
+from .runtime_paths import state_root
+
+OUTPUT = state_root() / "output"
 
 
 def prefill(form: dict, *, query: str = "", base_values: dict[str, str] | None = None,

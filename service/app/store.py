@@ -19,7 +19,9 @@ from typing import Any
 from . import parsers
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+from .runtime_paths import state_root
+
+DATA = state_root() / "data"
 LIBRARY = DATA / "library"
 DB_PATH = DATA / "seomu.db"
 

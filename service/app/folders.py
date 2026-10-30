@@ -9,7 +9,9 @@ from fastapi.responses import Response
 from pydantic import BaseModel,ConfigDict,Field
 from . import parsers
 
-DB_PATH=Path(__file__).resolve().parent.parent/'data'/'folders.db'
+from .runtime_paths import state_root, cloud_mode
+
+DB_PATH=state_root()/'data'/'folders.db'
 router=APIRouter(prefix='/api/folders',tags=['여러 폴더·업무 묶음'])
 MAX_FILES=300;MAX_ENTRIES=5000;MAX_BYTES=5*1024*1024;TOTAL_BYTES=40*1024*1024
 SKIP={'.git','.venv','node_modules','__pycache__','$recycle.bin','system volume information'}
@@ -56,6 +58,8 @@ def roots_checked(values):
         try:
             if any(q.is_symlink() or q.is_junction() for q in (p,*p.parents)):raise HTTPException(422,'연결점·심볼릭 링크 폴더는 직접 연결하지 않습니다.')
             p=p.resolve(strict=True)
+            if cloud_mode() and not p.is_relative_to(state_root() / "data") and not p.is_relative_to(state_root() / "submission-data"):
+                raise HTTPException(403,"Cloud folders must belong to the selected data volume.")
             if not p.is_dir() or p==Path(p.anchor):raise HTTPException(422,'드라이브 전체 대신 업무 하위 폴더를 지정하세요.')
             # 상위 경로의 연결점도 폴더 경계를 우회할 수 있으므로 제외한다.
             if any(a.is_symlink() or a.is_junction() for a in p.parents):raise HTTPException(422,'연결점이 포함된 경로는 지원하지 않습니다.')

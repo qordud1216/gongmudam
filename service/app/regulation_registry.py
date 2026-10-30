@@ -5,8 +5,10 @@ from datetime import datetime, timezone, timedelta
 import copy, hashlib, json, sqlite3, uuid
 
 ROOT=Path(__file__).resolve().parents[1]
-DB_PATH=ROOT/'data/regulation-monitor.db'
-OBJECTS=ROOT/'data/regulation-monitor/objects'
+from .runtime_paths import state_root
+
+DB_PATH=state_root()/'data/regulation-monitor.db'
+OBJECTS=state_root()/'data/regulation-monitor/objects'
 
 def dumps(value):return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':'))
 def sha(raw):return hashlib.sha256(raw).hexdigest()

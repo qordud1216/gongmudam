@@ -1,0 +1,24 @@
+# Run from a verified extracted release. No host port is published.
+services:
+  app:
+    image: ${GONGMUDAM_IMAGE:?set the verified image tag/digest}
+    restart: unless-stopped
+    init: true
+    read_only: true
+    user: "10001:10001"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    env_file: ${GONGMUDAM_RUNTIME_ENV_FILE:?select the preview or production runtime configuration}
+    environment:
+      GONGMUDAM_DATA_ROOT: /var/lib/gongmudam
+      GONGMUDAM_NO_LLM: "1"
+      GONGMUDAM_CLOUD: "1"
+      GONGMUDAM_RELEASE_ID: ${GONGMUDAM_RELEASE_ID:?set the verified release ID}
+      GONGMUDAM_IMAGE_ID: ${GONGMUDAM_IMAGE:?use the immutable verified image ID}
+    volumes:
+      - state:/var/lib/gongmudam
+volumes:
+  state:
+    name: ${GONGMUDAM_VOLUME_NAME:?use separate preview and production volumes}

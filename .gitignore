@@ -20,6 +20,9 @@ desktop/data/*
 .local-runtime/
 .wrangler/
 .dev.vars*
+dist/
+cloud-data/
+development-release.json
 work/
 tmp/
 *.log

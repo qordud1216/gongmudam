@@ -22,7 +22,9 @@ from . import adhoc_templates as templates
 from . import adhoc_workflow as workflow
 from . import adhoc_workspace
 
-DB_PATH=Path(__file__).resolve().parent.parent/'data'/'adhoc.db'
+from .runtime_paths import state_root
+
+DB_PATH=state_root()/'data'/'adhoc.db'
 router=APIRouter(prefix='/api/adhoc',tags=['수시업무·자료 취합'])
 HEADERS=['부서','성명','직급','교육명','교육일','참석 희망']
 MAX_BYTES=2*1024*1024

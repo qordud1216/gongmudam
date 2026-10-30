@@ -88,6 +88,11 @@ def create_app():
             if len(writes)>=90:return JSONResponse({'detail':'공개 시연 요청이 많습니다. 잠시 후 다시 시도하세요.'},429,headers={'Retry-After':'60'})
             writes.append(current)
         is_model=method=='POST' and (path in ('/api/ask','/api/local-ai/run','/api/llm/test') or path.endswith('/prefill') or path.endswith('/ai-runs'))
+        if path=="/api/ask":
+            try:
+                question=json.loads(request._body)
+                if isinstance(question,dict) and question.get("use_ai") is False:is_model=False
+            except (ValueError,UnicodeError):pass
         if is_model:
             current=time.monotonic()
             while model_calls and current-model_calls[0]>3600:model_calls.popleft()

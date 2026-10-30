@@ -5,7 +5,9 @@ from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 from . import folders
 
 router = APIRouter(prefix='/api/folders', tags=['폴더 선택·업로드'])
-ROOT = Path(__file__).resolve().parents[1]
+from .runtime_paths import state_root
+
+ROOT = state_root()
 EXTENSIONS = {'.txt', '.md', '.csv', '.xlsx', '.docx', '.hwpx', '.pdf'}
 MAX_TOTAL = 10*1024*1024
 picker_lock = threading.Lock()

@@ -29,8 +29,10 @@ def desktop_asset(name: str) -> Path | None:
 
 class EmbeddedPages:
     """Inject a browser adapter without editing archived HTML or buffering downloads."""
-    def __init__(self, app):
+    def __init__(self, app, injection=INJECTION, include_desktop=False):
         self.app = app
+        self.injection = injection
+        self.include_desktop = include_desktop
 
     async def __call__(self, scope, receive, send):
         if scope['type'] != 'http':
@@ -42,7 +44,7 @@ class EmbeddedPages:
             nonlocal html
             if message['type'] == 'http.response.start':
                 headers = list(message.get('headers', []))
-                html = (not scope['path'].startswith('/desktop/') and
+                html = ((self.include_desktop or not scope['path'].startswith('/desktop/')) and
                         any(k.lower() == b'content-type' and b'text/html' in v for k, v in headers))
                 updated = []
                 for key, value in headers:
@@ -62,7 +64,7 @@ class EmbeddedPages:
                 if message.get('more_body'):
                     return
                 body = b''.join(buffered)
-                body = body.replace(b'</head>', INJECTION + b'</head>', 1)
+                body = body.replace(b'</head>', self.injection + b'</head>', 1)
                 message = {**message, 'body': body}
             await send(message)
         await self.app(scope, receive, adapted)
@@ -83,6 +85,27 @@ class PublicModelBudget:
             path in {'/api/ask', '/api/local-ai/run', '/api/local-ai/failure-check',
                      '/api/settings/llm/test', '/api/workspace/model-check'} or
             path.endswith(('/prefill', '/ai-runs')))
+        if guarded and path == '/api/ask':
+            # Replay every consumed ASGI message; the downstream validator still
+            # receives the original body. Large/malformed bodies get no exemption.
+            buffered = deque()
+            size = 0
+            while size <= 65536:
+                message = await receive()
+                buffered.append(message)
+                size += len(message.get('body', b''))
+                if message['type'] != 'http.request' or not message.get('more_body'):
+                    break
+            original_receive = receive
+            async def replay():
+                return buffered.popleft() if buffered else await original_receive()
+            receive = replay
+            if size <= 65536 and message['type'] == 'http.request' and not message.get('more_body'):
+                try:
+                    body = json.loads(b''.join(item.get('body', b'') for item in buffered))
+                    guarded = not (isinstance(body, dict) and body.get('use_ai') is False)
+                except (ValueError, UnicodeError):
+                    pass
         if not guarded:
             return await self.app(scope, receive, send)
         now = time.monotonic()
@@ -221,9 +244,11 @@ def create_app():
 
     @app.get('/api/gongmudam/status')
     def status():
+        cloud = os.environ.get('GONGMUDAM_CLOUD') == '1'
         return {'status': 'ok', 'service_version': 'v69', 'desktop_connected': True,
-                'public_demo': public, 'private_data_isolated': public,
-                'requires_origin_pc': True, 'shared_demo': public}
+                'public_demo': public, 'private_data_isolated': public or cloud,
+                'requires_origin_pc': not cloud, 'shared_demo': public,
+                'operator_private': cloud, 'release_id': os.environ.get('GONGMUDAM_RELEASE_ID')}
 
     app.router.routes.append(static)
     app.add_middleware(EmbeddedPages)

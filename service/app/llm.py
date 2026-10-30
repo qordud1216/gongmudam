@@ -23,6 +23,21 @@ import httpx
 
 log = logging.getLogger(__name__)
 _capture = ContextVar('local_model_capture', default=None)
+_no_inference = ContextVar('no_inference', default=False)
+
+
+def disabled():
+    from .runtime_paths import no_llm
+    return no_llm() or _no_inference.get()
+
+
+@contextmanager
+def inference_policy(no_inference=False):
+    token = _no_inference.set(no_inference or _no_inference.get())
+    try:
+        yield
+    finally:
+        _no_inference.reset(token)
 
 
 def request_headers(profile: dict[str, Any]) -> dict[str, str]:
@@ -88,6 +103,8 @@ class OpenAICompatibleProvider(BaseProvider):
     name = "openai_compatible"
 
     def chat(self, messages, *, max_tokens=1500, temperature=None) -> str:
+        if disabled():
+            raise LLMError("LLM is disabled for this runtime/request.")
         base = (self.profile.get("base_url") or "").rstrip("/")
         if not base:
             raise LLMError("base_url 이 비어 있습니다.")
@@ -128,6 +145,8 @@ PROVIDERS = {
 
 
 def get_provider(profile: dict[str, Any]) -> BaseProvider:
+    if disabled():
+        return OfflineProvider({"provider": "offline"})
     cls = PROVIDERS.get(profile.get("provider", "offline"))
     if cls is None:
         raise LLMError(f"지원하지 않는 provider: {profile.get('provider')}")

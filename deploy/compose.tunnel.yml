@@ -1,0 +1,17 @@
+# Optional, only after the user-owned Tunnel/VPC and credentials are approved.
+services:
+  tunnel:
+    image: ${CLOUDFLARED_IMAGE:?select an approved cloudflared image digest}
+    restart: unless-stopped
+    network_mode: service:app
+    depends_on:
+      app:
+        condition: service_healthy
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    command: [tunnel, --no-autoupdate, run, --token-file, /run/secrets/tunnel_token]
+    secrets: [tunnel_token]
+secrets:
+  tunnel_token:
+    file: ${CLOUDFLARED_TOKEN_FILE:?select an existing external token file; never commit it}

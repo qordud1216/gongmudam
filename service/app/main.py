@@ -45,15 +45,16 @@ async def _lifespan(_app):
     store.conn()
     if store.is_empty():
         seed.load_seed()
-    watcher=folder_watch.Worker().start()
+    from .runtime_paths import cloud_mode
+    watcher=None if cloud_mode() else folder_watch.Worker().start()
     regulation_registry.initialize()
-    regulation_worker=regulation_monitor.Worker().start()
+    regulation_worker=None if cloud_mode() else regulation_monitor.Worker().start()
     try:
         yield
     finally:
-        watcher.stop()
+        if watcher:watcher.stop()
         folder_scan.stop()
-        regulation_worker.stop()
+        if regulation_worker:regulation_worker.stop()
 
 
 app = FastAPI(title="서무비서", version="1.0.0", lifespan=_lifespan)
@@ -92,6 +93,11 @@ async def _value_err(_req, exc):
 # ------------------------------------------------------------------ 상황 안내
 @app.post("/api/ask")
 def api_ask(body: dict = Body(...)) -> dict:
+    with llm.inference_policy(body.get("use_ai") is False):
+        return _ask(body)
+
+
+def _ask(body: dict) -> dict:
     query=str(body.get('query') or '').strip()
     if not query or len(query)>3000:raise HTTPException(422,'질문은 1~3000자로 입력하세요.')
     edit_result=workflow_chat.handle(query,body)

@@ -34,6 +34,8 @@ def local_profile(name):
 
 @router.get('/options')
 def options():
+    from .runtime_paths import no_llm
+    if no_llm():return {"disabled":True,"models":[],"notice":"LLM is disabled for this runtime."}
     profiles=[]
     for name in config.load().get('llm',{}).get('profiles',{}):
         try: p=local_profile(name)

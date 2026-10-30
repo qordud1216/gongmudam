@@ -1,4 +1,4 @@
-import json, tempfile, unittest
+import json, os, tempfile, unittest
 from pathlib import Path
 from unittest.mock import patch
 from fastapi import FastAPI, HTTPException
@@ -41,6 +41,7 @@ class FolderInputsTest(unittest.TestCase):
         self.app.state.public_demo=False
         with TestClient(self.app,client=('127.0.0.1',1234),base_url='http://127.0.0.1:8766') as c:
             self.assertEqual(c.post('/api/folders/choose-local').status_code,403)
+    @unittest.skipUnless(os.name == 'nt', 'Native folder dialog success requires Windows; cloud uploads are tested separately.')
     def test_local_cancel_returns_without_connecting(self):
         self.app.state.public_demo=False
         with TestClient(self.app,client=('127.0.0.1',1234),base_url='http://127.0.0.1:8766') as c,patch.object(inputs.subprocess,'run') as launch:

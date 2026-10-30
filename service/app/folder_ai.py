@@ -227,6 +227,7 @@ def model_schema(prompt):
     return schema
 
 def call_model(profile,messages,schema=None):
+    if llm.disabled():raise llm.LLMError("LLM is disabled for this runtime/request.")
     parsed=urlsplit(profile['base_url'])
     if parsed.port==11434 and parsed.path.rstrip('/')=='/v1':
         # Ollama의 요청별 문맥 크기·JSON 스키마를 사용한다. 서버 전역 설정은 변경하지 않는다.

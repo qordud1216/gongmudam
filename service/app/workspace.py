@@ -28,6 +28,8 @@ def selected_model_check(body:ModelCheck):
 def status():
     cfg=config.load();active=config.active_profile(cfg)
     try:
+        from .runtime_paths import no_llm
+        if no_llm():raise ValueError("LLM disabled")
         r=httpx.get('http://127.0.0.1:11434/api/tags',timeout=2);r.raise_for_status()
         models=[{'name':m['name'],'digest':m.get('digest')} for m in r.json().get('models',[])]
         available=True

@@ -14,7 +14,9 @@ from fastapi.responses import Response
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from . import adhoc, folders, store, tracker, travel_api
 
-DB_PATH=Path(__file__).resolve().parents[1]/'data/calendar.db'
+from .runtime_paths import state_root
+
+DB_PATH=state_root()/'data/calendar.db'
 KST=timezone(timedelta(hours=9))
 router=APIRouter(prefix='/api/calendar',tags=['업무 달력'])
 COLORS={'manual':'#39755f','travel':'#456b90','collection':'#a46e24','tracked':'#795f97'}
